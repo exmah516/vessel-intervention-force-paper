@@ -29,7 +29,7 @@
                4. 中国人民解放军北部战区总医院，辽宁~~沈阳\quad 110016},
  %
  % ----- 中文摘要
- cnabstract = {【目的】针对夹持式血管介入机器人在往复递送过程中，由于主副夹爪交替交接、机构运动惯性及柔顺接触重加载引起的周期性测力波动和虚假跳变问题，开展力感知扰动建模与残差抑制方法研究，以提高主端力反馈的保真度。【方法】首先分析主副双夹爪在“递送—交接—回程—重夹持”循环中的传力机理，将全周期划分为稳态递送、卸载交接、空载回程和重加载交接四个物理相（S1～S10共十个阶段）；基于接触力学建立夹持机构多级刚度串联等效模型，阐明重加载阶段轴向与周向耦合力传递规律；随后构建物理动力学补偿基线，并融合门控循环单元（GRU）神经网络在线学习未建模微滑移与接触滞回残差；最后采用因果平滑切换策略实现全周期力与扭矩的连续反馈。【结果】在搭建的介入血管模型台架上开展了纯轴向递送与轴向推进—周向旋转复合递送实验。结果表明，所提机理与GRU融合补偿方法能够有效消除交接阶段的测力台阶伪影，显著缩短重加载阶段的力响应恢复时间；同时在人工施加的未训练阻力突变扰动下，完整保留了器械真实的血管阻力峰值特征，未出现误消除现象。【结论】所提力扰动建模与残差补偿方法兼具物理可解释性与时序学习能力，在滤除机构往复切换伪影的同时真实反映了器械操作负载，为夹持式介入机器人的安全遥操作力反馈提供了有效手段。},
+ cnabstract = {【目的】针对往复夹持式血管介入机器人中机构运动与夹爪切换引起的附加测力波动，研究力反馈扰动建模与残差补偿方法，改善主端力反馈的连续性和载荷跟踪精度。【方法】将主副夹爪的递送、交接、回程和重夹持过程划分为S1～S10十个阶段，建立浮动传力组件的惯性干扰模型与多级串联刚度模型；采用轴向与周向耦合的等效恢复行程计算重加载补偿量，并将物理基线输出、换手前稳态载荷、相对运动与夹爪时序输入门控循环单元（GRU）网络，估计剩余测力误差；通过交接期数值锁存与边界平滑输出反馈力和扭矩。【结果】在无血管模型的双单元同轴对拉、对扭台架上完成参数辨识、网络训练及独立试次的定量对比，并在介入血管模型中完成受压推进与旋转递送验证。实验结果表明，该方法减小了换手引起的输出波动和重加载阶段的跟踪误差；在S1稳态递送与S9初始推进阶段施加未参与训练的阻力突变时，补偿输出仍能反映新增阻力变化。【结论】物理模型与GRU残差补偿相结合，可改善往复夹持递送的力反馈连续性和有效承载阶段的测力精度，为主端反馈器械操作载荷提供了方法。},
  % ---- 中文关键字
  cnkeywords = {导丝；介入机器人；夹持机构；接触力学；扭矩传递；力反馈；GRU神经网络},
  %
@@ -42,7 +42,7 @@
                4. \textit{Northern Theater Command General Hospital, Shenyang} 110016, \textit{China}},
  %
  % ---- 英文摘要
- enabstract = {[Objective] To address the periodic force sensing fluctuations and false jumping artifacts caused by alternate clamping handover, mechanism motion inertia, and compliant contact reloading in reciprocating clamping vascular intervention robots, a disturbance modeling and residual suppression method is investigated to improve the fidelity of master haptic feedback. [Methods] The load transfer mechanism of the dual-gripper collaborative delivery cycle is analyzed, dividing the reciprocating process into four physical phases and ten stages (S1--S10). A multi-stage series stiffness equivalent contact model is established to reveal the axial-rotational coupled load transfer behavior during the reloading stage. An analytical physical baseline is established, and a gated recurrent unit (GRU) neural network is incorporated to learn the unmodeled micro-slip and hysteresis residuals online. A causal smooth switching strategy is employed to achieve continuous feedback of force and torque across the entire cycle. [Results] Experiments are conducted on a vascular phantom bench under pure axial delivery and axial-rotational composite delivery conditions. The results demonstrate that the hybrid physics-GRU method eliminates the force step artifacts during gripper handover and shortens the force response recovery time during reloading. Moreover, under untrained sudden resistance disturbances, the real vessel resistance peak is preserved without false attenuation. [Conclusions] The proposed force disturbance modeling and residual compensation method integrates physical interpretability with temporal learning capability, effectively removing reciprocating switching artifacts while accurately reproducing real instrument loads, providing a reliable solution for safe teleoperated force feedback.},
+ enabstract = {[Objective] A disturbance model and residual compensation method are developed for additional force fluctuations caused by mechanism motion and gripper switching in reciprocating clamping vascular intervention robots, to improve feedback continuity and load tracking accuracy. [Methods] The delivery, handover, return, and reclamping cycle is divided into ten stages (S1--S10). An inertial disturbance model of the floating load transmission assembly and a series stiffness model are established. A coupled axial-rotational recovery travel is used to calculate the reloading compensation. The physical baseline output, stored steady load before handover, relative motion, and gripper timing are supplied to a gated recurrent unit (GRU) network to estimate the remaining measurement error. Numerical holding during handover and boundary smoothing are applied to the force and torque feedback. [Results] Parameter identification, network training, and quantitative comparisons on independent trials are performed using two coaxial sensing units under tensile and torsional loading without a vascular phantom. Compressive delivery and rotation are also tested in a vascular phantom. The results show reduced feedback fluctuations during handover and lower tracking errors during reloading. The compensated output retains a response to untrained resistance changes applied during steady delivery (S1) and initial reloading motion (S9). [Conclusions] Combining the physical model with GRU residual compensation improves feedback continuity during reciprocating clamping delivery and measurement accuracy during effective load bearing, providing a method for feeding instrument loads back to the operator.},
  %
  % ---- 英文关键字
  enkeywords = {guidewire; intervention robot; clamping mechanism; contact mechanics; torque transmission; force feedback; gated recurrent unit (GRU)}
@@ -74,23 +74,23 @@
 
 % \JQRpubidadjcol
 
-器械与驱动机构的接触构型决定了近端传力特性。相较于滚轮摩擦驱动需维持高法向预紧力且在推进与旋转复合运动时易发生微滑移耦合\ucite{ref5}，仿人手往复夹持机构通过面接触建立静摩擦连接\ucite{ref7}，不仅能以较小夹紧力降低器械亲水涂层损伤风险，还便于实现轴向递送与周向旋转载荷的解耦测量\ucite{ref8}。然而，受直线导轨行程限制，此类机构必须通过主、副夹爪“夹持递送---释放回退---重新夹持”的周期性往复接力来实现长距离连续输送\ucite{ref9,ref10}。对于承担近端测力功能的移动主爪而言，往复加减速引起的浮动组件惯性、支路内部摩擦及接触状态切换会显著改变测力支路的受力平衡\ucite{ref6,ref8}，破坏近端力反馈的连续性。
+器械与驱动机构的接触方式决定了近端传力特性。滚轮摩擦驱动需维持法向预紧力，在推进与旋转复合运动时还会受到界面微滑移的影响\ucite{ref5}；仿人手往复夹持机构则通过面接触建立静摩擦连接\ucite{ref7}，便于控制夹紧力，并分别测量轴向递送力与周向旋转扭矩\ucite{ref8}。受直线导轨行程限制，此类机构通过主、副夹爪“夹持递送---释放回退---重新夹持”的周期性往复运动实现长距离输送\ucite{ref9,ref10}。对于承担近端测力功能的移动主爪，往复加减速引起的浮动组件惯性、旋转支路摩擦及夹爪接触切换会改变测力支路的受力平衡\ucite{ref6,ref8}，造成反馈波动。
 
 针对近端测量中的机构附加干扰分量，现有研究主要从运行偏置标定、动力学模型补偿及数据驱动估计等方面展开。在机理建模与标定方面，Sankaran等\ucite{ref5}在不同转速下采集机构自由递送时的空载电流，建立运行偏置与转速的映射关系并从总力中予以扣除。Bao等\ucite{ref8}综合分析了摩擦、重力及旋转速度对测量结果的影响，构建了基于载荷与转速的动态补偿模型，并在时变加载实验中验证了其相较于静态零偏补偿的优势。Wang等\ucite{ref12}建立了递送机构的平移与旋转动力学模型，结合运动学测量实时修正测力基线，并对扭矩信号的抖动进行了滤波处理。在数据驱动建模方面，时序神经网络为表征夹持与传力过程中的复杂非线性关系提供了有效途径。Lyu等\ucite{ref13}将机器人运动状态、夹持间距与软体夹持器的视觉形变序列输入长短期记忆网络（LSTM），实现了器械操作力与扭矩的端到端估计；Wang等\ucite{ref14}采用时间卷积网络（TCN）建立了近端测量与导丝远端接触力之间的时序映射关系。
 
-尽管上述研究已分别探讨了稳态运行偏置校正、连续运动补偿及端到端时序力估计方法，但在主副夹爪交替工作的往复夹持递送过程中，机构的运动状态与接触边界处于持续的高频切换之中。主副夹爪间的载荷交接、回程启停惯性以及柔顺夹持界面的弹性重加载与微滑移，会与真实的器械血管负载变化同时耦合在近端测量信号中，诱发显著的瞬态卸载台阶与非平稳力波动。如何在抑制此类周期性机构切换伪影的同时，高保真地保留器械真实操作载荷的动态信息，仍是夹持式血管介入机器人力反馈控制中亟待解决的关键问题。
+上述研究分别讨论了运行偏置校正、连续运动补偿和时序力估计，但往复夹持递送还包含主副夹爪交替承载。载荷交接、回程启停惯性以及柔顺接触的变形重建与微滑移，会与真实血管阻力变化同时出现在近端测量信号中，形成卸载台阶和附加波动。因此，需要在减小机构运动与夹爪切换所致波动的同时，保留有效承载阶段的真实阻力变化，并明确松爪期间数值锁存所能反映的信息范围。
 
 \section{问题描述（Problem description）}
 
 \subsection{往复夹持递送过程}
 
-本文研究的夹持式血管介入机器人采用主、副双夹爪协同接力构型，通过仿人手指式夹爪与器械表面的摩擦接触传递驱动运动与力学载荷。其中，主夹爪安装于可沿直线导轨移动的滑台上，负责执行器械的轴向推进与周向旋转驱动；副夹爪安装于近血管鞘入口端，用于在主夹爪释放与回程期间锚定器械位置并承接管腔负载。主夹爪内部采用正交传力构型，将两个单轴拉压传感器正交布置于夹爪传力支路中，轴向与切向作用力分别经弹性传力元件与正交导向约束，沿各自传感器的敏感轴独立传递。
+本文研究的夹持式血管介入机器人采用主、副双夹爪交替夹持器械，通过夹爪与器械表面的摩擦接触传递运动和载荷。主夹爪安装于沿直线导轨移动的滑台上，负责器械的轴向推进与周向旋转。主夹爪内部集成轴向与周向二自由度测力支路，用于在驱动器械的同时同步感知轴向递送力与周向旋转扭矩；副夹爪安装于近血管鞘入口端，用于在主夹爪松开与回退期间固定器械位置并承接血管端负载。
 
-为缩短鞘口外无支撑器械长度以防止柔性导丝屈曲，系统将长距离连续递送分解为主夹爪的周期性短行程往复运动。根据控制时序与接触状态演化，单个往复周期依次经历 S1～S10 十个连续阶段，可按时序划分为四个特征物理相（如图\ref{fig1}所示）：
+为缩短鞘口外无支撑器械长度以防止柔性导丝屈曲，系统将长距离连续递送分解为主夹爪的周期性短行程往复运动。根据控制时序与接触状态，单个周期依次经历 S1～S10 十个阶段，按操作过程归为以下四类（如图\ref{fig1}所示）：
 \begin{enumerate}
 \item[1)] 稳态递送相（S1～S2）：主爪独立夹持导丝推进与旋转（S1），单次行程结束时滑台制动停止而副爪尚未闭合（S2）；
 \item[2)] 卸载交接相（S3～S4）：副爪闭合建立第一次双爪共持（S3），随后主爪释放导丝并将管腔负载转移至副爪（S4）；
-\item[3)] 空载回程相（S5～S6）：主爪完全脱离导丝后沿导轨高速退回（S5）并在起点制动停止（S6），期间导丝由副爪独立锚定；
+\item[3)] 空载回程相（S5～S6）：主爪完全脱离导丝后沿导轨高速退回（S5）并在起点制动停止（S6），期间导丝由副爪独立固定；
 \item[4)] 重加载交接相（S7～S9）与稳态恢复（S10）：主爪在起点重新闭合形成第二次双爪共持（S7），副爪释放导丝（S8），随后主爪带动导丝恢复向前推进，串联柔顺传力变形逐步重建、测力响应随载荷接管而动态爬升（S9）；当重夹持后的有效推进位移达到稳定承载阈值时重加载完成，主爪恢复独立稳态承载（S10，归入稳态递送相）并进入下一周期。
 \end{enumerate}
 
@@ -103,30 +103,30 @@
 
 \subsection{测力波动与补偿目标}
 
-在往复工作循环中，主夹爪交替经历承载推进与空载回退，机构内源性干扰呈现显著的阶段性特征，在主夹爪释放阶段，随着载荷向副爪转移及主爪脱开，主爪测力支路发生阶跃卸载；在快速回退阶段，滑台启停惯性冲击与导轨摩擦直接耦合至传感器通道；而在重新夹持与推进初期，受柔顺接触界面与弹性传力支路变形重建的影响，传感器信号呈现滞后于运动指令的重加载爬升过程。上述非平稳波动直接反馈至主端时，会使术者感受到周期性的虚假换手脉冲与抖动，严重干扰对远端真实血管阻力的判读。
+在往复工作循环中，主夹爪交替经历承载推进与空载回退，机构运动与夹爪切换引起的附加干扰随阶段变化。主夹爪释放时，载荷向副爪转移，主爪测力支路发生阶跃卸载；快速回退时，随滑台运动的内侧浮动组件产生轴向惯性力；存在旋转运动时，旋转支路还受到惯性、轴承摩擦与阻尼的影响。重新夹持时的机械冲击，以及恢复推进初期柔顺支路的变形重建，会分别造成短暂波动和逐步恢复的测力响应。若直接将这些变化反馈至主端，术者会感受到周期性换手脉冲，影响对远端血管阻力的判断。
 
-本文的补偿目标是在往复夹持递送全周期内，有效剥离并抑制由机构往复运动和接触切换引入的附加测力波动，同时高保真地保留反映器械真实阻力和阻力矩变化的低频与瞬态特征。补偿量由系统实时可测的运动学状态与夹持动作时序信息在线生成，并与原始测量信号保持严格的时间同步。
+本文的补偿目标是减小机构往复运动和夹爪切换引入的附加测力波动，并在主爪有效承载阶段保留真实阻力和阻力矩变化。补偿量根据同步采集的运动状态、测力信号与夹持动作时序在线计算。S4～S8期间采用数值锁存维持反馈连续，该数值不作为此期间血管阻力的实时测量值。
 
-全文设轴向正方向沿导丝名义中心轴指向远端血管，旋转角正方向遵循右手定则，统一采用 ${\rm N}$、${\rm N}\cdot{\rm mm}$、${\rm mm}$、${\rm rad}$ 和 ${\rm s}$ 作为力、扭矩、位移、角位移和时间的量纲，将主爪原始测量的轴向力记为 $F_{xm}$，绕器械轴线的测量扭矩记为 $\tau_{xm}$，由切向力测量通道输出 $F_{tm}$ 经有效力臂或扭矩标定关系换算获得，经算法补偿后的主端力与扭矩反馈量分别记为 $F_{xc}$ 和 $\tau_{xc}$。
+全文设轴向正方向沿导丝名义中心轴指向远端血管，旋转角正方向遵循右手定则，分别采用 ${\rm N}$、${\rm N}\cdot{\rm mm}$、${\rm mm}$、${\rm rad}$ 和 ${\rm s}$ 作为力、扭矩、位移、角位移和时间的单位。主爪原始测量的轴向力记为 $F_{xm}$，绕器械轴线的测量扭矩记为 $\tau_{xm}$；扭矩可由扭矩传感器直接测得，也可由切向力经标定力臂换算。补偿后的主端力与扭矩反馈量分别记为 $F_{xc}$ 和 $\tau_{xc}$。
 
 \subsection{本文工作}
 
 围绕往复夹持递送过程中的近端测力波动抑制问题，本文开展以下三方面研究工作：
 \begin{enumerate}
-\item[1)] 多阶段传力机理与接触动力学建模：系统剖析主副夹爪交替承载过程中的传力路径演变，建立涵盖正常递送、双爪交接及重加载耦合的10阶段动力学与接触力学模型，揭示惯性、柔顺接触变形、界面摩擦承载及安装偏斜对测力响应的作用机制与传递规律。
-\item[2)] 机理-数据融合的残差补偿方法构建：提出物理动力学模型与时序神经网络相结合的混合补偿架构，利用显式动力学模型剥离可标定的主干运动与交接干扰，并引入神经网络在线估计并补偿由微滑移、历史零位漂移及高阶非线性耦合引起的未建模动态残差。
-\item[3)] 多工况血管模型台架量化评估与消融对比实验：设置纯轴向往复递送与轴向推进—周向旋转复合递送工况，比较原始测量、低通滤波、物理基线及物理融合 GRU 补偿，并通过消融实验量化重加载过渡模型与时序残差学习对测力误差、换手峰值及恢复时间的贡献。
+\item[1)] 多阶段传力建模：分析主副夹爪交替承载的传力过程，建立正常递送、双爪交接与重加载阶段的受力模型，揭示惯性、柔顺接触变形及界面摩擦承载对测力响应的作用机制与传递规律。
+\item[2)] 物理模型与GRU残差补偿：利用可标定的运动干扰模型与耦合重加载模型计算物理基线，再用GRU网络在线估计微滑移、零位变化和接触滞回造成的剩余误差。
+\item[3)] 两类台架验证与消融对比：在同轴参考标定台架上完成定量对比和消融实验，评价重加载模型与残差学习对跟踪误差及恢复时间的作用；在血管模型台架上验证受压递送的反馈连续性及S1、S9阶段对局部阻力突变的响应。
 \end{enumerate}
 
 本文其余部分组织如下：第2节详述往复夹持传力建模、重加载物理基线与 GRU 时序残差补偿方法；第3节给出参数辨识、多工况对比与消融实验结果；第4节与第5节分别给出讨论与结论。
 
 \section{往复夹持传力机理与残差补偿方法（Reciprocating clamping transmission mechanism and residual compensation method）}
 
-本章围绕主、副夹爪交替承载的往复递送过程，建立远端血管介入阻力、夹持支路传力与近端传感器读数之间的动态映射关系，在此基础上构建物理动力学基线与 GRU 时序残差网络相融合的在线补偿算法。
+本节分析主、副夹爪交替承载时远端阻力、夹持支路载荷与传感器读数之间的关系，先用运动干扰模型与重加载模型计算物理基线，再由 GRU 时序网络补偿剩余测力误差。
 
 \subsection{正常递送的受力与测量关系}
 
-记远端血管介入阻力与阻力矩向量为 $\bm{w}_{\text{out}} = [F_{\text{out}},\tau_{\text{out}}]^{\rm T}$（取正向推进或旋转所需克服的阻力为正，主、副夹爪对导丝施加的载荷向量分别为 $\bm{w}_{M} = [F_{M},\tau_{M}]^{\rm T}$ 与 $\bm{w}_{S} = [F_{S},\tau_{S}]^{\rm T}$，则夹持区内导丝段的准静态载荷平衡方程为
+记远端血管阻力与阻力矩向量为 $\bm{w}_{\text{out}} = [F_{\text{out}},\tau_{\text{out}}]^{\rm T}$（取正向推进或旋转所需克服的阻力为正）。主、副夹爪对导丝施加的载荷向量分别为 $\bm{w}_{M} = [F_{M},\tau_{M}]^{\rm T}$ 与 $\bm{w}_{S} = [F_{S},\tau_{S}]^{\rm T}$，忽略夹持区短段导丝的惯性后，其准静态载荷平衡方程为
 \begin{align}
 	\label{eq1}
 	\begin{cases}
@@ -136,55 +136,45 @@
 \end{align}
 在 S1、S2 和 S10 阶段，副爪处于完全释放状态（$F_{S} = \tau_{S} = 0$），远端血管介入阻力直接由主爪作用载荷 $\bm{w}_{M}$ 平衡。
 
-定义近端传感器测量向量 $\bm{y} = [F_{xm},\tau_{xm}]^{\rm T}$。为了将力传导至传感器，在传感器安装面内侧至夹爪接触面势必存在浮动传力组件，其附加干扰作用于传感器敏感轴，选取该内侧浮动传力组件为受力分析对象，建立近端测量映射与机构动态干扰方程：
+定义近端传感器测量向量 $\bm{y} = [F_{xm},\tau_{xm}]^{\rm T}$，并选取传感器安装面内侧至夹爪接触面之间的浮动传力组件为受力分析对象。主夹爪与传感器随滑台整体平移。由于传感器自身刚度较大，浮动组件相对于主爪外壳的轴向弹性微变形很小，其绝对加速度近似等于滑台宏观加速度 $a_M$，因而产生轴向惯性力 $m_s a_M$。该组件沿轴向没有相对于主爪外壳的持续宏观滑动，因此轴向测力支路不计由滑台导轨速度 $v_M$ 引起的内部摩擦与黏性阻尼。周向运动经过旋转支承轴承，其干扰力矩则与旋转角加速度 $\alpha_M$ 和角速度 $\omega_M$ 有关。近端测量关系与机构运动干扰表示为
 \begin{align}
 	\label{eq2}
 	\bm{y} &= \bm{H}_{0}\bm{w}_{M} + \bm{d} + \bm{\varepsilon},\quad \bm{d} = \bm{p}(\bm{q}_{M},\bm{c}) + \bm{b} \\
 	\label{eq3}
-	\bm{p}(\bm{q}_{M},\bm{c}) &= \bm{M}_{s}
+\bm{p}(\bm{q}_{M},\bm{c}) &=
 	\begin{bmatrix}
-		a_{M} \\
-		\alpha_{M}
-	\end{bmatrix}
-	+ \bm{B}_{v}
-	\begin{bmatrix}
-		v_{M} \\
-		\omega_{M}
+		m_s a_M \\
+		J_s\alpha_M+b_{v,\varphi}\omega_M+f_{c,\varphi}\operatorname{sgn}(\omega_M)
 	\end{bmatrix} \notag \\
-	&\quad + \bm{F}_{c}
-	\begin{bmatrix}
-		\operatorname{sgn}(v_{M}) \\
-		\operatorname{sgn}(\omega_{M})
-	\end{bmatrix}
-	+ \bm{p}_{\text{clamp}}(\bm{c})
+	&\quad + \bm{p}_{\text{clamp}}(\bm{c})
 \end{align}
-式中，$\bm{H}_{0} \in \mathbb{R}^{2 \times 2}$ 为满秩名义传递矩阵，其主对角元素为无量纲传力增益，右上和左下非对角元素（量纲分别为 ${\rm mm}^{-1}$ 和 ${\rm mm}$）表征复合加载下正交传力支路间的交叉耦合；$\bm{b}$ 为传感器静态零位偏置；$\bm{\varepsilon}$ 为随机测量噪声；$\bm{p}(\bm{q}_{M},\bm{c})$ 为内侧浮动传力组件引入的动态干扰项，包含浮动夹爪组件等效惯性矩阵 $\bm{M}_{s} = \operatorname{diag}(m_{s},J_{s})$、内部正交导向结构的黏性阻尼矩阵 $\bm{B}_{v}$ 与库仑摩擦矩阵 $\bm{F}_{c}$，以及夹爪开合动作引起的瞬态耦合项 $\bm{p}_{\text{clamp}}(\bm{c})$；$v_{M}, a_{M}$ 与 $\omega_{M}, \alpha_{M}$ 分别为主爪的轴向速度、加速度与旋转角速度、角加速度。
+式中，$\bm{H}_{0} \in \mathbb{R}^{2 \times 2}$ 为满秩名义传递矩阵，其主对角元素为无量纲传力增益，右上和左下元素的量纲分别为 ${\rm mm}^{-1}$ 和 ${\rm mm}$，表示两个测力通道之间的交叉耦合；$\bm{b}$ 为静态零位偏置，$\bm{\varepsilon}$ 为随机测量噪声；$m_s,J_s$ 分别为内侧浮动传力组件的等效质量与等效转动惯量；$b_{v,\varphi},f_{c,\varphi}$ 分别为旋转传力支路的黏性阻尼系数与库仑摩擦力矩；$\bm{p}_{\text{clamp}}(\bm{c})$ 为夹爪开合动作引起的瞬态冲击干扰。$\bm{q}_M$ 为主爪运动状态，$\bm{c}$ 为主、副爪开合指令；$v_M,a_M$ 与 $\omega_M,\alpha_M$ 分别为主爪轴向速度、加速度与旋转角速度、角加速度。
 
 
-夹持机构采用柔顺硅胶垫保护器械表面，并通过法向预紧建立静摩擦连接。单侧传力支路的轴向柔顺性由硅胶垫的切向剪切柔顺性（刚度 $k_{i,\text{pad}}$）与机构内部弹性元件/支撑弹簧的柔顺性（刚度 $k_{i,\text{mech}}$，主爪含正交解耦弹性元件，副爪含轴向支撑弹簧）串联构成。多级刚度串联等效模型及交接阶段载荷响应如图\ref{fig2}所示。
+夹持机构采用柔顺硅胶垫保护器械表面，并通过法向预紧建立静摩擦连接。单侧传力支路的轴向变形由硅胶垫的切向剪切变形与机构弹性元件的变形共同构成，相应刚度分别记为 $k_{i,\text{pad}}$ 与 $k_{i,\text{mech}}$。两者按串联关系计算支路等效刚度。测力支路受力及多阶段变形示意见图\ref{fig2}。
 
-在双爪闭合且界面维持静摩擦黏着、无宏观滑移的条件下，双爪之间的短段导丝可视为刚性轴向节点。对主、副夹持支路 $i \in \{ M,S\}$，其变形协调与轴向静力平衡满足
+在双爪闭合且接触面无宏观滑移的条件下，双爪之间的短段导丝近似为刚性轴向节点。以两支路均已建立接触的平衡状态为增量起点，对主、副支路 $i\in\{M,S\}$ 有
 \begin{align}
 	\label{eq4}
 	\begin{cases}
 		k_{i} = \left( k_{i,\text{pad}}^{-1} + k_{i,\text{mech}}^{-1} \right)^{-1}, \\
-		\delta_{i} = U_{i} - u - h_{i}, \\
-		F_{i} = k_{i}\delta_{i},\quad F_{M} + F_{S} = F_{\text{out}}
+		\delta_i=\Delta U_i-\Delta u, \\
+		F_i=F_{i,0}+k_i\delta_i,\quad F_M+F_S=F_{\text{out}}
 	\end{cases}
 \end{align}
-式中，$U_{i}$ 为主、副夹持支承座的轴向位置；$u$ 为双爪间导丝节点的共同轴向位置；$h_{i}$ 为接触建立时的初始基准位置；$\delta_{i}$ 为支路轴向弹性变形量；$k_{i}$ 为支路轴向接触刚度。联立式\eqref{eq4}求解，可得双爪共持阶段的主、副爪轴向载荷分配关系：
+式中，$\Delta U_i$ 与 $\Delta u$ 分别为支承座和导丝节点相对于增量起点的轴向位移；$\delta_i$ 为夹爪闭合建立接触后，支承座与导丝节点之间的相对位移增量；$F_{i,0}$ 为起点处已有的轴向载荷，满足 $F_{M,0}+F_{S,0}=F_{\text{out},0}$。这一写法保留了已承载支路的预载。令 $\Delta F_i=F_i-F_{i,0}$、$\Delta F_{\text{out}}=F_{\text{out}}-F_{\text{out},0}$，由式\eqref{eq4}得双爪共持时的增量载荷分配关系：
 \begin{align}
 	\label{eq5}
 	\begin{cases}
-		F_{M} = \dfrac{k_{M}}{k_{M} + k_{S}}F_{\text{out}} \\
-		\quad\quad + \dfrac{k_{M}k_{S}}{k_{M} + k_{S}}\left[ (U_{M} - h_{M}) - (U_{S} - h_{S}) \right], \\
-		F_{S} = F_{\text{out}} - F_{M}
+		\Delta F_M=\dfrac{k_M}{k_M+k_S}\Delta F_{\text{out}} \\
+		\qquad+\dfrac{k_Mk_S}{k_M+k_S}(\Delta U_M-\Delta U_S), \\
+		\Delta F_S=\Delta F_{\text{out}}-\Delta F_M
 	\end{cases}
 \end{align}
-式\eqref{eq5}表明，双爪共持阶段的载荷分配不仅取决于两支路的刚度比例，还受两支路相对位移与接触初始基准位置差异的影响。据此可依次阐明各交接阶段的承载状态：
+式\eqref{eq5}表明，双爪共持时新增载荷的分配取决于支路刚度比例和两支承座的相对位移增量，原有载荷则由 $F_{i,0}$ 保留。各交接阶段的承载状态如下：
 \begin{enumerate}
-	\item[1)] S2 停止保持与 S3 副爪闭合阶段：在 S2 滑台制动停止时，主爪传力支路外侧受伺服锁定的滑台位置约束（$U_{M}$ 恒定），内侧则与导丝远端阻力及管腔静摩擦力维持静力平衡（$u$ 恒定且夹持面自锁）；由于两侧几何边界均被锁定，支路弹性变形 $\delta_{M}$ 不释放，传感器读数稳定保持递送载荷。进入 S3 副爪闭合瞬间，副爪尚未发生相对位移，其切向变形 $\delta_{S} = U_{S} - u - h_{S} \approx 0$，故外载仍几乎全部由主爪承担（$F_{M} \approx F_{\text{out}}$），扣除闭合动作微扰后主爪通道仍具备外载可观测性。
-	\item[2)] S7 主爪原地重夹持阶段：进入 S7 前外载完全由副爪承担，主爪在起始位置重新闭合但尚未向前推进，其切向变形满足 $\delta_{M} = U_{M} - u - h_{M} \approx 0$，故主爪有效外载分量 $F_{M} \approx 0$，此时主爪虽已闭合但无法直接测得远端外载。
+	\item[1)] S2 停止保持与 S3 副爪闭合阶段：S2 制动结束后，若滑台与导丝均未继续移动，主爪支路原有变形未释放，因而仍承担递送载荷。S3 副爪刚闭合时，$\Delta U_S-\Delta u\approx0$，新闭合支路尚无切向弹性变形，且 $F_{S,0}\approx0$；主爪原有预载继续保留，因此 $F_M\approx F_{\text{out}}$，扣除闭合冲击后仍能测得远端血管阻力。
+	\item[2)] S7 主爪原地重夹持阶段：此时载荷主要由副爪承担。主爪刚闭合而尚未推进，$\Delta U_M-\Delta u\approx0$，且 $F_{M,0}\approx0$，因此主爪有效外载分量近似为零。S3 与 S7 刚闭合时出现的短暂读数波动，主要来自法向夹紧挤压硅胶垫造成的侧向膨胀及开合机械冲击，归入 $\bm p_{\text{clamp}}(\bm c)$，不解释为远端载荷已转移至新闭合支路。
 	\item[3)] S8 副爪释放阶段：当副爪松开时，一方面管腔静摩擦对静止导丝产生原地自锁作用（等效保持力记为 $F_{\text{lock}} \ge 0$），限制导丝向后回退；另一方面，远端受载导丝储存的轴向弹性恢复力 $F_{\varepsilon,0}$ 驱动导丝发生微小向后回缩 $z \ge 0$ 以挤压主爪支路（产生承力 $F_{M,\text{S8}} = k_{M}z$）时，该回缩位移同时释放了远端导丝自身的弹性压缩量（设当前血管构型下远端导丝轴向等效刚度为 $k_{w}$，远端推力降至 $F_{\varepsilon,0} - k_{w}z$）。由准静态平衡条件 $k_{M}z = [F_{\varepsilon,0} - F_{\text{lock}} - k_{w}z]_{+}$ 可得：
 \end{enumerate}
 \begin{align}
@@ -192,12 +182,12 @@
 	z = \frac{[F_{\varepsilon,0} - F_{\text{lock}}]_{+}}{k_{M} + k_{w}},\quad
 	F_{M,\text{S8}} = \frac{k_{M}}{k_{M} + k_{w}}\left[ F_{\varepsilon,0} - F_{\text{lock}} \right]_{+}
 \end{align}
-式中，$[a]_{+} = \max(a,0)$。式\eqref{eq6}从机理上表明，受管腔静摩擦自锁与串联刚度分压系数 $k_{M}/(k_{M} + k_{w}) < 1$ 的双重限制，S8 副爪释放结束时主爪被动承接的载荷恒满足 $F_{M,\text{S8}} < F_{\text{out}}$。由于实际连续递送中 $k_{w}$、$F_{\varepsilon,0}$ 与 $F_{\text{lock}}$ 随导丝介入深度及血管弯曲构型动态变化，在线补偿时不以固定参数开环计算 $F_{M,\text{S8}}$，而是直接采集 S8 结束时刻主爪的实测承载值作为 S9 动态重加载的初始边值。
+式中，$[a]_+=\max(a,0)$，$k_M/(k_M+k_w)$ 为串联刚度分配比例。式\eqref{eq6}说明，S8 末主爪被动承接的载荷受远端弹性恢复力、管腔静摩擦保持力和刚度分配比例共同影响。换手前稳态载荷非零时，S8 末实测载荷 $\widehat F_{M,k_9}$ 与换手前稳态载荷 $\widehat F_{M,k_v}$ 的比值，反映当前血管形态下远端导丝刚度 $k_w$ 与保持力 $F_{\text{lock}}$ 的综合状态。因此，本文以 S8 末实测承载值 $\widehat{\bm w}_{M,k_9}$ 作为 S9 重加载的初始边值，结合换手前稳态载荷 $\widehat{\bm D}_9$ 动态确定式\eqref{eq10}物理基线的重加载初始补偿幅值 $\widehat{\bm A}_9$。$k_v$ 为 S3 前最近的稳态载荷采样时刻，$k_9$ 为 S8 结束、S9 开始的采样时刻。
 
 \begin{figure*}[h!t]
 	\centering
-	\includegraphics[width=0.88\linewidth]{fig2}
-	\bicaption{夹持机构多级刚度串联等效模型及交接阶段载荷响应对照}{Multi-stage series stiffness equivalent model and load response comparison during handover stages}
+	\fbox{\parbox{0.85\linewidth}{\raggedright 【图2占位说明：(a) 近端二自由度测力支路与内侧浮动传力组件隔离体受力分析图，标明远端阻力反作用力、浮动组件惯性力 $m_s a_M$、旋转支路摩擦阻尼力矩及传感器敏感轴正方向；(b) 主副夹爪多级串联刚度等效模型，以及 S1（主爪独立稳态承载）、S8（副爪松开后导丝微回缩与主爪被动承接部分载荷）、S9（主爪恢复推进与旋转时的复合弹性变形重建）三个典型阶段的变形与传力演变示意图。】}}
+	\bicaption{测力支路受力分析及多阶段串联变形传力演变示意图}{Force analysis of sensing branch and schematic of multi-stage series deformation and load transfer evolution}
 	\label{fig2}
 \end{figure*}
 
@@ -210,41 +200,48 @@
 \end{align}
 式\eqref{eq7}表明轴向力 $F_{M}$ 与扭矩 $\tau_{M}$ 共同占用静摩擦裕度；当复合载荷接近边界时，界面局部微滑移将使传力恢复呈现显著非线性。
 
-以 S9 起始采样时刻 $k_{9}$ 为参考基准，硅胶垫、机构内部弹性元件及导丝段的串联变形共同构成二维有效变形增量 $\Delta\bm{\xi} = [\Delta\xi_{x},\Delta\xi_{\varphi}]^{\rm T}$。在固定法向预紧力下，主爪载荷增量 $\Delta\bm{w}_{M}$ 与有效变形满足局部线性黏弹性本构关系：
+以 S9 起始时刻 $k_9$ 为参考，硅胶垫、机构弹性元件与导丝段的串联变形构成二维有效变形增量 $\Delta\bm\xi=[\Delta\xi_x,\Delta\xi_\varphi]^{\rm T}$。在固定法向夹紧力下，用局部切线刚度表示载荷与变形关系：
 \begin{align}
 	\label{eq8}
-	\Delta\bm{w}_{M} \simeq \bm{K}\Delta\bm{\xi} + \bm{C}\Delta\dot{\bm{\xi}},\quad
+	\Delta\bm{w}_{M} \simeq \bm{K}\Delta\bm{\xi},\quad
 	\bm{K} =
 	\begin{bmatrix}
 		k_{xx} & k_{x\varphi} \\
 		k_{\varphi x} & k_{\varphi\varphi}
 	\end{bmatrix}
 \end{align}
-式中，主对角刚度 $k_{xx}$（${\rm N}/{\rm mm}$）、$k_{\varphi\varphi}$（${\rm N}\cdot{\rm mm}/{\rm rad}$）及交叉耦合刚度 $k_{x\varphi}$（${\rm N}/{\rm rad}$）、$k_{\varphi x}$（${\rm N}\cdot{\rm mm}/{\rm mm}$）表征整条串联传力支路的等效切线刚度，阻尼矩阵 $\bm{C}$ 各元素量纲为对应刚度量纲乘以时间单位 ${\rm s}$。
+式中，$k_{xx}$（${\rm N}/{\rm mm}$）与 $k_{\varphi\varphi}$（${\rm N}\cdot{\rm mm}/{\rm rad}$）分别为轴向和扭转等效切线刚度，$k_{x\varphi}$（${\rm N}/{\rm rad}$）与 $k_{\varphi x}$（${\rm N}\cdot{\rm mm}/{\rm mm}$）表示两个方向的交叉耦合。
 
-在扭矩通道中，S8 副爪松开瞬间，导丝储存的扭转弹性势能通过微小回捻已向主爪被动转移了部分静态弹性扭矩。进入 S9 后，若执行推进与旋转复合操作（$\Delta\varphi_{M} \neq 0$），新增角位移继续拉满支路扭转变形，使测量扭矩爬升恢复至周向旋转阻力矩；若仅执行纯轴向推进（$\Delta\varphi_{M} = 0$），器械在管腔内无需克服周向旋转动摩擦阻力矩，扭矩通道仅保留 S8 被动承接的静态弹性扭矩及轴向推进诱发的交叉耦合增量 $k_{\varphi x}\Delta\xi_{x}$。
+在扭矩通道中，S8 副爪松开后，导丝可能通过微小回转向主爪传递部分静态弹性扭矩。进入 S9 后，若执行复合操作（$\Delta\varphi_M\neq0$），新增转角使支路扭转变形逐步恢复，测量扭矩随之接近稳态旋转阻力矩。纯轴向推进时（$\Delta\varphi_M=0$），扭矩通道仍可能保留 S8 的静态弹性扭矩及轴向推进引起的交叉耦合增量 $k_{\varphi x}\Delta\xi_x$，因此不将该通道读数直接置零。
 
-为将式\eqref{eq8}刻画的重加载弹性恢复过程转化为基于可测运动量的在线物理基线，定义 $k_{9}$ 时刻后主爪沿当前递送方向累计的有效恢复行程为 $s_{x,k} = |x_{M,k} - x_{M,k_{9}}|$，累计旋转恢复角行程为 $s_{\varphi,k} = |\varphi_{M,k} - \varphi_{M,k_{9}}|$。在重加载预滑移过渡段内，随着恢复行程累积，支路切向变形渐进趋近稳态承载需求 $\bm{D}_{9} = [D_{F,9},D_{\tau,9}]^{\rm T}$，主爪承载对恢复行程的变化率与当前尚未恢复的载荷亏缺成正比：
+在固定器械、硅胶垫与法向夹紧力下，以常数特征恢复长度 $\lambda_{x0}$（${\rm mm}$）和特征恢复转角 $\lambda_{\varphi0}$（${\rm rad}$）描述支路从接触变形重建到稳定传力的行程尺度。这两个常数由夹持界面材料与支路刚度共同决定，通过不同载荷与速度下的恢复曲线统一拟合，并在独立试次中检验其适用范围，不再按瞬时外载重新定义。
+
+式\eqref{eq7}表明，复合递送时周向切应力会占用接触面的静摩擦裕度，可能加快切向变形的过渡。结合式\eqref{eq8}中的交叉刚度，定义轴向---周向耦合等效恢复行程 $s_{\text{eq},k}$，并采用以下需标定验证的恢复模型：
 \begin{align}
 	\label{eq9}
-	\frac{\partial F_{M}}{\partial s_{x}} = \frac{D_{F,9} - F_{M}}{\lambda_{x}},\quad
-	\frac{\partial \tau_{M}}{\partial s_{\varphi}} = \frac{D_{\tau,9} - \tau_{M}}{\lambda_{\varphi}}
+	\begin{gathered}
+		s_{x,k}=|x_{M,k}-x_{M,k_9}|,\quad
+		s_{\varphi,k}=|\varphi_{M,k}-\varphi_{M,k_9}|, \\
+		s_{\text{eq},k}=\sqrt{\left(\frac{s_{x,k}}{\lambda_{x0}}\right)^2
+		+\chi_{\varphi,k}\left(\frac{s_{\varphi,k}}{\lambda_{\varphi0}}\right)^2}, \\
+		\frac{{\rm d}\bm w_M}{{\rm d}s_{\text{eq}}}=\bm D_9-\bm w_M
+	\end{gathered}
 \end{align}
-式中，$\lambda_{x} = (D_{F,9} - F_{M,k_{9}})/k_{xx}^{\text{eff}}$ 与 $\lambda_{\varphi} = (D_{\tau,9} - \tau_{M,k_{9}})/k_{\varphi\varphi}^{\text{eff}}$ 分别为由串联等效刚度决定的轴向特征恢复长度（${\rm mm}$）与周向特征恢复角（${\rm rad}$）。对式\eqref{eq9}自 S8 末初始承载状态 $\widehat{\bm{w}}_{M,k_{9}}$ 沿恢复行程积分，即可导出 S9 阶段尚未恢复的动态重加载亏缺补偿项：
+式中，$s_{x,k}$ 与 $s_{\varphi,k}$ 分别为以 S8 末位置和转角为起点的恢复行程；在单向恢复段中等于累计轴向行程与累计转角。$\chi_{\varphi,k}$ 为旋转激活指示量，纯轴向推进取 0，复合递送取 1，由该恢复段的旋转指令确定，启停瞬间沿用该段取值。$\bm D_9=[D_{F,9},D_{\tau,9}]^{\rm T}$ 为该次恢复的稳态载荷目标，$s_{\text{eq}}$ 无量纲。式\eqref{eq9}通过无量纲耦合恢复行程 $s_{\text{eq},k}$ 将轴向与周向变形恢复过程统一表征为关于剩余未恢复载荷的一阶渐近过程。以换手前稳态估计 $\widehat{\bm D}_9$ 近似该目标，并从 S8 末实测承载值 $\widehat{\bm w}_{M,k_9}$ 积分，得到重加载未恢复量的补偿式：
 \begin{align}
 	\label{eq10}
 	\begin{cases}
 		\widehat{\bm{A}}_{9} = \widehat{\bm{D}}_{9} - \widehat{\bm{w}}_{M,k_{9}}, \\
 		\Delta\widehat{\bm{w}}_{\text{reload},k} =
 		\begin{bmatrix}
-			\widehat{A}_{F,9}\exp( - s_{x,k}/\lambda_{x}) \\
-			\chi_{\varphi,k}\widehat{A}_{\tau,9}\exp( - s_{\varphi,k}/\lambda_{\varphi})
+			\widehat{A}_{F,9}\exp(-s_{\text{eq},k}) \\
+			\chi_{\varphi,k}\widehat{A}_{\tau,9}\exp(-s_{\text{eq},k})
 		\end{bmatrix}
 	\end{cases}
 \end{align}
-式中，$\widehat{\bm{D}}_{9} = \widehat{\bm{w}}_{M,k_{v}}$ 为换手前最近有效承载时刻 $k_{v}$ 的主爪稳态载荷估计值，$\widehat{\bm{w}}_{M,k_{9}}$ 为 S8 结束时刻主爪实测承载值，$\widehat{\bm{A}}_{9} = [\widehat{A}_{F,9},\widehat{A}_{\tau,9}]^{\rm T}$ 为初始重加载亏缺幅值；$\chi_{\varphi,k} \in \{0,1\}$ 为旋转激活指示量（纯轴向推进时取 0，复合旋转时取 1）。
+式中，$\widehat{\bm D}_9=\widehat{\bm w}_{M,k_v}$ 为 S3 前最近稳态窗口的载荷均值，$\widehat{\bm A}_9=[\widehat A_{F,9},\widehat A_{\tau,9}]^{\rm T}$ 为初始未恢复载荷。纯轴向推进时，$s_{\text{eq},k}=s_{x,k}/\lambda_{x0}$，式\eqref{eq10}退化为轴向指数恢复，扭矩补偿量为零；复合递送时，旋转行程也使轴向补偿量衰减，用于描述旋转对轴向重加载的加速作用。计算只需主爪测力与运动信息，两个恢复尺度可通过主爪本体的加载标定获得。恢复段内若发生换向，绝对位置差不再等于累计路程，其接触滞回及恢复模型的剩余误差由下一节处理。
 
-在 S9 阶段，主爪已带动导丝向血管深处推进。若直接将 S4～S8 静止期的数值保持策略延长至 S9，将在每次换手后的初始数毫米推进内形成测力盲区，无法感知突发的局部血管受阻；而式\eqref{eq10}采用加性亏缺补偿形式与实时测量值叠加，不仅在 $s_{x,k} = 0$ 处自然满足初值连续性，且实时测量项增益恒保持为 1，能够在补齐柔顺变形亏缺的同时无衰减地实时响应 S9 期间新增的血管阻力突变。此外，上述多级串联柔顺性在 S1/S10 正常递送加减速及操作者不换手主动回拉或反捻时，同样会因正反向变形重建而产生双向接触滞回误差。因此，需在全承载时段引入时序残差网络，对局部刚度时变引起的重加载剩余误差与常规递送接触滞回进行统一在线补偿。
+在 S9 阶段，主爪已带动导丝向血管内推进。若将 S4～S8 的数值锁存策略延长至 S9，传感器实时读数将被完全屏蔽，每次换手后的初始数毫米推进内便无法感知突发受阻。式\eqref{eq10}的补偿量与实时测量值 $\widehat{\bm w}_{M,k}$ 相加，使实时测力通道在 S9 期间保持接通，可以反映新增的血管阻力变化。S9 初期柔顺支路尚未完全绷紧时，阻力变化传至传感器的幅值仍可能衰减；这一误差，以及正常递送加减速、正反推拉和旋转换向时的接触滞回，统一交由 GRU 时序残差网络补偿，其实际改善程度通过实验评价。
 
 \subsection{融合机理规律的GRU时序残差补偿网络}
 
@@ -261,19 +258,24 @@
 		= \widehat{\bm{w}}_{M,k} + \Delta\widehat{\bm{w}}_{\text{reload},k}
 	\end{cases}
 \end{align}
-式中，$\widehat{\bm{p}}_{k}$ 按式\eqref{eq3}由标定参数在线计算，$\Delta\widehat{\bm{w}}_{\text{reload},k}$ 在重加载恢复完成后衰减为零。由于底层伺服驱动器内部滤波，本平台经倍福（Beckhoff）总线直接读取的速度与加速度相对于位置差分分别存在约 $0.008\,{\rm s}$ 与 $0.065 \sim 0.075\,{\rm s}$ 的相位滞后。为避免滞后加速度在式\eqref{eq3}中引发反向修正伪影，物理基线采用低延迟滤波位置差分得到的速度与加速度计算 $\widehat{\bm{p}}_{k}$。
+式中，$\widehat{\bm p}_k$ 按式\eqref{eq3}计算。重加载补偿在 $k_9$ 初始化，S9 内按式\eqref{eq10}衰减，S10 延续该衰减直至补偿量低于设定阈值后置零；S1～S8 不施加该项。阈值为[待补]，所有对比方法采用相同的阶段边界。由于底层伺服驱动器内部滤波，本平台经倍福（Beckhoff）总线直接读取的速度与加速度相对于位置差分分别存在约 $0.008\,{\rm s}$ 与 $0.065\sim0.075\,{\rm s}$ 的相位滞后。为减少滞后加速度引起的附加波动，物理基线采用低延迟滤波位置差分得到的速度与加速度计算 $\widehat{\bm p}_k$。
 
-为在线估计物理基线未能覆盖的界面微滑移、远端导丝刚度时变波动及双向接触滞回残差，结合实时测力、相对运动状态与夹持时序构造 13 维网络输入向量 $\bm{x}_{k}$ 及长度为 $N$ 的因果滑动窗口 $\bm{X}_{k}$：
+为估计界面微滑移、刚度变化和接触滞回造成的剩余误差，将物理基线、换手前稳态载荷、运动状态与夹爪时序组成 15 维输入向量 $\bm x_k$，并构造长度为 $N$ 的历史数据滑动窗口 $\bm X_k$：
 \begin{align}
 	\label{eq12}
 	&\begin{cases}
-		\bm{x}_{k} = [\bm{y}_{k}^{\rm T},\bm{q}_{M,k}^{\rm T},\bm{c}_{k}^{\rm T},\Delta t_{e,k},\widehat{\bm{d}}_{k}^{\rm T}]^{\rm T}, \\
-		\bm{q}_{M,k} = [s_{x,k},s_{\varphi,k},v_{M,k},a_{M,k},\omega_{M,k},\alpha_{M,k}]^{\rm T}
+		\begin{aligned}
+		\bm x_k=\big[&(\bm w_{\text{out},k}^{(0)})^{\rm T},\widehat{\bm D}_{9,k}^{\rm T},\bm q_{M,k}^{\rm T},\\
+		&\bm c_k^{\rm T},\Delta t_{e,k},\widehat{\bm d}_k^{\rm T}\big]^{\rm T},
+		\end{aligned} \\
+		\bm q_{M,k}=[s_{x,k},s_{\varphi,k},v_{M,k},a_{M,k},\omega_{M,k},\alpha_{M,k}]^{\rm T}
 	\end{cases} \\
 	\label{eq13}
 	&\bm{X}_{k} = [\bm{x}_{k - N + 1},\ldots,\bm{x}_{k}]^{\rm T},\quad T_{w} = \frac{N - 1}{f_{s}}
 \end{align}
-式中，$\bm{c}_{k} = [c_{M,k},c_{S,k}]^{\rm T} \in \{0,1\}^{2}$ 为主、副爪开合指令（闭合取 1，释放取 0）；$\Delta t_{e,k}$ 为距最近一次经动作延迟修正的开合事件的时间；$f_{s}$ 为采样频率，$T_{w}$ 为窗口时长。运动向量 $\bm{q}_{M,k}$ 采用相对恢复行程 $s_{x,k}, s_{\varphi,k}$ 替代导轨绝对坐标，以避免网络对特定空间位置产生过拟合。
+式中，$\bm c_k=[c_{M,k},c_{S,k}]^{\rm T}\in\{0,1\}^2$ 为开合指令（闭合取 1，释放取 0）；$\Delta t_{e,k}$ 为距最近一次经动作延迟修正的开合事件的时间；$f_s$ 为采样频率，$T_w$ 为窗口时长。输入各组维数依次为 $2+2+6+2+1+2=15$。$\widehat{\bm D}_{9,k}$ 在 S1/S2 采用当前低频稳态均值，进入 S3 前于 $k_v$ 锁存，在 S3～S10 保持该值，下一周期 S1 再更新。恢复行程在 $k_9$ 置零，仅在主爪承载运动时更新，S3～S8 冻结，初始 S1 以本次递送起点为参考，避免将空载回退行程作为恢复行程。
+
+用物理基线 $\bm w_{\text{out},k}^{(0)}$ 替代原始测量 $\bm y_k$，既提供当前载荷大小参考，也减少开合冲击和运动干扰直接进入网络。为进一步验证网络在滤除接触残差的同时对未知突发阻力的响应保真度，本文在第3节专门设置了独立局部阻力突变实验。由于输入已保存跨周期稳态基准和恢复行程，且 S8 末测量值已用于初始化重加载项，窗口无需覆盖整个 S4～S8 回退过程，只需覆盖短时局部动态，例如 $0.1\sim0.2\,{\rm s}$。实际 $N$ 由验证集选定，并在不同往复周期和操作速度下评价补偿效果。
 
 残差学习器 $\mathcal{R}_{\theta}(\bm{X}_{k})$ 由输入标准化层、$L$ 层单向 GRU 特征提取层和全连接线性输出层组成（整体框架如图\ref{fig3}所示）。进入网络前，式\eqref{eq12}中的连续型物理分量均按训练集均值与标准差进行 Z-score 标准化，开合指令保留二值编码。对任一 GRU 层，记当前时刻输入为 $\bm{z}_{k}$，其门控状态更新方程为\ucite{ref26}：
 \begin{align}
@@ -285,7 +287,7 @@
 		\bm{h}_{k} = (1 - \bm{g}_{z,k}) \odot \bm{h}_{k - 1} + \bm{g}_{z,k} \odot \widetilde{\bm{h}}_{k}
 	\end{cases}
 \end{align}
-式中，$\sigma(\cdot)$ 为 Sigmoid 激活函数，$\odot$ 为逐元素乘积。当开合指令 $\bm{c}_{k}$ 与事件时间 $\Delta t_{e,k}$ 发生阶段切换时，重置门 $\bm{g}_{r,k}$ 自适应衰减上一周期的历史接触累积状态；更新门 $\bm{g}_{z,k}$ 则动态控制新状态写入比例，以跟踪 S9 未建模微滑移残差及 S1/S10 正常推拉、反捻换向时的双向滞回误差。
+式中，$\sigma(\cdot)$ 为 Sigmoid 激活函数，$\odot$ 为逐元素乘积；$\bm W,\bm U,\bm b$ 为可训练参数。重置门和更新门分别调节历史状态参与候选状态计算的程度及新状态的写入比例，具体取值由训练数据确定。
 
 窗口末端第 $L$ 层隐藏状态 $\bm{h}_{k}^{(L)}$ 经线性输出层与反标准化映射后输出二维残差预测 $\widehat{\bm{r}}_{k}$。残差真值 $\bm{r}_{k}$、网络预测值 $\widehat{\bm{r}}_{k}$ 及分通道尺度归一化训练损失函数 $\mathcal{L}(\theta)$ 分别为
 \begin{align}
@@ -307,7 +309,7 @@
 	\label{eq16}
 	&\mathcal{L}(\theta) = \frac{1}{|\mathcal{T}|}\sum_{k \in \mathcal{T}}\left[ \lambda_{F}\frac{(r_{F,k} - \widehat{r}_{F,k})^{2}}{s_{F}^{2}} + \lambda_{\tau}\frac{(r_{\tau,k} - \widehat{r}_{\tau,k})^{2}}{s_{\tau}^{2}} \right]
 \end{align}
-式中，$\bm{w}_{\text{ref},k}$ 为参考测力端同步获取的真实外部载荷标签；$\mathcal{T}$ 为主爪独立有效承载阶段（S1、S2、S9、S10）的训练样本集合；$s_{F},s_{\tau}$ 为训练集残差标准差尺度，$\lambda_{F},\lambda_{\tau}$ 为通道权重。
+式中，$\bm w_{\text{ref},k}$ 为同轴参考台架中经自身干扰修正并统一方向的参考载荷；$\mathcal T$ 仅包含主爪独立承载阶段 S1、S2、S9、S10 的有效样本；$s_F,s_\tau$ 为训练集残差标准差尺度，$\lambda_F,\lambda_\tau$ 为通道权重。线性输出层的参数包含残差的尺度恢复，使式\eqref{eq15}的输出单位分别为力和扭矩。
 
 在线运行时，定义主爪实时补偿载荷为 $\widetilde{\bm{w}}_{k} = \bm{w}_{\text{out},k}^{(0)} - \widehat{\bm{r}}_{k}$，全周期主端力反馈输出 $\bm{w}_{\text{fb},k} = [F_{xc,k},\tau_{xc,k}]^{\rm T}$ 采用如下切换与边界平滑策略：
 \begin{align}
@@ -316,15 +318,15 @@
 	\begin{cases}
 		\bm{w}_{\text{fb},k_{v}}, & s_{k} \in \{ \text{S4},\ldots,\text{S8}\}, \\
 		(1 - \alpha_{k})\bm{w}_{\text{fb},k_{v}} + \alpha_{k}\widetilde{\bm{w}}_{k}, & k_{9} \le k \le k_{9} + N_{b}, \\
-		\widetilde{\bm{w}}_{k}, & \text{其余有效承载时刻}
+		\widetilde{\bm{w}}_{k}, & \text{其余时刻}
 	\end{cases}
 \end{align}
-式中，$k_{v}$ 为进入 S4 前最近有效承载时刻；在主爪脱开与回程阶段（S4～S8）保持输出 $\bm{w}_{\text{fb},k_{v}}$。尽管物理基线 $\bm{w}_{\text{out},k}^{(0)}$ 在 $k_{9}$ 时刻已满足初值连续，但为消除 S8$\to$S9 切换瞬间接入 GRU 残差预测项 $\widehat{\bm{r}}_{k_{9}}$ 可能引入的微小接缝跳变，在刚进入 S9 的短时窗口 $N_{b}$ 内引入三次多项式平滑权重 $\alpha_{k} = 3\zeta_{k}^{2} - 2\zeta_{k}^{3}$（其中 $\zeta_{k} = (k - k_{9})/N_{b} \in [0,1]$），使输出平滑过渡至实时补偿值 $\widetilde{\bm{w}}_{k}$。
+式中，$s_k$ 表示当前工作阶段，锁存值取 S3 前 $k_v$ 时刻的反馈输出。S3 中主爪继续承载，按运动与开合模型修正测量，残差估计沿用 $k_v$ 的值；S4～S8 采用数值锁存，其中 S7 已重新接触导丝，S8 也可能被动承接载荷，但均不提前解除锁存。进入 S9 后，在 $N_b$ 个采样间隔内采用 $\alpha_k=3\zeta_k^2-2\zeta_k^3$，其中 $\zeta_k=(k-k_9)/N_b\in[0,1]$，平滑接入实时补偿输出。
 
 \begin{figure*}[h!t]
 	\centering
-	\includegraphics[width=0.88\linewidth]{fig3}
-	\bicaption{机理物理基线与GRU时序残差融合补偿框架}{Hybrid compensation framework integrating physical baseline and GRU temporal residual}
+	\fbox{\parbox{0.85\linewidth}{\raggedright 【图3占位说明：物理基线与 GRU 残差网络融合补偿框图。左侧输入主爪运动状态与原始测力，上方支路通过运动干扰扣除与二维耦合重加载公式计算物理基线 $\bm w_{\text{out},k}^{(0)}$；下方支路将物理基线、换手前锁存载荷 $\widehat{\bm D}_{9,k}$、含相对恢复行程的运动状态 $\bm q_{M,k}$、夹爪时序及干扰估计组成短时窗口，输入 GRU 预测残差 $\widehat{\bm r}_k$。物理基线减去残差后，经 S4～S8 锁存与 S9 边界平滑输出最终反馈 $\bm w_{\text{fb},k}$。标注稳态基准的更新、锁存及 S8 末测量初始化重加载项的位置。】}}
+	\bicaption{物理基线与GRU时序残差融合补偿框图}{Compensation framework combining the physical baseline and GRU temporal residual network}
 	\label{fig3}
 \end{figure*}
 
@@ -334,21 +336,29 @@
 
 实验平台基于双操作手协同血管介入机器人构建，受测器械包括 0.014 英寸导引导丝与 0.035 英寸造影导丝（以及用于对比的介入导管）。近端受测单元由移动主夹爪与辅助副夹爪组成：主爪滑台通过齿轮齿条沿器械轴向（$x$ 轴）平移，两夹爪工作面均覆有柔顺硅胶垫；回弹弹簧经连杆机构提供法向闭合预紧力（$y$ 轴），直线电缸通过压杆驱动夹爪张开。主爪内部布置两个正交的单轴拉压传感器，分别测量轴向力 $F_{xm}$ 与切向力 $F_{tm}$（经有效力臂 $\ell_{s}$ 换算为测量扭矩 $\tau_{xm}$）；副爪沿轴向由支撑弹簧承载。
 
-为在无附加偏心力矩干扰的条件下同步获取同轴参考力与参考扭矩真值 $\bm{w}_{\text{ref},k}$，实验采用与受测主爪完全同构的第二测力操作单元作为远端随动参考端。受测主/副夹爪与远端参考单元同轴夹持器械两端（中间串联受测血管模型或柔顺加载段）：受测主/副夹爪按预设时序执行 S1～S10 周期性往复夹持递送；远端参考单元则在全周期内保持闭合锁死（不执行松爪换手），仅在有效递送阶段（S1、S9、S10）随器械推进同步运动，而在受测主爪换手回退阶段（S2～S8）保持静止锚定。通过调控远端参考单元相对于受测主爪的运动轨迹差（或调整串联弹性加载组件预紧量），可在器械上生成可重复的恒定载荷与连续时变载荷。
+实验采用以下两套独立配置。
 
-由于远端参考单元全程无松爪换手与重加载过程，其接触界面始终维持稳态传力状态。在副爪完全释放的主爪独立承载阶段（S1、S2、S9、S10），受测主爪与远端参考单元构成单一串联受力链；将参考单元读数扣除其离线标定的零偏与自身浮动组件惯性后，所得净载荷在物理上即与主爪端器械承受的真实外部载荷大小相等、方向相反，从而直接作为监督训练与精度评估的独立参考真值 $\bm{w}_{\text{ref},k}$。倍福（Beckhoff）实时控制器以采样频率 $f_{s} = 250\,{\rm Hz}$ 同步采集受测主爪与参考单元的力/扭矩、位置、速度、加速度及夹爪开合指令。
+1) 双单元同轴参考标定与定量评估台架。拆下血管模型，采用与受测主爪同构的第二测力操作单元作为远端随动参考端，与近端受测主、副夹爪同轴夹持器械两端。参考端全程保持夹持，不执行换手；通过两端运动轨迹差或串联弹性加载组件施加恒定及连续时变载荷。考虑到超细柔性导丝在无管腔约束时直接受压易发生屈曲，该台架采用轴向对拉与周向对扭加载。固定夹紧条件下，硅胶垫的切向剪切变形及预滑移恢复在正、反方向上具有近似对称性，因此对拉实验可用于研究夹持支路的变形恢复与滞回；管腔内受压递送的表现则由第二套台架另行验证。
+
+去除血管模型后，器械不受分布管壁摩擦。在副爪完全松开的 S1、S2、S9、S10 阶段，受测主爪与参考端形成直接串联受力链；在忽略中间短段器械惯性的准静态条件下，两端净载荷大小相等、方向相反。参考端读数先扣除零偏、浮动组件惯性及旋转支路摩擦阻尼，再由其独立标定的传递矩阵换算为载荷，并按受测端的坐标正方向变换符号，得到参考真值 $\bm w_{\text{ref},k}$。该配置用于参数辨识、GRU 监督训练、有效承载阶段的定量精度评价，以及 S1/S9 阻力变化的保留率与延迟测量；S3～S8 不将参考端读数作为主爪外载真值。
+
+2) 介入血管模型递送验证台架。将导丝或导管置入具有实际血管曲率的介入血管模型，不安装远端同轴夹持单元，由主、副夹爪执行连续往复推进与旋转。在 S1 稳态递送和 S9 重加载初始推进阶段设置局部阻力突变，观察受压递送时的反馈连续性、换手跳变及新增阻力在反馈波形中的表现。该配置用于波形验证，不用同轴台架的参考载荷替代管腔内总阻力，也不据此计算带独立真值的跟踪误差。
+
+两套台架均使用倍福（Beckhoff）实时控制器，以 $f_s=250\,{\rm Hz}$ 同步采集力、扭矩、位置与夹爪开合指令，并记录速度、加速度及其时间戳；同轴台架同时采集参考单元信号。
 
 \subsection{参数辨识与多阶段物理模型验证}
 
-在固定器械类型与夹爪预紧条件下，依次开展静态标定、空载加减速运动、支路刚度测试及交接分压验证实验。静态标定采用标准砝码（0、20、40、60、80 g）与已知力臂联合加载，通过最小二乘拟合辨识名义传递矩阵 $\bm{H}_{0}$、有效力臂 $\ell_{s}$ 及静态零偏 $\bm{b}$。空载运动实验覆盖不同平移速度、旋转角速度及启停加减速工况，用于辨识式\eqref{eq3}中内侧浮动夹爪组件的等效惯性 $\bm{M}_{s}$、内部导向阻尼 $\bm{B}_{v}$、库仑摩擦 $\bm{F}_{c}$ 及开合瞬态耦合项 $\bm{p}_{\text{clamp}}$，并同步完成运动通道相位延迟校准。
+在固定器械类型、硅胶垫和夹爪预紧条件下，完成静态标定、空载运动、支路刚度测试及交接载荷分配验证。静态标定采用标准砝码（0、20、40、60、80 g）与已知力臂联合加载，通过最小二乘拟合辨识名义传递矩阵 $\bm H_0$、有效力臂 $\ell_s$ 和静态零偏 $\bm b$。空载平移加减速用于辨识 $m_s$，旋转变速与正反转用于辨识 $J_s,b_{v,\varphi},f_{c,\varphi}$；重复开合试验记录瞬态冲击响应，并按开合方向与事件后时间拟合 $\bm p_{\text{clamp}}$。这里式\eqref{eq3}的开合项包含动作指令历史，而非仅由当前二值指令决定。运动通道与开合动作延迟均在标定中对齐。
 
-在刚度与重加载特性辨识中，通过锁定一端并施加微小位移/转角增量，分别拟合主爪支路刚度 $k_{M}$、副爪支路刚度 $k_{S}$ 及特定测试构型下的器械段刚度 $k_{w}$，并在不同载荷与递送速度下拟合 S9 阶段的特征恢复尺度 $\lambda_{x},\lambda_{\varphi}$ 与评估阈值 $\Delta x_{\text{S9}}$。辨识得到的系统模型参数汇总于表\ref{tab1}。
+通过锁定一端并施加微小位移或转角，拟合主、副爪支路刚度 $k_M,k_S$ 及指定同轴测试构型的器械段刚度 $k_w$。在固定夹紧条件下，对不同载荷与速度的 S9 曲线联合拟合一组常数 $\lambda_{x0},\lambda_{\varphi0}$，再用独立试次检验式\eqref{eq10}。S9/S10 的阶段边界采用达到 95\% 稳态承载的恢复行程阈值 $\Delta x_{\text{S9}}$，按操作工况标定后固定用于该工况的全部对比方法。参数和待填标定值列于表\ref{tab1}。
+
+表中的 $k_w$ 和串联刚度分配比例只对应指定测试构型。血管模型中 $k_w$ 与 $F_{\text{lock}}$ 随导丝位置和管腔形态变化，不能将无管壁台架的标定值直接用于计算血管模型的 S8 承载。在线计算采用 S8 末实测值，并保存换手前稳态载荷；二者反映当前环境状态，区别于本体标定常数。
 
 \begin{table*}[h!t]
 	\centering
 	\bicaption{系统物理模型辨识参数汇总表}{Summary of system physical model identification parameters}
 	\label{tab1}
-	\begin{tabular}{lll}
+	\begin{tabular}{@{}p{0.22\linewidth}p{0.30\linewidth}p{0.42\linewidth}@{}}
 		\hline
 		参数名称 & 符号及量纲 & 辨识方法与标定值 \\
 		\hline
@@ -356,60 +366,67 @@
 		切向通道有效力臂 & $\ell_{s}$ (${\rm mm}$) & 标准扭矩与切向力线性拟合；[待补] \\
 		传感器静态零位偏置 & $\bm{b}$ (${\rm N}, {\rm N}\cdot{\rm mm}$) & 静止空载稳态均值记录；[待补] \\
 		浮动组件等效惯性参数 & $m_{s}$ (${\rm N}\cdot{\rm s}^{2}/{\rm mm}$), $J_{s}$ (${\rm N}\cdot{\rm mm}\cdot{\rm s}^{2}/{\rm rad}$) & 空载不同加减速响应拟合；[待补] \\
-		内部导向摩擦与阻尼参数 & $\bm{F}_{c}$ (${\rm N}, {\rm N}\cdot{\rm mm}$), $\bm{B}_{v}$（载荷/速度） & 多速度空载往复与旋转试验；[待补] \\
+		旋转支路摩擦与阻尼参数 & $f_{c,\varphi}$ (${\rm N}\cdot{\rm mm}$)，$b_{v,\varphi}$ (${\rm N}\cdot{\rm mm}\cdot{\rm s}/{\rm rad}$) & 多速度空载正反转响应拟合；[待补] \\
+		夹爪开合瞬态冲击 & $\bm p_{\text{clamp}}$ (${\rm N}, {\rm N}\cdot{\rm mm}$) & 重复开合的事件响应拟合；[待补] \\
 		支路与受测段轴向刚度 & $k_{M}, k_{S}, k_{w}$ (${\rm N}/{\rm mm}$) & 锁定位移---载荷斜率拟合；[待补] \\
-		S8 串联被动分压系数 & $k_{M}/(k_{M} + k_{w})$（无量纲） & 刚度理论计算与 S8 实测对比；[待补] \\
-		重加载特征恢复尺度 & $\lambda_{x}$ (${\rm mm}$), $\lambda_{\varphi}$ (${\rm rad}$) & S9 位移/转角---载荷恢复曲线拟合；[待补] \\
+		S8 串联刚度分配比例 & $k_M/(k_M+k_w)$（无量纲） & 指定同轴测试构型下计算并与 S8 实测对比；[待补] \\
+		重加载特征恢复尺度 & $\lambda_{x0}$ (${\rm mm}$)，$\lambda_{\varphi0}$ (${\rm rad}$) & 固定夹紧条件下联合拟合耦合恢复曲线；[待补] \\
 		S9/S10 阶段评估阈值 & $\Delta x_{\text{S9}}$ (${\rm mm}$) & 95\% 稳态承载恢复行程标定；[待补] \\
 		运动与开合动作延迟 & $t_{v}, t_{a}, t_{c}$ (${\rm s}$) & 位置差分与事件阶跃响应对齐；[待补] \\
 		\hline
 	\end{tabular}
 \end{table*}
 
-在多阶段物理模型验证实验中，使用独立于辨识集的测试试次，并通过程序控制适当延长 S3～S4 与 S7～S8 的持续时间，以清晰观测双爪共持与释放交接过程。实验重点验证：1) S2 停止保载与 S3 副爪刚闭合时的主爪承载保持特性（$F_{M} \approx F_{\text{out}}$）；2) S7 主爪原地重夹持时的切向零变形特性（$F_{M} \approx 0$）；3) S8 副爪松开后式\eqref{eq6}对被动弹性分压的预测精度；4) S9 恢复推进阶段式\eqref{eq10}与式\eqref{eq11}物理基线对重加载主干爬升轨迹的跟踪效果（结果见图\ref{fig2}）。
+多阶段模型验证采用独立于辨识集的同轴测试试次，并适当延长 S3～S4 与 S7～S8，以观察双爪共持和释放过程。验证内容包括：S2 停止后原有载荷的保持；S3 新闭合副爪与 S7 新闭合主爪初始切向变形很小、但闭合冲击仍存在的现象；指定同轴构型中 S8 的被动载荷分配；以及 S9 中实测恢复曲线与式\eqref{eq10}的符合程度。同轴对拉台架只验证相应加载方向上的弹性分配，不据此辨识管腔静摩擦保持力。图\ref{fig2}用于说明变形过程，补偿输出与参考载荷的曲线对比见图\ref{fig4}，辨识误差与模型验证结果为[待补]。
 
 \subsection{往复递送综合对比与消融实验}
 
-综合评估实验设置两组核心操作工况：1) 纯轴向往复递送工况（$\omega_{M} = 0$），涵盖不同推进速度、加减速、周期性主副爪换手及不换手主动回拉，用于评估轴向重加载补偿、正常变速/换向滞回修正及扭矩通道串扰抑制效果；2) 轴向推进与周向旋转复合递送工况（$\omega_{M} \neq 0$），涵盖不同推进---旋转速度组合及旋转换向，用于评估力与扭矩双通道同步重加载恢复及耦合残差抑制效果。此外，在稳定递送段及 S9 初始推进段分别人为注入未参与训练的局部阻力突变扰动，以检验算法对真实突发血管阻力的保留能力。
+综合实验包含纯轴向与轴向---周向复合递送两组工况。纯轴向工况覆盖不同推进速度、加减速、周期性换手和不换手回拉，评价重加载误差、变速与换向滞回及扭矩通道串扰。复合工况覆盖不同推进与旋转速度组合及旋转换向，评价双通道恢复和耦合误差。在 S1 稳态递送与 S9 初始推进阶段，另施加未参与训练的局部阻力突变。同轴台架用于计算保留率和响应延迟，血管模型台架用于检查受压递送波形；S4～S8 不设置阻力突变验证。
 
-为防止残差网络过拟合于单一恒定载荷背景而抹平真实负载变化，训练数据集由约 30\% 的阶梯准恒定载荷试次与 70\% 的连续时变载荷试次混合构成。由于在时变载荷试次中，器械真实负载波动同时体现在主爪物理基线 $\bm{w}_{\text{out},k}^{(0)}$ 与远端参考真值 $\bm{w}_{\text{ref},k}$ 中，二者在式\eqref{eq15}相减构建残差标签 $\bm{r}_{k}$ 时真实负载波动相互抵消，从而迫使 GRU 仅学习由换手重加载与换向微滑移引起的局部接触残差。数据集按完整往复试次划分为训练集、验证集与独立测试集（试次数与比例为[待补]）。GRU 网络超参数由验证集选定：滑动窗口长度 $N = [\text{待补}]$，网络层数 $L = [\text{待补}]$，隐藏层维度 $H = [\text{待补}]$，平滑过渡窗口 $N_{b} = [\text{待补}]$，采用 Adam 优化器（学习率 $\eta = [\text{待补}]$）进行训练。
+同轴台架数据由约 30\% 的阶梯准恒定载荷试次与 70\% 的连续时变载荷试次组成。数据先按完整试次划分为训练、验证与独立测试集，再分别构造滑动窗口，避免同一试次的相邻窗口跨集合重复。试次数与划分比例为[待补]。残差标签按式\eqref{eq15}计算，包含物理基线与参考载荷之间的全部差值；时变加载用于增加训练中的载荷变化。
 
-对同一测试试次同步对比四种方法与参考真值（如图\ref{fig4}所示）：1) 原始测量信号（Raw）；2) 传统低通滤波（LPF，截止频率为[待补]）；3) 仅物理基线补偿（Physics Baseline，在式\eqref{eq17}中令 $\widehat{\bm{r}}_{k} = \bm{0}$）；4) 本文物理基线融合 GRU 残差补偿（Physics + GRU）。同时设置两组消融对比：移除式\eqref{eq10}重加载过渡项的残差模型（w/o Reloading Term）与无物理基线的纯端到端 GRU 回归模型（Pure GRU）。
+GRU 超参数由验证集选定：$N=[\text{待补}]$，层数 $L=[\text{待补}]$，隐藏维度 $H=[\text{待补}]$，平滑窗口 $N_b=[\text{待补}]$。采用 Adam 优化器，学习率 $\eta=[\text{待补}]$；通道损失权重、稳态均值窗口及判定阈值为[待补]。所有标准化参数只由训练集计算。
+
+在相同测试试次上对比 Raw、LPF、Physics Baseline 与 Physics + GRU（图\ref{fig4}）。Raw 展示未处理测量的完整卸载台阶；LPF 的截止频率为[待补]；Physics Baseline 令式\eqref{eq17}中的残差预测为零。除 Raw 外，以上方法及下述两组消融均采用相同的 S4～S8 数值锁存、同一 $k_v$ 和相同的 S9 边界平滑窗口与权重，各方法锁存自身在 $k_v$ 的输出。S4～S8 包括松爪回退、重新夹持和被动承载，统一锁存用于避免将这一处理带来的连续性优势归于补偿模型。
+
+两组消融均保留换手前稳态基准 $\widehat{\bm D}_{9,k}$、相对恢复行程、运动与夹爪时序信息，并使用相同数据划分、窗口长度和网络规模。w/o Reloading Term 移除式\eqref{eq10}，以 $\widehat{\bm w}_{M,k}$ 作为其基线及网络载荷输入，重新构造残差标签 $\widehat{\bm w}_{M,k}-\bm w_{\text{ref},k}$ 并训练。Pure GRU 将原始测量 $\bm y_k$ 与共同的稳态基准、恢复行程、运动和时序信息输入网络，直接以 $\bm w_{\text{ref},k}$ 监督预测载荷；不输入物理基线和干扰估计，也不在输出端叠加重加载项。两组消融分别检验耦合重加载项与完整物理基线的贡献。
 
 \begin{figure*}[h!t]
 	\centering
-	\includegraphics[width=0.88\linewidth]{fig4}
+	\fbox{\parbox{0.85\linewidth}{\raggedright 【图4占位说明：(a) 同轴台架纯轴向工况的轴向力曲线，对比 Raw、LPF、Physics Baseline、Physics + GRU 与有效参考载荷；(b) 复合递送工况的轴向力与扭矩曲线，统一时间轴并标注 S1～S10 阶段；(c) 在换手前后外部参考载荷准恒定的试次中，放大从 S3 开始至 S9 重加载完成、进入 S10 的完整交接重加载过程，标注式\eqref{eq19}的事件窗口 $\Omega_h$、最大瞬态偏离及各处理方法共用的锁存与平滑区间。参考真值仅在 S1、S2、S9、S10 绘制，S3～S8 留空或以无真值区阴影标记。误差统计分别列出 S1/S2/S10 与 S9 的 MAE、RMSE，全部数值由独立测试结果填写。】}}
 	\bicaption{纯轴向与复合递送工况下四种方法的测力补偿效果对比}{Comparison of force compensation performance among four methods under axial and composite delivery conditions}
 	\label{fig4}
 \end{figure*}
 
-以 $a \in \{ F,\tau\}$ 表示评价通道，$\Omega_{s}$ 表示指定阶段样本集合，$e_{a,k} = w_{\text{fb},a,k} - w_{\text{ref},a,k}$ 为反馈输出相对于参考真值的误差，分别统计稳态递送段（S1/S10）、交接保持段（S3～S8）及重加载段（S9）的平均绝对误差（MAE）与均方根误差（RMSE）：
+以 $a\in\{F,\tau\}$ 表示评价通道，$e_{a,k}=w_{\text{fb},a,k}-w_{\text{ref},a,k}$ 为相应方法输出的载荷误差。MAE 和 RMSE 仅在同轴台架中主爪与器械接触且独立承载、参考载荷有效的阶段统计。$\Omega_s$ 分别取稳态及停止承载段 S1/S2/S10 与重加载段 S9，两类结果单独报告：
 \begin{align}
 	\label{eq18}
 	\text{MAE}_{a,s} = \frac{1}{|\Omega_{s}|}\sum_{k \in \Omega_{s}}|e_{a,k}|,\quad
 	\text{RMSE}_{a,s} = \sqrt{\frac{1}{|\Omega_{s}|}\sum_{k \in \Omega_{s}}e_{a,k}^{2}}
 \end{align}
-针对每次换手过程，在覆盖 S3 至 S9 恢复尾段的事件窗口 $\Omega_{h}$ 内定义换手最大瞬态跳变误差 $E_{\text{peak},a}$，并定义进入 S9 后误差收敛并稳定于容差带 $\epsilon_{a}$ 内所需的重加载恢复时间 $t_{s,a}$：
+在换手前后外部参考载荷保持准恒定的稳态递送载荷试次中，以式\eqref{eq17}中的锁存输出 $w_{\text{fb},a,k_v}$ 为基准，在完整交接重加载事件窗口 $\Omega_h$ 内定义最大瞬态偏离 $E_{\text{peak},a}$，衡量换手过程的输出波动幅度。对 S9 及其后同一周期的 S10 有效参考样本，定义误差连续保持在容差带 $\epsilon_a$ 内所需的恢复时间 $t_{s,a}$：
 \begin{align}
 	\label{eq19}
 	\begin{cases}
-		E_{\text{peak},a} = \max\limits_{k \in \Omega_{h}}|e_{a,k}|, \\
+		E_{\text{peak},a}=\max\limits_{k\in\Omega_h}|w_{\text{fb},a,k}-w_{\text{fb},a,k_v}|, \\
 		t_{s,a} = \dfrac{k_{s,a} - k_{9}}{f_{s}}, \\
-		k_{s,a} = \min\left\{ k \ge k_{9} : \max\limits_{0 \le j < N_{s}}|e_{a,k + j}| \le \epsilon_{a}\right\}
+		k_{s,a}=\min\left\{k\in\Omega_{\text{rec}}:\max\limits_{0\le j<N_s}|e_{a,k+j}|\le\epsilon_a\right\}
 	\end{cases}
 \end{align}
-式中，通道容差 $\epsilon_{F},\epsilon_{\tau}$ 与连续稳定样本数 $N_{s}$ 设为[待补]。对未训练局部阻力突变扰动实验，另统计阻力峰值保留率与响应延迟（如图\ref{fig5}所示）。最后，在部署工控机（配置为[待补]）上以批大小 1 测试单步在线推理耗时，验证其是否满足实时控制周期要求，消融实验与跨工况泛化结果汇总如图\ref{fig6}所示。
+式中，$\Omega_h$ 从 S3 开始延伸至 S9 重加载完成、进入 S10 的首个采样时刻，包含两端边界，覆盖完整交接重加载周期；$\Omega_{\text{rec}}$ 为不早于 $k_9$、且其后连续 $N_s$ 个样本均处于本周期 S9/S10 有效参考区间的起始样本集合。若未满足稳定条件，则记为观察窗口内未恢复。$\epsilon_F,\epsilon_\tau$ 与 $N_s$ 为[待补]。S4～S8 期间涵盖松爪回退与重新夹持交接，系统输出统一采用锁存常值，故不在此区间统计对参考真值的跟踪误差（MAE 与 RMSE）。
 
-\begin{figure}[h!t]
-	\centering
-	\includegraphics[width=0.95\linewidth]{fig5}
-	\bicaption{保持期与重加载阶段未训练阻力突变扰动下的动态响应与保留效果}{Dynamic response and preservation performance under untrained resistance disturbance injection during hold and reloading stages}
-	\label{fig5}
-\end{figure}
+未训练扰动仅施加于 S1 和 S9（图\ref{fig5}）。同轴台架以扰动前局部基线为零点，计算反馈峰值增量与参考峰值增量之比，并在相同响应阈值下计算反馈与参考的起始时刻差；基线窗口、峰值搜索窗口、响应阈值及结果为[待补]。血管模型只报告对应阶段的反馈波形及阻力施加时刻。最后，在部署工控机（配置为[待补]）上以批大小 1 测量单步推理耗时，与 $250\,{\rm Hz}$ 控制周期比较。消融及跨器械、速度和载荷条件的独立测试结果汇总于图\ref{fig6}，各项误差、恢复时间、保留率、延迟及推理耗时均为[待补]。
 
 \begin{figure*}[h!t]
 	\centering
-	\includegraphics[width=0.88\linewidth]{fig6}
+	\fbox{\parbox{0.85\linewidth}{\raggedright 【图5占位说明：(a) 同轴台架 S1 稳态递送阶段的未训练阻力突变响应，绘制参考载荷及各方法输出；(b) 同轴台架 S9 初始推进阶段的同类响应，放大早期衰减与边界平滑区间，标注扰动施加时刻、峰值增量和响应延迟；(c) 血管模型受压递送中 S1 与 S9 局部阻力突变的原始及补偿波形，仅标注施加时刻，不绘制未测得的独立真值。各子图明确区分两套台架，定量保留率和延迟仅来自同轴台架。】}}
+	\bicaption{稳态递送与重加载阶段未训练阻力突变扰动下的动态响应与保留效果}{Dynamic response and preservation performance under untrained resistance disturbance injection during steady delivery and reloading stages}
+	\label{fig5}
+\end{figure*}
+
+\begin{figure*}[h!t]
+	\centering
+	\fbox{\parbox{0.85\linewidth}{\raggedright 【图6占位说明：(a) Physics + GRU、w/o Reloading Term 与 Pure GRU 的 S9 载荷恢复曲线及局部误差，标注共同的锁存和平滑设置；(b) 按 S1/S2/S10 与 S9 分组比较 MAE、RMSE 和恢复时间；(c) 按器械类型、运动速度与载荷条件列出独立测试结果，并报告批大小为 1 的在线推理耗时。说明两组消融均保留换手前载荷记忆和相对恢复行程，移除重加载项后重新构造残差标签并训练，Pure GRU 直接预测载荷。曲线、统计量及试次数均由实际结果填写。】}}
 	\bicaption{消融实验与多工况泛化性能综合评估}{Comprehensive evaluation of ablation studies and multi-condition generalization performance}
 	\label{fig6}
 \end{figure*}
