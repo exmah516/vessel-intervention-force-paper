@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  22 OCT 2026 13:44
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  23 OCT 2026 14:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1967,33 +1967,27 @@ Underfull \vbox (badness 3601) has occurred while \output is active []
 File: fig1.pdf Graphic file (type pdf)
 <use fig1.pdf>
 
-[2]
+[2] [3]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 5.0pt on input line 129.
-
-Underfull \hbox (badness 2903) in paragraph at lines 129--130
-[]\TU/SimSun(0)/m/n/10.53937 记 远 端 血 管 阻 力 与 阻 力 矩 向 量 为 $[][] \OT1/ztmcm/m/n/1
-0.53937 =
- []
-
-[3] [4] [5] [6] [7]
-Underfull \hbox (badness 10000) in paragraph at lines 365--365
+ [4] [5] [6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
 []|$[][]$ |\TU/SimSun(0)/m/n/9.03374 （对 角 元 无 量 纲，|  非 对 角 元 为
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 370.
-[8] (./JQR_LaTeX_Template.bbl
+(Font)              scaled to size 6.0pt on input line 371.
+[8] [9] (./JQR_LaTeX_Template.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.03pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.5pt on input line 1.
- [9]
+ [10]
 Underfull \hbox (badness 1406) in paragraph at lines 136--141
 []\T1/ntxtlf/m/n/8.5 GAO W, SRINI-VASAN N, PIAO D, et al.  []Legobot:
  []
 
-[10])
+)
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "KaiTi/BI" (it probably doesn't
@@ -2047,8 +2041,9 @@ Package fontspec Info:
 (fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
 
 
-Overfull \vbox (0.94781pt too high) has occurred while \output is active []
 
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 [11] (./JQR_LaTeX_Template.aux)
  ***********
@@ -2060,15 +2055,15 @@ L3 programming layer <2022/07/14>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `JQR_LaTeX_Template.out' has not changed.
-(rerunfilecheck)             Checksum: D9BE11058CC12766D5F7F35BA7F241AB;2933.
+(rerunfilecheck)             Checksum: 251E2F9D36764C4FBBAD63F680F436CF;2941.
  ) 
 Here is how much of TeX's memory you used:
  36641 strings out of 468168
  774822 string characters out of 5436525
- 1286797 words of memory out of 5000000
+ 1284746 words of memory out of 5000000
  64641 multiletter control sequences out of 15000+600000
  724208 words of font info for 208 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 137i,25n,143p,1741b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,25n,143p,1691b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on JQR_LaTeX_Template.xdv (11 pages, 284112 bytes).
+Output written on JQR_LaTeX_Template.pdf (11 pages).

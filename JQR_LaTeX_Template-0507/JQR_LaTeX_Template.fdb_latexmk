@@ -1,22 +1,22 @@
 # Fdb version 4
-["bibtex JQR_LaTeX_Template"] 1792647895.79239 "JQR_LaTeX_Template.aux" "JQR_LaTeX_Template.bbl" "JQR_LaTeX_Template" 1792647900.75605 0
+["bibtex JQR_LaTeX_Template"] 1792660636.23696 "JQR_LaTeX_Template.aux" "JQR_LaTeX_Template.bbl" "JQR_LaTeX_Template" 1792660685.75674 0
   "./jqr-num.bst" 1746663130 43614 f0f6141534b0260d7d09c52fba3d6b6b ""
   "./references.bib" 1792561122 9502 894133ee7dc3fb2aacd7a1e02ff2a436 ""
-  "JQR_LaTeX_Template.aux" 1792647899 10177 f1438ddbc6af1b0b9f1dd351c0c92605 "xelatex"
+  "JQR_LaTeX_Template.aux" 1792660683 10207 c3cd03323b102228a564a75cb5e9632e "xelatex"
   (generated)
   "JQR_LaTeX_Template.bbl"
   "JQR_LaTeX_Template.blg"
   (rewritten before read)
-["xdvipdfmx"] 1792647900.01721 "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template.pdf" "JQR_LaTeX_Template" 1792647900.76639 0
-  "JQR_LaTeX_Template.xdv" 1792647899 284112 15f3e50f1dc1194dcec03192d6e301a5 "xelatex"
+["xdvipdfmx"] 1792660684.995 "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template.pdf" "JQR_LaTeX_Template" 1792660685.76605 0
+  "JQR_LaTeX_Template.xdv" 1792660683 299720 154154efe662daf77dbc2bb005683d56 "xelatex"
   (generated)
   "JQR_LaTeX_Template.pdf"
   (rewritten before read)
-["xelatex"] 1792647896.20417 "JQR_LaTeX_Template.tex" "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template" 1792647900.7567 0
-  "JQR_LaTeX_Template.aux" 1792647899 10177 f1438ddbc6af1b0b9f1dd351c0c92605 "xelatex"
-  "JQR_LaTeX_Template.bbl" 1792647896 9698 56c36d460747920d14d03c3f58e9f132 "bibtex JQR_LaTeX_Template"
-  "JQR_LaTeX_Template.out" 1792647899 2933 d9be11058cc12766d5f7f35ba7f241ab "xelatex"
-  "JQR_LaTeX_Template.tex" 1792647833 55008 6de37ce43fc8d8d20d9be5763372e241 ""
+["xelatex"] 1792660680.80727 "JQR_LaTeX_Template.tex" "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template" 1792660685.75699 0
+  "JQR_LaTeX_Template.aux" 1792660683 10207 c3cd03323b102228a564a75cb5e9632e "xelatex"
+  "JQR_LaTeX_Template.bbl" 1792660636 9698 56c36d460747920d14d03c3f58e9f132 "bibtex JQR_LaTeX_Template"
+  "JQR_LaTeX_Template.out" 1792660683 2933 d9be11058cc12766d5f7f35ba7f241ab "xelatex"
+  "JQR_LaTeX_Template.tex" 1792660604 57730 d627dbbec14d595f3373c988c7c1c397 ""
   "JQRnew.cls" 1746663130 17453 19ce5a0006db23c04b6836b04e385812 ""
   "c:/Windows/Fonts/msyh.ttc" 1738878900 19704352 1e10e74402e59d54499af795caf0b135 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1783006662 3524 cb3e574dea2d1052e39280babc910dc8 ""
