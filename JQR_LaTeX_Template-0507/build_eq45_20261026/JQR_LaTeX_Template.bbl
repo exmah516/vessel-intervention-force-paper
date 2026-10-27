@@ -1,0 +1,208 @@
+\begin{thebibliography}{26}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\baselineskip=11bp plus0.1pt minus0.1pt
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Chen et~al.(2026)Chen, Yang, Fischer, et~al.]{ref1}
+CHEN~X, YANG~Y, FISCHER~N, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2026.3681030}{Remote
+  teleoperation of endovascular intervention robots: A systematic
+  review}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2026, 8\allowbreak
+  (2): 579-593.
+
+\bibitem[Guo et~al.(2019)Guo, Song, Yin, et~al.]{ref2}
+GUO~S, SONG~Y, YIN~X, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TRO.2019.2896763}{A novel
+  robot-assisted endovascular catheterization system with haptic force
+  feedback}\allowbreak[J].
+\newblock IEEE Transactions on Robotics, 2019, 35\allowbreak (3): 685-696.
+
+\bibitem[He et~al.(2018)He, Wang, and Zuo]{ref3}
+HE~C, WANG~S, ZUO~S.
+\newblock \href{http://dx.doi.org/10.1007/s11548-018-1722-x}{A linear stepping
+  endovascular intervention robot with variable stiffness and force
+  sensing}\allowbreak[J].
+\newblock International Journal of Computer Assisted Radiology and Surgery,
+  2018, 13\allowbreak (5): 671-682.
+
+\bibitem[Zhao et~al.(2018)Zhao, Guo, Xiao, et~al.]{ref4}
+ZHAO~Y, GUO~S, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0275-7}{Operating force
+  information on-line acquisition of a novel slave manipulator for vascular
+  interventional surgery}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 33.
+
+\bibitem[Wang et~al.(2021)Wang, Liu, Yan, et~al.]{ref6}
+WANG~K, LIU~J, YAN~W, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s11548-020-02278-w}{Force feedback
+  controls of multi-gripper robotic endovascular intervention: design,
+  prototype, and experiments}\allowbreak[J].
+\newblock International Journal of Computer Assisted Radiology and Surgery,
+  2021, 16\allowbreak (1): 179-192.
+
+\bibitem[Sankaran et~al.(2020)Sankaran, Chembrammel, and Kesavadas]{ref5}
+SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2045}{Force calibration for an
+  endovascular robotic system with proximal force measurement}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2020, 16\allowbreak (2): e2045.
+
+\bibitem[Al-Ahmad et~al.(2023)Al-Ahmad, Ourak, Vlekken, et~al.]{ref7}
+AL-AHMAD~O, OURAK~M, VLEKKEN~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2023.3291026}{Force control with
+  a novel robotic catheterization system based on braided sleeve
+  grippers}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2023, 5\allowbreak
+  (3): 602-613.
+
+\bibitem[Bao et~al.(2018)Bao, Guo, Xiao, et~al.]{ref8}
+BAO~X, GUO~S, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0318-0}{Compensatory force
+  measurement and multimodal force feedback for remote-controlled vascular
+  interventional robot}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (3): 74.
+
+\bibitem[Wang et~al.(2020)Wang, Yuan, Zeng, et~al.]{ref9}
+WANG~K, YUAN~H, ZENG~Y, et~al.
+\newblock \href{http://dx.doi.org/10.1109/ICMA49215.2020.9233703}{Reciprocating
+  operation method for vascular intervention surgery
+  robot}\allowbreak[C]//\allowbreak
+2020 IEEE International Conference on Mechatronics and Automation (ICMA).
+\newblock 2020: 1613-1618.
+
+\bibitem[Cao et~al.(2024)Cao, Guo, Guo, et~al.]{ref10}
+CAO~S, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TIM.2023.3342853}{A reciprocating
+  delivery device-based endovascular intervention robot with multimanipulators
+  collaboration}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2024, 73: 1-12.
+
+\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
+WANG~S, LIU~Z, SHU~X, et~al.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
+  sensing of a novel cardiovascular interventional surgery
+  robot}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2022, 18\allowbreak (4): e2406.
+
+\bibitem[Lyu et~al.(2024)Lyu, Guo, Yan, et~al.]{ref13}
+LYU~C, GUO~S, YAN~Y, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TIM.2024.3381290}{Deep-learning-based
+  force sensing method for a flexible endovascular surgery
+  robot}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2024, 73: 1-10.
+
+\bibitem[Wang et~al.(2024)Wang, Shen, Liu, et~al.]{ref14}
+WANG~S, SHEN~H, LIU~Z, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2023.3345028}{Tcn-based distal
+  force feedback strategy of a vascular interventional surgery
+  robot}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2024, 24\allowbreak (3): 4120-4130.
+
+\bibitem[Cho et~al.(2014)Cho, van Merri{\"e}nboer, Gulcehre, et~al.]{ref26}
+CHO~K, VAN MERRI{\"E}NBOER~B, GULCEHRE~C, et~al.
+\newblock \href{http://dx.doi.org/10.3115/v1/D14-1179}{Learning phrase
+  representations using rnn encoder--decoder for statistical machine
+  translation}\allowbreak[C]//\allowbreak
+Proceedings of the 2014 Conference on Empirical Methods in Natural Language
+  Processing (EMNLP).
+\newblock Doha, Qatar: ACL, 2014: 1724-1734.
+
+\bibitem[Fischer et~al.(2026)Fischer, Karstensen, and Mathis-Ullrich]{ref11}
+FISCHER~J, KARSTENSEN~L, MATHIS-ULLRICH~F.
+\newblock \href{http://arxiv.org/abs/2607.11779}{A compact top-loading robot
+  for endovascular interventions: Design, control and
+  evaluation}\allowbreak[R].
+\newblock arXiv, 2026.
+
+\bibitem[Guo et~al.(2018)Guo, Wang, Xiao, et~al.]{ref15}
+GUO~S, WANG~Y, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0278-4}{Study on real-time
+  force feedback for a master--slave interventional surgical robotic
+  system}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 37.
+
+\bibitem[Gao et~al.(2026)Gao, Srinivasan, Piao, et~al.]{ref16}
+GAO~W, SRINIVASAN~N, PIAO~D, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMECH.2026.3695773}{Legobot: Modular,
+  compact, device-agnostic robot for endovascular catheter and guidewire
+  manipulation in stroke thrombectomy}\allowbreak[J].
+\newblock IEEE/ASME Transactions on Mechatronics, 2026: 1-9.
+
+\bibitem[Duan et~al.(2026)Duan, Du, Li, et~al.]{ref17}
+DUAN~W, DU~W, LI~Z, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TIM.2026.3679188}{A high-precision
+  positioning and force sensing robotic system for multi-instrument
+  manipulation during robot-assisted endovascular intervention}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2026, 75: 1-14.
+
+\bibitem[Nazari et~al.(2025)Nazari, Catania, Sadeghian, et~al.]{ref18}
+NAZARI~A~A, CATANIA~J, SADEGHIAN~S, et~al.
+\newblock \href{http://dx.doi.org/10.1002/rcs.70073}{A master--follower
+  teleoperation system for robotic catheterisation: Design, characterisation
+  and tracking control}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2025, 21\allowbreak (3): e70073.
+
+\bibitem[Pantano et~al.(2026)Pantano, Wolf, Mathea, et~al.]{ref19}
+PANTANO~M, WOLF~T, MATHEA~P, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2026.3680997}{Force measurement
+  in robot-assisted endovascular procedures: A systematic
+  review}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2026, 8\allowbreak
+  (2): 594-611.
+
+\bibitem[Tiezzi et~al.(2007)Tiezzi and Kao]{ref20}
+TIEZZI~P, KAO~I.
+\newblock \href{http://dx.doi.org/10.1109/TRO.2006.889494}{Modeling of
+  viscoelastic contacts and evolution of limit surface for robotic contact
+  interface}\allowbreak[J].
+\newblock IEEE Transactions on Robotics, 2007, 23\allowbreak (2): 206-217.
+
+\bibitem[Zhang et~al.(2022)Zhang, Liang, and Zou]{ref21}
+ZHANG~T, LIANG~X, ZOU~Y.
+\newblock \href{http://dx.doi.org/10.1016/j.conengprac.2021.105012}{Robot
+  peg-in-hole assembly based on contact force estimation compensated by
+  convolutional neural network}\allowbreak[J].
+\newblock Control Engineering Practice, 2022, 120: 105012.
+
+\bibitem[Zhou et~al.(2026)Zhou, Cheung, Liu, et~al.]{ref22}
+ZHOU~Y, CHEUNG~Y~H, LIU~S, et~al.
+\newblock \href{http://dx.doi.org/10.1016/j.conengprac.2026.107140}{Sensorless
+  contact forces estimation for robotic manipulators using dual-stage
+  temporal-residual neural network compensation}\allowbreak[J].
+\newblock Control Engineering Practice, 2026, 176: 107140.
+
+\bibitem[Yan et~al.(2023)Yan, Guo, Lin, et~al.]{ref23}
+YAN~Y, GUO~S, LIN~Z, et~al.
+\newblock
+  \href{http://dx.doi.org/10.1109/TIM.2023.3309365}{Grasping-force-based
+  passive safety method for a vascular interventional surgery robot
+  system}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2023, 72: 1-12.
+
+\bibitem[Patni et~al.(2024)Patni, Stoudek, Chlup, et~al.]{ref24}
+PATNI~S~P, STOUDEK~P, CHLUP~H, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s00170-024-13678-6}{Online elasticity
+  estimation and material sorting using standard robot grippers}\allowbreak[J].
+\newblock The International Journal of Advanced Manufacturing Technology, 2024,
+  132\allowbreak (11--12): 6033-6051.
+
+\bibitem[Bicchi(1994)]{ref25}
+BICCHI~A.
+\newblock \href{http://dx.doi.org/10.1016/0921-8890(94)90055-8}{On the problem
+  of decomposing grasp and manipulation forces in multiple whole-limb
+  manipulation}\allowbreak[J].
+\newblock Robotics and Autonomous Systems, 1994, 13\allowbreak (2): 127-147.
+
+\end{thebibliography}

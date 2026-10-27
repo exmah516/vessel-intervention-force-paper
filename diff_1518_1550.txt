@@ -1,0 +1,148 @@
+--- step1518
++++ step1550
+@@ -91,10 +91,10 @@
+ \end{enumerate}
+ 
+-\begin{figure*}[h!t]
+-	\centering
+-	\includegraphics[width=0.88\linewidth]{fig1.png}
++\begin{figure}[h!t]
++	\centering
++	\includegraphics[width=\linewidth]{fig1.png}
+ 	\bicaption{往复夹持递送工作过程}{Timing of S1--S10 stages and evolution of physical phases during reciprocating clamping delivery}
+ 	\label{fig1}
+-\end{figure*}
++\end{figure}
+ 
+ \subsection{测力波动与补偿目标}
+@@ -173,10 +173,10 @@
+ 式中，$\eta_k$ 为串联刚度分配比例。式\eqref{eq6}说明，S8末主爪被动承接的载荷受远端弹性回弹限制，一般低于交接前副爪承担的完整阻力，造成重加载启动时的初始力阶跃亏缺。
+ 
+-\begin{figure*}[h!t]
+-	\centering
+-	\fbox{\parbox{0.85\linewidth}{\raggedright 【图2占位说明：(a) 近端二自由度测力支路与内侧浮动传力组件隔离体受力分析图；(b) 双爪交接与重夹持阶段串联刚度接触模型及载荷流动示意图。】}}
++\begin{figure}[h!t]
++	\centering
++	\fbox{\parbox{0.95\linewidth}{\raggedright 【图2占位说明：(a) 近端二自由度测力支路与内侧浮动传力组件隔离体受力分析图；(b) 双爪交接与重夹持阶段串联刚度接触模型及载荷流动示意图。】}}
+ 	\bicaption{传力机构隔离体与双爪交替承载接触力学模型}{Free-body diagram of force-sensing mechanism and contact mechanics model for alternating dual-gripper load transmission}
+ 	\label{fig2}
+-\end{figure*}
++\end{figure}
+ 
+ \subsection{串联刚度与轴向-周向耦合弹性重加载模型}
+@@ -225,5 +225,5 @@
+ 式中，$\bm{c}[k]$ 为开合指令（闭合取1，释放取0）；$\Delta t[k]$ 为距最近一次经动作延迟修正的开合动作触发的时间，用物理模型替代原始测量，既提供当前载荷大小参考，也减少开合冲击和运动干扰直接进入网络造成的过拟合风险。输入滑动窗口长度设为 $N=30$（对应30 ms历史时序）：$\bm{X}_k = [\bm{x}_{k-N+1},\ldots,\bm{x}_k]^{\rm T}$。
+ 
+-残差学习器由输入标准化层、2层单向GRU特征提取层和全连接线性输出层组成。隐层神经元数分别设为 $H_1=64$ 与 $H_2=32$。单个GRU单元的前向传播方程为\ucite{ref26}：
++残差学习器由输入标准化层、2层单向GRU特征提取层和全连接线性输出层组成（整体框架如图\ref{fig3}所示）。隐层神经元数分别设为 $H_1=64$ 与 $H_2=32$。单个GRU单元的前向传播方程为\ucite{ref26}：
+ \begin{align}
+ 	\label{eq14}
+@@ -260,10 +260,10 @@
+ 式中，$k$ 表示当前工作阶段，锁存值取S3前时刻的反馈输出 $\bm{w}_{\text{steady}}$。S3中主爪继续承载并伴随副爪闭合冲击，过渡权重 $\alpha_k$ 在 $[0,1]$ 之间线性单调递减；S9权重 $\gamma_k$ 随弹性恢复行程自然衰减，实现从锁存状态向恢复状态的连续过渡。
+ 
+-\begin{figure*}[h!t]
+-	\centering
+-	\fbox{\parbox{0.85\linewidth}{\raggedright 【图3占位说明：物理模型与GRU残差网络融合补偿框图。左侧输入主爪运动状态、开合时序与测量读数；上半支路为动力学及重加载物理模型；下半支路为特征构造与两层GRU残差网络；二者求和后经多阶段状态机与平滑模块输出最终反馈力与扭矩。】}}
++\begin{figure}[h!t]
++	\centering
++	\fbox{\parbox{0.95\linewidth}{\raggedright 【图3占位说明：物理模型与GRU残差网络融合补偿框图。左侧输入主爪运动状态、开合时序与测量读数；上半支路为动力学及重加载物理模型；下半支路为特征构造与两层GRU残差网络；二者求和后经多阶段状态机与平滑模块输出最终反馈力与扭矩。】}}
+ 	\bicaption{物理模型与GRU时序残差网络融合补偿原理框图}{Block diagram of hybrid compensation fusing physical baseline and GRU temporal residual network}
+ 	\label{fig3}
+-\end{figure*}
++\end{figure}
+ 
+ \section{实验验证与分析（Experimental validation and analysis）}
+@@ -271,5 +271,5 @@
+ \subsection{实验平台}
+ 
+-实验平台基于双操作手协同血管介入机器人构建，受测器械包括0.014英寸导引导丝与5F介入导管，主夹爪滑台平移及旋转由伺服电机驱动，近端测机构内为两个力恒LH-S09A3轴向力传感器。
++实验平台基于双操作手协同血管介入机器人构建，受测器械包括0.014英寸导引导丝与5F介入导管，主夹爪滑台平移及旋转由伺服电机驱动，近端测机构内为两个力恒LH-S09A3轴向力传感器。两套实验配置如图\ref{fig4}所示。
+ 
+ 实验采用以下两套独立配置：
+@@ -281,10 +281,10 @@
+ 测量与控制系统基于倍福控制总线构建，以 $250\,{\rm Hz}$ 同步记录测力读数、各轴运动状态（位置、速度、加速度）及夹爪开关数字量信号。采集的数据在工控机（Intel Core i7-11700，16 GB RAM）上进行在线处理与补偿输出。
+ 
+-\begin{figure*}[h!t]
+-	\centering
+-	\includegraphics[width=0.88\linewidth]{fig4.png}
++\begin{figure}[h!t]
++	\centering
++	\includegraphics[width=\linewidth]{fig4.png}
+ 	\bicaption{实验设置}{Experimental setup and two test configurations}
+ 	\label{fig4}
+-\end{figure*}
++\end{figure}
+ 
+ \subsection{测量参数标定与多阶段承载验证}
+@@ -315,8 +315,9 @@
+ 式中，$t_{\text{win}}$ 为重加载恢复时间搜索区间。实验统计结果如表\ref{tab1}所示。
+ 
+-\begin{table*}[h!t]
++\begin{table}[h!t]
+ 	\centering
+ 	\bicaption{稳态递送与重加载阶段力反馈重构误差对比}{Comparison of force feedback reconstruction errors during steady delivery and reloading}
+ 	\label{tab1}
++	\resizebox{\linewidth}{!}{%
+ 	\begin{tabular}{lll}
+ 		\toprule
+@@ -327,39 +328,40 @@
+ 		复合推进旋转（轴向+扭矩） & 综合重构RMSE ($F$/$\tau$) & 待填入具体实验对比指标 \\
+ 		\bottomrule
+-	\end{tabular}
+-\end{table*}
++	\end{tabular}%
++	}
++\end{table}
+ 
+ \subsubsection{阻力突变响应评估}
+ 
+-为检验补偿方法在消除换手伪影的同时是否能够真实传递远端新增阻力，开展未训练阻力突变测试。在S1稳态递送中途和S9重加载刚开始时，通过第二操作手在未预告时刻施加阶跃阻力突变。
+-
+-\begin{figure*}[h!t]
+-	\centering
+-	\fbox{\parbox{0.85\linewidth}{\raggedright 【图5占位说明：(a) 同轴台架S1稳态递送阶段的未训练阻力突变响应，绘制原始测力、物理模型、GRU预测与连续参考曲线；(b) S9重加载启动初期的阻力突变响应曲线，展示重加载过渡项与残差网络对突发阻力的快速跟随能力。】}}
++为检验补偿方法在消除换手伪影的同时是否能够真实传递远端新增阻力，开展未训练阻力突变测试。在S1稳态递送中途和S9重加载刚开始时，通过第二操作手在未预告时刻施加阶跃阻力突变，响应曲线如图\ref{fig5}所示。
++
++\begin{figure}[h!t]
++	\centering
++	\fbox{\parbox{0.95\linewidth}{\raggedright 【图5占位说明：(a) 同轴台架S1稳态递送阶段的未训练阻力突变响应，绘制原始测力、物理模型、GRU预测与连续参考曲线；(b) S9重加载启动初期的阻力突变响应曲线，展示重加载过渡项与残差网络对突发阻力的快速跟随能力。】}}
+ 	\bicaption{S1与S9阶段未训练阻力突变响应曲线}{Disturbance response waveforms to untrained resistance step in S1 and S9 stages}
+ 	\label{fig5}
+-\end{figure*}
++\end{figure}
+ 
+ \subsubsection{消融实验与模型泛化性分析}
+ 
+-进一步开展消融实验与泛化性测试，设置移除重加载过渡项（w/o Reloading Model）及移除GRU残差网络（w/o GRU）两组消融变体。在不同推进速度（$5\,{\rm mm/s}$、$10\,{\rm mm/s}$、$15\,{\rm mm/s}$）与不同夹爪预紧力条件下测试模型的泛化表现。
+-
+-\begin{figure*}[h!t]
+-	\centering
+-	\fbox{\parbox{0.85\linewidth}{\raggedright 【图6占位说明：(a) Physics + GRU、w/o Reloading Model 与 w/o GRU在S9阶段重构误差的消融对比柱状图；(b) 不同推进速度与预紧力工况下力反馈重构RMSE变化趋势图。】}}
++进一步开展消融实验与泛化性测试，设置移除重加载过渡项（w/o Reloading Model）及移除GRU残差网络（w/o GRU）两组消融变体。在不同推进速度（$5\,{\rm mm/s}$、$10\,{\rm mm/s}$、$15\,{\rm mm/s}$）与不同夹爪预紧力条件下测试模型的泛化表现，结果如图\ref{fig6}所示。
++
++\begin{figure}[h!t]
++	\centering
++	\fbox{\parbox{0.95\linewidth}{\raggedright 【图6占位说明：(a) Physics + GRU、w/o Reloading Model 与 w/o GRU在S9阶段重构误差的消融对比柱状图；(b) 不同推进速度与预紧力工况下力反馈重构RMSE变化趋势图。】}}
+ 	\bicaption{消融实验对比与不同速度及夹持预紧力下的泛化性分析}{Ablation study and generalization performance under various velocities and clamping forces}
+ 	\label{fig6}
+-\end{figure*}
++\end{figure}
+ 
+ \subsubsection{血管模型连续递送波形重构}
+ 
+-在具有真实解剖形态的介入血管模型中，操作机器人执行多周期往复夹持长距离连续推进与旋转递送。记录未补偿测力信号与本文方法输出的力与扭矩波形。
+-
+-\begin{figure*}[h!t]
+-	\centering
+-	\fbox{\parbox{0.85\linewidth}{\raggedright 【图7占位说明：(a) 介入血管模型多周期往复推进与旋转递送实测曲线，上栏为轴向反馈力，下栏为周向反馈扭矩；(b) 局部换手重加载窗口放大图，对比原始测量波形与重构连续反馈波形。】}}
++在具有真实解剖形态的介入血管模型中，操作机器人执行多周期往复夹持长距离连续推进与旋转递送。记录未补偿测力信号与本文方法输出的力与扭矩波形，如图\ref{fig7}所示。
++
++\begin{figure}[h!t]
++	\centering
++	\fbox{\parbox{0.95\linewidth}{\raggedright 【图7占位说明：(a) 介入血管模型多周期往复推进与旋转递送实测曲线，上栏为轴向反馈力，下栏为周向反馈扭矩；(b) 局部换手重加载窗口放大图，对比原始测量波形与重构连续反馈波形。】}}
+ 	\bicaption{介入血管模型多周期往复递送反馈波形重构}{Reconstructed continuous force and torque feedback waveforms during multi-cycle delivery in vascular phantom}
+ 	\label{fig7}
+-\end{figure*}
++\end{figure}
+ 
+ \section{讨论（Discussion）}
