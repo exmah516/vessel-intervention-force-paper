@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="216.0pt" height="85.03937007874015pt" viewBox="0 0 216.0 85.03937007874015">
+<svg xmlns="http://www.w3.org/2000/svg" width="215.43307086614175pt" height="85.03937007874015pt" viewBox="0 0 215.43307086614175 85.03937007874015">
 <rect width="100%" height="100%" fill="white"/>
-<rect x="28.080" y="5.102" width="184.680" height="27.789" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="30.080" y="15.102" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">force</text>
-<rect x="28.080" y="37.666" width="184.680" height="25.263" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
-<text x="30.080" y="47.666" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">position</text>
+<rect x="28.006" y="5.102" width="184.195" height="27.789" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
+<text x="30.006" y="15.102" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">force</text>
+<rect x="28.006" y="37.666" width="184.195" height="25.263" fill="none" stroke="#2c7bb6" stroke-width="1.2"/>
+<text x="30.006" y="47.666" font-family="Arial, sans-serif" font-size="8" fill="#2c7bb6">position</text>
 <text x="4" y="80.039" font-family="Arial, sans-serif" font-size="7" fill="#333">PASS: 0 fail, 0 warn</text>
 </svg>

@@ -1,0 +1,1043 @@
+{
+  "source": "D:\\Work_files\\Vessel intervention Robot\\力波动方法\\write\\论文撰写\\面向往复夹持递送的血管介入机器人力反馈扰动建模与残差抑制_MathType_编辑修复版.docx",
+  "source_sha256": "05663eeb7e64105e7915ca06c04caf716747601abd57cdc8a6f105d3da5fb868",
+  "objects": 172,
+  "repaired": 0,
+  "texvc_pass": 172,
+  "dataobject_pass": 172,
+  "results": [
+    {
+      "occurrence": 1,
+      "fixed_mtef_sha256": "858ef95fb3f1ae8be5293e73444e6a537d6fc386d159fac0f0d2ecb036509ee5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject1.bin"
+    },
+    {
+      "occurrence": 2,
+      "fixed_mtef_sha256": "abb32180294e71eb990641c000ab22ab13acca5c0e3048bb7d9122b603cdf29f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject2.bin"
+    },
+    {
+      "occurrence": 3,
+      "fixed_mtef_sha256": "26854f5a55ab42754be82bb83b88987a394190d7a15533b3d7fef0c7cdb3d563",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject3.bin"
+    },
+    {
+      "occurrence": 4,
+      "fixed_mtef_sha256": "7f32326138fb350e54ce080c23084812e160cd4487376dbfed7222677ad594be",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject4.bin"
+    },
+    {
+      "occurrence": 5,
+      "fixed_mtef_sha256": "269abbd7b61c24e0047def5cc8a6e71a4450b8914bf73cde468b4f230d183f5f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject5.bin"
+    },
+    {
+      "occurrence": 6,
+      "fixed_mtef_sha256": "7a9baee2ecea124b9e7ee6e1b47eb06a40d1d04b34be38d7336004ec428f8d3f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject6.bin"
+    },
+    {
+      "occurrence": 7,
+      "fixed_mtef_sha256": "29004a85514e96e62d91bd5ce6933b9a14b10edc921adcb88481606c34bfb25f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject7.bin"
+    },
+    {
+      "occurrence": 8,
+      "fixed_mtef_sha256": "48af14b93b869ba7f05efa609d58ff39bbf3f9e76208dc9ab455cc4962cb252e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject8.bin"
+    },
+    {
+      "occurrence": 9,
+      "fixed_mtef_sha256": "0d08e771d375a95a4661d16160d7621b50ce8056c7be425d702902d6c32186d2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject9.bin"
+    },
+    {
+      "occurrence": 10,
+      "fixed_mtef_sha256": "c03de7b5aae3d482ba713a9ce31f00e4c264bb2bc56881913183d63bef43cd41",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject10.bin"
+    },
+    {
+      "occurrence": 11,
+      "fixed_mtef_sha256": "0c32ba5d2bc4d0488f0e6d2944efdf037e76d7727f558caaab393267901f8317",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject11.bin"
+    },
+    {
+      "occurrence": 12,
+      "fixed_mtef_sha256": "f412c94cab9c66fb8e7f694c46b4cfab35db07d857ebb234fbd94e2c0f7057c1",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject12.bin"
+    },
+    {
+      "occurrence": 13,
+      "fixed_mtef_sha256": "22bd69a54795076913086504d42bbc82c171d326bd46241f602fadb6e2a4d11b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject13.bin"
+    },
+    {
+      "occurrence": 14,
+      "fixed_mtef_sha256": "2512c2d83917fccbf4ec59e31187308ab856a40fee315a5f95280eacd8d02dbf",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject14.bin"
+    },
+    {
+      "occurrence": 15,
+      "fixed_mtef_sha256": "6d6dec8639218bc391051620301500c44572aa9463ca93e7af3a95be3292a043",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject15.bin"
+    },
+    {
+      "occurrence": 16,
+      "fixed_mtef_sha256": "b13c7ebeddea3f3336ab3d5d5855725c2fc039218952397093d49bff17bd146f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject16.bin"
+    },
+    {
+      "occurrence": 17,
+      "fixed_mtef_sha256": "f14fb6ba401517e2a6cdf52fa26ded49496932d9fd2c9252b77d6ec8d6abb23d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject17.bin"
+    },
+    {
+      "occurrence": 18,
+      "fixed_mtef_sha256": "f603217d47721cadb374493a7955609bbd820197b19427313173a8ef714e455b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject18.bin"
+    },
+    {
+      "occurrence": 19,
+      "fixed_mtef_sha256": "3752b657569faba3701b222be529d2f7f383f412157e9461ef8c4755c544e74a",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject19.bin"
+    },
+    {
+      "occurrence": 20,
+      "fixed_mtef_sha256": "cd3a8b806514b3befc579703e8219e521079967382f6e10deb925bcac8616c23",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject20.bin"
+    },
+    {
+      "occurrence": 21,
+      "fixed_mtef_sha256": "ebb4ce7f580c011e0190ebe562006afa2a6d89a7ff629f8a79267e07e35cd942",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject21.bin"
+    },
+    {
+      "occurrence": 22,
+      "fixed_mtef_sha256": "76a2b911a26a1442555b1687e66c452814c369c2e06d57291e8081f7eaf0b835",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject22.bin"
+    },
+    {
+      "occurrence": 23,
+      "fixed_mtef_sha256": "823b48d3ddb254c15e6aa1589c86e1d33d366249e13bf8c82692e5fc23c8762f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject23.bin"
+    },
+    {
+      "occurrence": 24,
+      "fixed_mtef_sha256": "123a0a3be3ae40687c1809d3a1b59671abef2526481fdc41c5b3efd20d7f957f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject24.bin"
+    },
+    {
+      "occurrence": 25,
+      "fixed_mtef_sha256": "decce2b921994bbb65794a58249608d4a032e76f519a656d6a38db20ef0b02ba",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject25.bin"
+    },
+    {
+      "occurrence": 26,
+      "fixed_mtef_sha256": "5400234c8be9f4017ff6e42d1ab099b0dec095ffb2e4a90a4d1499e316a650bc",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject26.bin"
+    },
+    {
+      "occurrence": 27,
+      "fixed_mtef_sha256": "858ef95fb3f1ae8be5293e73444e6a537d6fc386d159fac0f0d2ecb036509ee5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject27.bin"
+    },
+    {
+      "occurrence": 28,
+      "fixed_mtef_sha256": "abb32180294e71eb990641c000ab22ab13acca5c0e3048bb7d9122b603cdf29f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject28.bin"
+    },
+    {
+      "occurrence": 29,
+      "fixed_mtef_sha256": "a9363135b8b741d56aba578da8e87eca21345f3a077ca8d0c46c42fe93ea83d0",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject29.bin"
+    },
+    {
+      "occurrence": 30,
+      "fixed_mtef_sha256": "fb97d77df8771c339ba736f447e95f65a66b25c284d5a33524ba1f47a8ccb3cc",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject30.bin"
+    },
+    {
+      "occurrence": 31,
+      "fixed_mtef_sha256": "a3b1a6a1d94237305133a1b33669636b319d4bcffc30d186c2343aac9d08e3bc",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject31.bin"
+    },
+    {
+      "occurrence": 32,
+      "fixed_mtef_sha256": "3aa39840058d7a28f035a15a1e205f6d4571c7f202bdea879aeff5712d9be673",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject32.bin"
+    },
+    {
+      "occurrence": 33,
+      "fixed_mtef_sha256": "6ea94014c1d359835bac41cf5416cd0035206ef04d83a640511bf49b1ebc7e26",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject33.bin"
+    },
+    {
+      "occurrence": 34,
+      "fixed_mtef_sha256": "bc82ffa6bf30efd036eaf66cdd7d3da84bb52b344c5d9d409c8aecb89dd50048",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject34.bin"
+    },
+    {
+      "occurrence": 35,
+      "fixed_mtef_sha256": "49c960327e4b33a25ea8a74a001651e20d97239a8aa038990415c080e73256a9",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject35.bin"
+    },
+    {
+      "occurrence": 36,
+      "fixed_mtef_sha256": "ba9633082990901437222346f55d42648b67e0013df840434d6193f698af08e8",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject36.bin"
+    },
+    {
+      "occurrence": 37,
+      "fixed_mtef_sha256": "4e31ac4857e391455c5d08ac89d1aef2b76177a20be7f92ee0eaca871e835a75",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject37.bin"
+    },
+    {
+      "occurrence": 38,
+      "fixed_mtef_sha256": "acb612ef6fc1037db52d08088c770ece4d7ee9b1d22ab0cc0a620516b061c399",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject38.bin"
+    },
+    {
+      "occurrence": 39,
+      "fixed_mtef_sha256": "535870619868d017fa1dd258342e7bd297731ef56f2e5da7fdb402cf9ff88f72",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject39.bin"
+    },
+    {
+      "occurrence": 40,
+      "fixed_mtef_sha256": "04d5b2bf8e5f36642d477c683d014f49be399b47ab7cb7fa5797d5a69f35d0a4",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject40.bin"
+    },
+    {
+      "occurrence": 41,
+      "fixed_mtef_sha256": "383bfab1736bfb8b61e53eda18492481b51bb4c1c3131f24d5bc520b10dd00be",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject41.bin"
+    },
+    {
+      "occurrence": 42,
+      "fixed_mtef_sha256": "fb7eaae78545458583035f28c8b7ebd18adbfc537af7daf07f4bff5e95ca286c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject42.bin"
+    },
+    {
+      "occurrence": 43,
+      "fixed_mtef_sha256": "812890e05b7ddf3373d0b2041a93bc11191d1b4b69ba3c8f0b980aca07466482",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject43.bin"
+    },
+    {
+      "occurrence": 44,
+      "fixed_mtef_sha256": "8aab09a7ff9d8003e89f02cf6d455059d5ff27987326f3f3dd7b8ec8614bcbc5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject44.bin"
+    },
+    {
+      "occurrence": 45,
+      "fixed_mtef_sha256": "e9e6736cb3207e8185f9e4c2be0ce08593335e6da5d9d5c7b5a8fa92ad1507c2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject45.bin"
+    },
+    {
+      "occurrence": 46,
+      "fixed_mtef_sha256": "8438682fbca953b9dca4ae9039d9db8b5401abd019e4e1123948a3f47c8ef48b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject46.bin"
+    },
+    {
+      "occurrence": 47,
+      "fixed_mtef_sha256": "6ea1e096a8e0be8e4967b938cac7546acb01da4de68e52a950c9ef998839e540",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject47.bin"
+    },
+    {
+      "occurrence": 48,
+      "fixed_mtef_sha256": "5cd1ef206fa97041abafcee768a0f839a7b81672dcb30fde8902ec3613f73de2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject48.bin"
+    },
+    {
+      "occurrence": 49,
+      "fixed_mtef_sha256": "c2adbf78c7c618184336261ae0195310fe1722612c2931e71ca6ac684b438ca5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject49.bin"
+    },
+    {
+      "occurrence": 50,
+      "fixed_mtef_sha256": "2d8054c4b058552c74d4209bff74ae7edf14c5cf58a8e6c16997445730020f86",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject50.bin"
+    },
+    {
+      "occurrence": 51,
+      "fixed_mtef_sha256": "a36a6eff98210779b55e57ce8a767766a56b379cd0d49bb57752e101498e9819",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject51.bin"
+    },
+    {
+      "occurrence": 52,
+      "fixed_mtef_sha256": "f02029d654d9a85e6750b8d9ae9d7cbb86efeb8324b111031eaacdc9ec5d6529",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject52.bin"
+    },
+    {
+      "occurrence": 53,
+      "fixed_mtef_sha256": "28f6497788534aadd610167acf65d312288c5dad97faaf568a49ceb35b72481a",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject53.bin"
+    },
+    {
+      "occurrence": 54,
+      "fixed_mtef_sha256": "5d678d1b1853102a6b2a435d870dd5ff68f870adcdc4898949a8f295f3a6ea5a",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject54.bin"
+    },
+    {
+      "occurrence": 55,
+      "fixed_mtef_sha256": "83ce488fd587df3ee32958f5a722780d5fff4240d1ff8f1ad6f7dce77b22bad3",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject55.bin"
+    },
+    {
+      "occurrence": 56,
+      "fixed_mtef_sha256": "407d71824ebf9af3c89dc3ba8c1f8f1e9f03570b733417eed14c31595476250d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject56.bin"
+    },
+    {
+      "occurrence": 57,
+      "fixed_mtef_sha256": "5fce19ca45e9397badeffbd734371db87897c070b3a12c4ada527af6bfad699e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject57.bin"
+    },
+    {
+      "occurrence": 58,
+      "fixed_mtef_sha256": "91f414339a7026d18cb0ee7b0765384c5e44ffb0e6e53b97ce9ec2010cad8d48",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject58.bin"
+    },
+    {
+      "occurrence": 59,
+      "fixed_mtef_sha256": "bb13ace4434fbc7a4872227dcddd9899b1dd522327c64af2f9320f3f556512a2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject59.bin"
+    },
+    {
+      "occurrence": 60,
+      "fixed_mtef_sha256": "872ab387d4a07705d1ed01e366293571e68a563971e1aea5e40cc48713bbcb76",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject60.bin"
+    },
+    {
+      "occurrence": 61,
+      "fixed_mtef_sha256": "3e311242769ad486b26a8e20f5af21d5d3c486271e0f2f649c33faa2147aa621",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject61.bin"
+    },
+    {
+      "occurrence": 62,
+      "fixed_mtef_sha256": "ee787df5b06f16cf0f0a817c5e5295363c43238fc42a1b566531edce8958056e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject62.bin"
+    },
+    {
+      "occurrence": 63,
+      "fixed_mtef_sha256": "8aab09a7ff9d8003e89f02cf6d455059d5ff27987326f3f3dd7b8ec8614bcbc5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject63.bin"
+    },
+    {
+      "occurrence": 64,
+      "fixed_mtef_sha256": "90c6375a754002acf3360be3b02231f5fb6f87d798e8829c265f1a24e6062afc",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject64.bin"
+    },
+    {
+      "occurrence": 65,
+      "fixed_mtef_sha256": "a58d59ba5352968d863d02fbe536266e4a160662d766d48f7a59bee8fadca8fe",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject65.bin"
+    },
+    {
+      "occurrence": 66,
+      "fixed_mtef_sha256": "d83be32f167677800b3c09c7ca38c362aa9688ae920e76c2d2f39bd73cf900b6",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject66.bin"
+    },
+    {
+      "occurrence": 67,
+      "fixed_mtef_sha256": "26256aa986a93aebd0e08cfb5c48c706ea28e94987358029eb3936ef66755992",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject67.bin"
+    },
+    {
+      "occurrence": 68,
+      "fixed_mtef_sha256": "3fc2f91a9a45358b2bbbbdd4ea52982ab4fc7c94f5ad24dcb0ee72af680114ce",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject68.bin"
+    },
+    {
+      "occurrence": 69,
+      "fixed_mtef_sha256": "407d71824ebf9af3c89dc3ba8c1f8f1e9f03570b733417eed14c31595476250d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject69.bin"
+    },
+    {
+      "occurrence": 70,
+      "fixed_mtef_sha256": "d095fc8f2978a12c1fbfe4c70279e654ec084b53ced7a88233d00481282a56ad",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject70.bin"
+    },
+    {
+      "occurrence": 71,
+      "fixed_mtef_sha256": "7d457edb6f7625638b6f995a5a6248c76f0df053f7f2f9c521a17ff85ba0f8e3",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject71.bin"
+    },
+    {
+      "occurrence": 72,
+      "fixed_mtef_sha256": "886bf71c31192fd096085eee42fe9fea8200a9ad2db3c9e822d2d215c02373f4",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject72.bin"
+    },
+    {
+      "occurrence": 73,
+      "fixed_mtef_sha256": "b7b63103f536515ad72344fbf3c3c199d948477a824073f54e85004ef279be92",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject73.bin"
+    },
+    {
+      "occurrence": 74,
+      "fixed_mtef_sha256": "377492daef1f7cf2f4845501e269fd2f8d043ac825b81e0e98441c5208165e38",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject74.bin"
+    },
+    {
+      "occurrence": 75,
+      "fixed_mtef_sha256": "0b32e43c7ee1fa9e3f68ca952b196b00ae9fd518b825a757c1fafd7bee2b8322",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject75.bin"
+    },
+    {
+      "occurrence": 76,
+      "fixed_mtef_sha256": "656099c4c7ea6e9cd33e80b4c7b9d2a38e08e83a82ec40e8450c9b177e7f9d99",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject76.bin"
+    },
+    {
+      "occurrence": 77,
+      "fixed_mtef_sha256": "fa96f008dfcce3af5653be6d56cf13bc50af16940dc45c423990bc7b1dc65d8f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject77.bin"
+    },
+    {
+      "occurrence": 78,
+      "fixed_mtef_sha256": "92ab099e0f3efa2e918108ea95ad869078746921487101fe9372b0651ff383ee",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject78.bin"
+    },
+    {
+      "occurrence": 79,
+      "fixed_mtef_sha256": "fedc8c381c956e903e155beee5ba55ee9981d740a90a1520c328454ad977d15e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject79.bin"
+    },
+    {
+      "occurrence": 80,
+      "fixed_mtef_sha256": "6a94a0c49f91208669e8d02cde0800e99a67472b1f0c00d89a8f70f0e9aaa167",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject80.bin"
+    },
+    {
+      "occurrence": 81,
+      "fixed_mtef_sha256": "5f0d5317cce517a5b937c833759b709991e718acbb13fecc98e056d22db6086c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject81.bin"
+    },
+    {
+      "occurrence": 82,
+      "fixed_mtef_sha256": "4af568bb076fb58cb94a2341e898f6399b704ff39de0f24059502503f4bed703",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject82.bin"
+    },
+    {
+      "occurrence": 83,
+      "fixed_mtef_sha256": "f056ad02a55f419a63984c23e8c472288a9ee7823d3b62a2ae7107daf95c9930",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject83.bin"
+    },
+    {
+      "occurrence": 84,
+      "fixed_mtef_sha256": "8aab09a7ff9d8003e89f02cf6d455059d5ff27987326f3f3dd7b8ec8614bcbc5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject84.bin"
+    },
+    {
+      "occurrence": 85,
+      "fixed_mtef_sha256": "01ddfa06284e8a3ad080e211f2040a9e026b4a10d04170fbae96763132e8a1cf",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject85.bin"
+    },
+    {
+      "occurrence": 86,
+      "fixed_mtef_sha256": "c38a85819991d714ec13f4d520c1d16fa77cd017359a7d3c98bc35ac4bdff66d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject86.bin"
+    },
+    {
+      "occurrence": 87,
+      "fixed_mtef_sha256": "7ce7bc5f4737f0932112d9ac1d919338519f1c278ca2577000c8a63ca6bc4adb",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject87.bin"
+    },
+    {
+      "occurrence": 88,
+      "fixed_mtef_sha256": "257a703239e09e51addbd84c228e2ff8d61cc2a498ff355d0022f4389910a134",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject88.bin"
+    },
+    {
+      "occurrence": 89,
+      "fixed_mtef_sha256": "b041e5cf1394bf570a7b31303f3f3b753f60e29e92145384105c682da64ad693",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject89.bin"
+    },
+    {
+      "occurrence": 90,
+      "fixed_mtef_sha256": "eb736aa178543c649d0f270adc1270cb696653116f9145014bf0d75482253870",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject90.bin"
+    },
+    {
+      "occurrence": 91,
+      "fixed_mtef_sha256": "8c76a9232b1a9937eea4a61f82bcf707b63b3cbb6ac0987515eb71ccc4968609",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject91.bin"
+    },
+    {
+      "occurrence": 92,
+      "fixed_mtef_sha256": "10cfdaa65c64243c8eb5854b7d4c4224e618dbecd0cf2cbcae75a77527a24f65",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject92.bin"
+    },
+    {
+      "occurrence": 93,
+      "fixed_mtef_sha256": "8388fe3594defc5d4e17745e19ac14292d8a93629e4481b023efe5673956c438",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject93.bin"
+    },
+    {
+      "occurrence": 94,
+      "fixed_mtef_sha256": "9f0e87d9e5fe2527f5d718180fb47a2cfc688034b9618e7e369c5450717a7f4d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject94.bin"
+    },
+    {
+      "occurrence": 95,
+      "fixed_mtef_sha256": "4d80f84918da2f627680cbacf0df30de3902e9af8f6b0143fffdbf1b17aa9938",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject95.bin"
+    },
+    {
+      "occurrence": 96,
+      "fixed_mtef_sha256": "1ab4832d0e27fcf44f09d0a69b95b295d56e4f95bcba43ff364163348f2be021",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject96.bin"
+    },
+    {
+      "occurrence": 97,
+      "fixed_mtef_sha256": "8c76a9232b1a9937eea4a61f82bcf707b63b3cbb6ac0987515eb71ccc4968609",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject97.bin"
+    },
+    {
+      "occurrence": 98,
+      "fixed_mtef_sha256": "10cfdaa65c64243c8eb5854b7d4c4224e618dbecd0cf2cbcae75a77527a24f65",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject98.bin"
+    },
+    {
+      "occurrence": 99,
+      "fixed_mtef_sha256": "d9ca3159e3eba977f300dce7436207ee9d269608290e91c778a763297b3b338b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject99.bin"
+    },
+    {
+      "occurrence": 100,
+      "fixed_mtef_sha256": "eec5a0c2fa8c0b4ec6da57a00a9ce3d9dab2f2432945934cb99a15dd79ce8424",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject100.bin"
+    },
+    {
+      "occurrence": 101,
+      "fixed_mtef_sha256": "168eecdbb914f0608a557337fb4f2a7c4aad60d6037ed6decfaeafa7c0e3d0bb",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject101.bin"
+    },
+    {
+      "occurrence": 102,
+      "fixed_mtef_sha256": "eda6591acd748b969cc5f59dd3e060f7c071cddcbb2c7be57c2cea45cd965422",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject102.bin"
+    },
+    {
+      "occurrence": 103,
+      "fixed_mtef_sha256": "12c241ca6bfdb1eb4b6b1192df1e51857ad63183c92ef5b904a9896e2cc8fbc4",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject103.bin"
+    },
+    {
+      "occurrence": 104,
+      "fixed_mtef_sha256": "c27c3a180622562af0985c6ea26bdb74f93f0f16c13fbe3c738a2f361e614c47",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject104.bin"
+    },
+    {
+      "occurrence": 105,
+      "fixed_mtef_sha256": "9949f73b820f4efdbb4873e44c29e66eca44feea53fb130cf149f0662476f6b4",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject105.bin"
+    },
+    {
+      "occurrence": 106,
+      "fixed_mtef_sha256": "c9b8fbf50733b74bd8b69ad1a0b417d4c5d3c008c8240c7f2c881622ae969e78",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject106.bin"
+    },
+    {
+      "occurrence": 107,
+      "fixed_mtef_sha256": "75609a32f5b3c39f2bcf2625928aa3110698803009aea5e9d473951c48f5cd47",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject107.bin"
+    },
+    {
+      "occurrence": 108,
+      "fixed_mtef_sha256": "abf9600da996efe19255df594d64dd2032ab3f1f92ddc87ad6cb362fa42aab99",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject108.bin"
+    },
+    {
+      "occurrence": 109,
+      "fixed_mtef_sha256": "75609a32f5b3c39f2bcf2625928aa3110698803009aea5e9d473951c48f5cd47",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject109.bin"
+    },
+    {
+      "occurrence": 110,
+      "fixed_mtef_sha256": "4b3428e34e5732341a968ca9b293bd8cb7c103f66cd230638bf745df0e9558df",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject110.bin"
+    },
+    {
+      "occurrence": 111,
+      "fixed_mtef_sha256": "d54152d664ff24b489d1e4ceb54df28a01daecc977e07808f6b0cdd8de252b4b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject111.bin"
+    },
+    {
+      "occurrence": 112,
+      "fixed_mtef_sha256": "4ed9b0bfdbc867144d227c64a8adec3d00f9e399154fd8808070800f54426578",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject112.bin"
+    },
+    {
+      "occurrence": 113,
+      "fixed_mtef_sha256": "01a08b035c72b36a744be1698c54b1f0d79caf20ea9bc5b326b2636dacb3265f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject113.bin"
+    },
+    {
+      "occurrence": 114,
+      "fixed_mtef_sha256": "22746413c7658dbe6012cd8a002da572df0b2b68c4b12400fb5a157885648ca1",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject114.bin"
+    },
+    {
+      "occurrence": 115,
+      "fixed_mtef_sha256": "48af14b93b869ba7f05efa609d58ff39bbf3f9e76208dc9ab455cc4962cb252e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject115.bin"
+    },
+    {
+      "occurrence": 116,
+      "fixed_mtef_sha256": "c753407ef9f470f87afceef07fb28f09e5b07de4a547fc50d16a6e3a635e5f47",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject116.bin"
+    },
+    {
+      "occurrence": 117,
+      "fixed_mtef_sha256": "8a16aa89a1f16d723d5112d216c97628d5520a59f87e478acb894623e77c8e86",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject117.bin"
+    },
+    {
+      "occurrence": 118,
+      "fixed_mtef_sha256": "8e317ac9637be3df1edfbbda82c31b15d93dbcd37fc43ca6d7b70ffccde318b5",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject118.bin"
+    },
+    {
+      "occurrence": 119,
+      "fixed_mtef_sha256": "22746413c7658dbe6012cd8a002da572df0b2b68c4b12400fb5a157885648ca1",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject119.bin"
+    },
+    {
+      "occurrence": 120,
+      "fixed_mtef_sha256": "48af14b93b869ba7f05efa609d58ff39bbf3f9e76208dc9ab455cc4962cb252e",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject120.bin"
+    },
+    {
+      "occurrence": 121,
+      "fixed_mtef_sha256": "decce2b921994bbb65794a58249608d4a032e76f519a656d6a38db20ef0b02ba",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject121.bin"
+    },
+    {
+      "occurrence": 122,
+      "fixed_mtef_sha256": "76a2b911a26a1442555b1687e66c452814c369c2e06d57291e8081f7eaf0b835",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject122.bin"
+    },
+    {
+      "occurrence": 123,
+      "fixed_mtef_sha256": "823b48d3ddb254c15e6aa1589c86e1d33d366249e13bf8c82692e5fc23c8762f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject123.bin"
+    },
+    {
+      "occurrence": 124,
+      "fixed_mtef_sha256": "c55a3bc326db5603cf247c8b2f15409981404c906a319cdfe4c078561da685fd",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject124.bin"
+    },
+    {
+      "occurrence": 125,
+      "fixed_mtef_sha256": "945e0177b4d388bc35feb1e2a5e6a6109cbd9d74b41342063ca609bcc8963aa9",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject125.bin"
+    },
+    {
+      "occurrence": 126,
+      "fixed_mtef_sha256": "872ab387d4a07705d1ed01e366293571e68a563971e1aea5e40cc48713bbcb76",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject126.bin"
+    },
+    {
+      "occurrence": 127,
+      "fixed_mtef_sha256": "34e1ff2aec6345bc062b3321bf72288b24a983932807035efa54d3ca6f483de7",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject127.bin"
+    },
+    {
+      "occurrence": 128,
+      "fixed_mtef_sha256": "c5de493b9248c3408e3c30d262ce7d77337aa7295ab83754d2f5a0d4ba3794af",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject128.bin"
+    },
+    {
+      "occurrence": 129,
+      "fixed_mtef_sha256": "bb13ace4434fbc7a4872227dcddd9899b1dd522327c64af2f9320f3f556512a2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject129.bin"
+    },
+    {
+      "occurrence": 130,
+      "fixed_mtef_sha256": "8edd0a648c96ca7aef8a3e632231215b26a3f00bb8b91799f44ced236dcf42f4",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject130.bin"
+    },
+    {
+      "occurrence": 131,
+      "fixed_mtef_sha256": "068cc347f53e546edf50545abcc5d1a29f23d894c7bfef80aa4bfa22cb35d670",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject131.bin"
+    },
+    {
+      "occurrence": 132,
+      "fixed_mtef_sha256": "168abc127a838c68a62772966bb0bfdbba7b77962d81f2cdd08fd3c74257ec39",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject132.bin"
+    },
+    {
+      "occurrence": 133,
+      "fixed_mtef_sha256": "c5de493b9248c3408e3c30d262ce7d77337aa7295ab83754d2f5a0d4ba3794af",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject133.bin"
+    },
+    {
+      "occurrence": 134,
+      "fixed_mtef_sha256": "407d71824ebf9af3c89dc3ba8c1f8f1e9f03570b733417eed14c31595476250d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject134.bin"
+    },
+    {
+      "occurrence": 135,
+      "fixed_mtef_sha256": "756881cced47e6d4123a361ebc9754104b1b22242eb5cfc3c637915b58e5d244",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject135.bin"
+    },
+    {
+      "occurrence": 136,
+      "fixed_mtef_sha256": "5e635fe002edbb9184cb10286abe1cf83b9e5b9def2f0a76b8cdad91b167d6cc",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject136.bin"
+    },
+    {
+      "occurrence": 137,
+      "fixed_mtef_sha256": "872ab387d4a07705d1ed01e366293571e68a563971e1aea5e40cc48713bbcb76",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject137.bin"
+    },
+    {
+      "occurrence": 138,
+      "fixed_mtef_sha256": "3e311242769ad486b26a8e20f5af21d5d3c486271e0f2f649c33faa2147aa621",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject138.bin"
+    },
+    {
+      "occurrence": 139,
+      "fixed_mtef_sha256": "bb13ace4434fbc7a4872227dcddd9899b1dd522327c64af2f9320f3f556512a2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject139.bin"
+    },
+    {
+      "occurrence": 140,
+      "fixed_mtef_sha256": "75e0a63be79e570685e8fb0bf1034bd1df3f7e0bdcb03297899a0a9a697d3e72",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject140.bin"
+    },
+    {
+      "occurrence": 141,
+      "fixed_mtef_sha256": "fb7eaae78545458583035f28c8b7ebd18adbfc537af7daf07f4bff5e95ca286c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject141.bin"
+    },
+    {
+      "occurrence": 142,
+      "fixed_mtef_sha256": "f056ad02a55f419a63984c23e8c472288a9ee7823d3b62a2ae7107daf95c9930",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject142.bin"
+    },
+    {
+      "occurrence": 143,
+      "fixed_mtef_sha256": "117838fd15814b5eb0484e595753cd4146fe6173a3890f8ca5f2fedd5556f7c6",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject143.bin"
+    },
+    {
+      "occurrence": 144,
+      "fixed_mtef_sha256": "6528711b911c20e38392829c45eab698c94d0d5b0eac1abed9025fd2d6100532",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject144.bin"
+    },
+    {
+      "occurrence": 145,
+      "fixed_mtef_sha256": "d9ca3159e3eba977f300dce7436207ee9d269608290e91c778a763297b3b338b",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject145.bin"
+    },
+    {
+      "occurrence": 146,
+      "fixed_mtef_sha256": "3dd688378bb709c2f73a38ec034e30231d509f6e84927055a626e5409dad26a7",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject146.bin"
+    },
+    {
+      "occurrence": 147,
+      "fixed_mtef_sha256": "04ae25b87e7ee0d82cfea5d71411f3cc9cbc4f051f58881e9e3fdc7fed901256",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject147.bin"
+    },
+    {
+      "occurrence": 148,
+      "fixed_mtef_sha256": "5b9a1d9602802ed6cae3b8b3b22d3f219a4b1b0860266b6c424bbf329513dc37",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject148.bin"
+    },
+    {
+      "occurrence": 149,
+      "fixed_mtef_sha256": "3a7db2a94e970b2d49ea240832769f67eacf25d63bf63dd03828fa78f8d96824",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject149.bin"
+    },
+    {
+      "occurrence": 150,
+      "fixed_mtef_sha256": "ff1c900934c0fbb29f78bc3306c9a547c33c6e9e56b251728a2da1a31a5f98a8",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject150.bin"
+    },
+    {
+      "occurrence": 151,
+      "fixed_mtef_sha256": "e0d6bba84bc5ef07af3df37f41eb203e27e4d759958f4578b34978361486d881",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject151.bin"
+    },
+    {
+      "occurrence": 152,
+      "fixed_mtef_sha256": "9ceba3947edb269f658c57307193e877b4052a4f7f07e99bfd0a461844840b0f",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject152.bin"
+    },
+    {
+      "occurrence": 153,
+      "fixed_mtef_sha256": "b3292ac2d5db89a1c74a0d57fc2db522ec68d96bccf31e0a3cfced805d14f681",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject153.bin"
+    },
+    {
+      "occurrence": 154,
+      "fixed_mtef_sha256": "76470fcf48875d35431dda356f1abd2d08e4a10461fb25c39c7af74deee7e659",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject154.bin"
+    },
+    {
+      "occurrence": 155,
+      "fixed_mtef_sha256": "41f892c9cc9f63c7224ee202e6f15962fee9c82e5e6804ba0c6dcc4e86eb038c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject155.bin"
+    },
+    {
+      "occurrence": 156,
+      "fixed_mtef_sha256": "45c4565542a44819e5409d0bf5dc3ce83d165d4f97dc1420c9aa37fd2e830d99",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject156.bin"
+    },
+    {
+      "occurrence": 157,
+      "fixed_mtef_sha256": "1abe57e1f417de549b3e57fd7cb2644082c10f5b750b4620303c6208d4dff004",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject157.bin"
+    },
+    {
+      "occurrence": 158,
+      "fixed_mtef_sha256": "d162e341f3263c8892b08764eefdd7ed5f692b1b91254318322f89d3e462004c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject158.bin"
+    },
+    {
+      "occurrence": 159,
+      "fixed_mtef_sha256": "13ea7b981f7197fcc9305e0db1327b9dca3f7b20790426fd245d56b9369a1e2a",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject159.bin"
+    },
+    {
+      "occurrence": 160,
+      "fixed_mtef_sha256": "4eee31f0b52c196458ff03b0d4a23acf6867b2972dc8d7cf2d20786c864fe601",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject160.bin"
+    },
+    {
+      "occurrence": 161,
+      "fixed_mtef_sha256": "7e01d73d1426527a299f95c44bebd8e1770a26405733faf0bbbf012c84271575",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject161.bin"
+    },
+    {
+      "occurrence": 162,
+      "fixed_mtef_sha256": "92c890e705037651a7eaa004b8eb9020f31979d5cfe42bf478b9dbc66d931d83",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject162.bin"
+    },
+    {
+      "occurrence": 163,
+      "fixed_mtef_sha256": "d249e9e43c9f51e6b697df034fc801e35a602465082477d1b5d98b6b48c1b506",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject163.bin"
+    },
+    {
+      "occurrence": 164,
+      "fixed_mtef_sha256": "7fbd21d4888eb5c9250d2b8c6dee65b590081dd479b00ae8b2402f832784fcca",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject164.bin"
+    },
+    {
+      "occurrence": 165,
+      "fixed_mtef_sha256": "26e3e2ae3e97615d0c7389af1f35e6a19d95ff0110cfb69130f3ea82d0588961",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject165.bin"
+    },
+    {
+      "occurrence": 166,
+      "fixed_mtef_sha256": "8606033a5d3f403d2c267f495d87425d5bcecb7385446e5578e071dff1dedf65",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject166.bin"
+    },
+    {
+      "occurrence": 167,
+      "fixed_mtef_sha256": "407d71824ebf9af3c89dc3ba8c1f8f1e9f03570b733417eed14c31595476250d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject167.bin"
+    },
+    {
+      "occurrence": 168,
+      "fixed_mtef_sha256": "b502a7ae99f4cd00974c6d96749d955bc6a7ce78a2fc8d8a5d9a5e55f92e0370",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject168.bin"
+    },
+    {
+      "occurrence": 169,
+      "fixed_mtef_sha256": "136097fd8d75e7b33ccc647a32edd59f9c04063b2ba53e2ec68fb3f379df41ba",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject169.bin"
+    },
+    {
+      "occurrence": 170,
+      "fixed_mtef_sha256": "eaece5ee597e2780730bcb89bd752b155f7fcf2f11090ca78d5a3b0a6545f54d",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject170.bin"
+    },
+    {
+      "occurrence": 171,
+      "fixed_mtef_sha256": "9b751ba298a302ed285faaaa63f624ff271dbaba14eedca5253059df5d73963c",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject171.bin"
+    },
+    {
+      "occurrence": 172,
+      "fixed_mtef_sha256": "bb13ace4434fbc7a4872227dcddd9899b1dd522327c64af2f9320f3f556512a2",
+      "inner_spaces_replaced": 0,
+      "native_part": "word/embeddings/oleObject172.bin"
+    }
+  ],
+  "expression_hashes_match_before_word_save": true
+}

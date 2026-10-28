@@ -1,0 +1,26 @@
+[
+  {
+    "key": "087f131a07dbd9bcc2",
+    "variant": "original",
+    "ret": -14,
+    "translator_status": 1097754967,
+    "actual_length": 26,
+    "tex": "<math>250\\text{Hz}</math>"
+  },
+  {
+    "key": "087f131a07dbd9bcc2",
+    "variant": "thin-space",
+    "ret": 0,
+    "translator_status": 1,
+    "actual_length": 28,
+    "tex": "<math>250\\,\\text{Hz}</math>"
+  },
+  {
+    "key": "087f131a07dbd9bcc2",
+    "variant": "no-inner-space",
+    "ret": 0,
+    "translator_status": 160496954,
+    "actual_length": 26,
+    "tex": "<math>250\\text{Hz}</math>"
+  }
+]

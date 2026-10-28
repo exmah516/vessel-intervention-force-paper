@@ -1,0 +1,13 @@
+{
+  "source_sha256": "f8d006762f6f4436c4a190d2d1b5a48c624502b0efa954edbbbbc10443958cbb",
+  "output_sha256": "e7febdc25fdf857a057b607c986a7058c7ba316a7130780ba332d9ac88ffa266",
+  "style_count": 73,
+  "native_objects_checked": 172,
+  "display_equations": 27,
+  "figures": 8,
+  "tables": 1,
+  "references": 26,
+  "captions": 18,
+  "manual_items": 9,
+  "all_checks_passed": true
+}
