@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  28 OCT 2026 10:56
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  28 OCT 2026 19:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1964,7 +1964,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 File: fig1.png Graphic file (type bmp)
 <fig1.png>
  [2] [3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 346--347
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
 []\TU/SimSun(0)/m/n/10.53937 在 正 常 恢 复 阶 段，|  总 补 偿 量 为 $\OML/ztmcm/m/it/10.539
 37 C\OT1/ztmcm/m/n/10.53937 [\OML/ztmcm/m/it/10.53937 k\OT1/ztmcm/m/n/10.53937 
 ] =
@@ -1975,7 +1975,7 @@ File: fig4.png Graphic file (type bmp)
 <fig4.png>
  [6]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 499.
+(Font)              scaled to size 5.0pt on input line 489.
  [7] (./JQR_LaTeX_Template.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.03pt on input line 1.
@@ -2057,10 +2057,10 @@ Package rerunfilecheck Info: File `JQR_LaTeX_Template.out' has not changed.
 (rerunfilecheck)             Checksum: B479C74F2CF0563C40D1996B9A2196B1;3611.
  ) 
 Here is how much of TeX's memory you used:
- 36595 strings out of 468168
- 770608 string characters out of 5436525
+ 36594 strings out of 468168
+ 770595 string characters out of 5436525
  1274135 words of memory out of 5000000
- 64594 multiletter control sequences out of 15000+600000
+ 64593 multiletter control sequences out of 15000+600000
  721321 words of font info for 205 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  137i,18n,143p,1388b,1103s stack positions out of 10000i,1000n,20000p,200000b,200000s

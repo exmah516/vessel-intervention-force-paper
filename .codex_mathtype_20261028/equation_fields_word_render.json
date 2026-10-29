@@ -1,0 +1,194 @@
+{
+  "Path": "C:\\Program Files\\Microsoft Office\\root\\Office16",
+  "Version": "16.0",
+  "Pages": 8,
+  "UpdateResult": 0,
+  "Fields": [
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "1",
+      "Page": 3,
+      "Line": 23
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "2",
+      "Page": 3,
+      "Line": 35
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "3",
+      "Page": 3,
+      "Line": 36
+    },
+    {
+      "Code": "REF JQR_eq_3 \\h",
+      "Result": "3",
+      "Page": 3,
+      "Line": 39
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "4",
+      "Page": 3,
+      "Line": 65
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "5",
+      "Page": 3,
+      "Line": 74
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "6",
+      "Page": 3,
+      "Line": 76
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "7",
+      "Page": 3,
+      "Line": 80
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "8",
+      "Page": 3,
+      "Line": 83
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "9",
+      "Page": 3,
+      "Line": 88
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "10",
+      "Page": 4,
+      "Line": 4
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "11",
+      "Page": 4,
+      "Line": 6
+    },
+    {
+      "Code": "REF JQR_eq_11 \\h",
+      "Result": "10",
+      "Page": 4,
+      "Line": 7
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "12",
+      "Page": 4,
+      "Line": 12
+    },
+    {
+      "Code": "REF JQR_eq_10 \\h",
+      "Result": "9",
+      "Page": 4,
+      "Line": 17
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "13",
+      "Page": 4,
+      "Line": 18
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "14",
+      "Page": 4,
+      "Line": 38
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "15",
+      "Page": 4,
+      "Line": 44
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "16",
+      "Page": 4,
+      "Line": 54
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "17",
+      "Page": 4,
+      "Line": 60
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "18",
+      "Page": 4,
+      "Line": 65
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "19",
+      "Page": 4,
+      "Line": 70
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "20",
+      "Page": 5,
+      "Line": 4
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "21",
+      "Page": 5,
+      "Line": 11
+    },
+    {
+      "Code": "REF JQR_eq_13 \\h",
+      "Result": "12",
+      "Page": 5,
+      "Line": 73
+    },
+    {
+      "Code": "REF JQR_eq_14 \\h",
+      "Result": "13",
+      "Page": 6,
+      "Line": 11
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "22",
+      "Page": 6,
+      "Line": 39
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "23",
+      "Page": 6,
+      "Line": 44
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "24",
+      "Page": 6,
+      "Line": 46
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "25",
+      "Page": 6,
+      "Line": 78
+    },
+    {
+      "Code": "SEQ JQREquation \\* ARABIC",
+      "Result": "26",
+      "Page": 6,
+      "Line": 79
+    }
+  ]
+}

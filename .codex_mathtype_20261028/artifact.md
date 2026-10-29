@@ -23,3 +23,11 @@ Final verification completed:
 - Chinese affiliation postcodes preserved. All58 source occurrences of 待补 plus the English to-be-added placeholder preserved. Source/template SHA256 remain unchanged.
 - Title uses a manual break at the subject/predicate boundary to avoid an isolated two-character final line. Figure placeholder paragraphs, bilingual caption pairs, and individual references stay together. Source table separator before the repeatability row retained.
 - All73 styles explicitly declare ascii/hAnsi/eastAsia; font sizes and heading spaces passed the structural audit in final_audit.json.
+
+2026-10-28 native multiline revision:
+- Edited the accepted current Word field-linked manuscript, SHA256 fc33dd7b724df51d1b59300300fbeea7ebab7faebf27ec1717d8a24fb0dfd30e; retained its user edits and the deleted original equation4. The source remains unchanged.
+- New deliverable: 面向往复夹持递送的血管介入机器人力反馈扰动建模与残差抑制_MathType_自然多行版.docx, SHA256 d646001d92d7cff9933f8078f8155c2c2a2f41eaa3f35224ee483ccea459d21d.
+- Replaced nine layout-only matrices with native MathType PILE structures using relational alignment, equivalent to Enter and align-at-equals. Removed three unnecessary one-row matrix wrappers. Retained two actual vectors and the piecewise function layout.
+- Verified all168 MathType native streams through both installed Texvc translators, preserving every mathematical character/template/embellishment and effective style. The MathType saver only removed redundant adjacent color resets in modified objects. Microsoft Word did not alter the saved native streams.
+- Preserved204 body paragraphs,26 SEQ equation fields,5 hyperlink REF fields, all bookmarks, figures, and bibliography. All74 styles have explicit ascii/hAnsi/eastAsia fonts; no automatic list numbering.
+- Microsoft Word16.0 from the Microsoft Office Office16 installation updated the fields successfully, repaginated, and exported8 pages for review. Formula and number have the same page and line for all26 equations. Inspected all eight full page PNGs, including the native multi-line equations, loss function, RMSE/MAE, captions and references; no new overflow or isolated labels found.

@@ -1,0 +1,249 @@
+{
+  "source": "D:\\Work_files\\Vessel intervention Robot\\力波动方法\\write\\论文撰写\\面向往复夹持递送的血管介入机器人力反馈扰动建模与残差抑制_MathType_编辑修复版.docx",
+  "source_sha256": "98d9e5071fddeebf87e53bb65ace66a5a9ac50859d0fc997ab563f7d227131a9",
+  "output": "D:\\Work_files\\Vessel intervention Robot\\力波动方法\\write\\论文撰写\\面向往复夹持递送的血管介入机器人力反馈扰动建模与残差抑制_MathType_公式引用联动版.docx",
+  "mapping": {
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "5": 4,
+    "6": 5,
+    "7": 6,
+    "8": 7,
+    "9": 8,
+    "10": 9,
+    "11": 10,
+    "12": 11,
+    "13": 12,
+    "14": 13,
+    "15": 14,
+    "16": 15,
+    "17": 16,
+    "18": 17,
+    "19": 18,
+    "20": 19,
+    "21": 20,
+    "22": 21,
+    "23": 22,
+    "24": 23,
+    "25": 24,
+    "26": 25,
+    "27": 26
+  },
+  "equations": [
+    {
+      "old": 1,
+      "number": 1,
+      "paragraph": 44,
+      "bookmark": "JQR_eq_1",
+      "bookmark_id": "0"
+    },
+    {
+      "old": 2,
+      "number": 2,
+      "paragraph": 47,
+      "bookmark": "JQR_eq_2",
+      "bookmark_id": "1"
+    },
+    {
+      "old": 3,
+      "number": 3,
+      "paragraph": 48,
+      "bookmark": "JQR_eq_3",
+      "bookmark_id": "2"
+    },
+    {
+      "old": 5,
+      "number": 4,
+      "paragraph": 52,
+      "bookmark": "JQR_eq_5",
+      "bookmark_id": "3"
+    },
+    {
+      "old": 6,
+      "number": 5,
+      "paragraph": 58,
+      "bookmark": "JQR_eq_6",
+      "bookmark_id": "4"
+    },
+    {
+      "old": 7,
+      "number": 6,
+      "paragraph": 60,
+      "bookmark": "JQR_eq_7",
+      "bookmark_id": "5"
+    },
+    {
+      "old": 8,
+      "number": 7,
+      "paragraph": 62,
+      "bookmark": "JQR_eq_8",
+      "bookmark_id": "6"
+    },
+    {
+      "old": 9,
+      "number": 8,
+      "paragraph": 64,
+      "bookmark": "JQR_eq_9",
+      "bookmark_id": "7"
+    },
+    {
+      "old": 10,
+      "number": 9,
+      "paragraph": 66,
+      "bookmark": "JQR_eq_10",
+      "bookmark_id": "8"
+    },
+    {
+      "old": 11,
+      "number": 10,
+      "paragraph": 68,
+      "bookmark": "JQR_eq_11",
+      "bookmark_id": "9"
+    },
+    {
+      "old": 12,
+      "number": 11,
+      "paragraph": 70,
+      "bookmark": "JQR_eq_12",
+      "bookmark_id": "10"
+    },
+    {
+      "old": 13,
+      "number": 12,
+      "paragraph": 73,
+      "bookmark": "JQR_eq_13",
+      "bookmark_id": "11"
+    },
+    {
+      "old": 14,
+      "number": 13,
+      "paragraph": 76,
+      "bookmark": "JQR_eq_14",
+      "bookmark_id": "12"
+    },
+    {
+      "old": 15,
+      "number": 14,
+      "paragraph": 84,
+      "bookmark": "JQR_eq_15",
+      "bookmark_id": "13"
+    },
+    {
+      "old": 16,
+      "number": 15,
+      "paragraph": 87,
+      "bookmark": "JQR_eq_16",
+      "bookmark_id": "14"
+    },
+    {
+      "old": 17,
+      "number": 16,
+      "paragraph": 90,
+      "bookmark": "JQR_eq_17",
+      "bookmark_id": "15"
+    },
+    {
+      "old": 18,
+      "number": 17,
+      "paragraph": 93,
+      "bookmark": "JQR_eq_18",
+      "bookmark_id": "16"
+    },
+    {
+      "old": 19,
+      "number": 18,
+      "paragraph": 96,
+      "bookmark": "JQR_eq_19",
+      "bookmark_id": "17"
+    },
+    {
+      "old": 20,
+      "number": 19,
+      "paragraph": 98,
+      "bookmark": "JQR_eq_20",
+      "bookmark_id": "18"
+    },
+    {
+      "old": 21,
+      "number": 20,
+      "paragraph": 101,
+      "bookmark": "JQR_eq_21",
+      "bookmark_id": "19"
+    },
+    {
+      "old": 22,
+      "number": 21,
+      "paragraph": 104,
+      "bookmark": "JQR_eq_22",
+      "bookmark_id": "20"
+    },
+    {
+      "old": 23,
+      "number": 22,
+      "paragraph": 131,
+      "bookmark": "JQR_eq_23",
+      "bookmark_id": "21"
+    },
+    {
+      "old": 24,
+      "number": 23,
+      "paragraph": 133,
+      "bookmark": "JQR_eq_24",
+      "bookmark_id": "22"
+    },
+    {
+      "old": 25,
+      "number": 24,
+      "paragraph": 135,
+      "bookmark": "JQR_eq_25",
+      "bookmark_id": "23"
+    },
+    {
+      "old": 26,
+      "number": 25,
+      "paragraph": 144,
+      "bookmark": "JQR_eq_26",
+      "bookmark_id": "24"
+    },
+    {
+      "old": 27,
+      "number": 26,
+      "paragraph": 145,
+      "bookmark": "JQR_eq_27",
+      "bookmark_id": "25"
+    }
+  ],
+  "references": [
+    {
+      "paragraph": 49,
+      "old": 3,
+      "number": 3,
+      "bookmark": "JQR_eq_3"
+    },
+    {
+      "paragraph": 71,
+      "old": 11,
+      "number": 10,
+      "bookmark": "JQR_eq_11"
+    },
+    {
+      "paragraph": 75,
+      "old": 10,
+      "number": 9,
+      "bookmark": "JQR_eq_10"
+    },
+    {
+      "paragraph": 123,
+      "old": 13,
+      "number": 12,
+      "bookmark": "JQR_eq_13"
+    },
+    {
+      "paragraph": 125,
+      "old": 14,
+      "number": 13,
+      "bookmark": "JQR_eq_14"
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+Source: https://support.microsoft.com/en-us/office/update-fields-7339a049-cb0d-4d5a-8679-97c20c643d4e
+Access date: 2026-10-28
+
+Update fields
+Applies To
+Word for Microsoft 365
+Word 2024
+Word 2021
+Word 2019
+Word 2016
+Get help with Copilot
+How can I update all fields in a document?
+Explain some fields are updated while other fields are not
+Update fields Word issues for me.
+Sometimes you need to manually trigger an update of the information in fields like those used in a table of contents, headers and footers, cross-references, bookmarks, and formulas in tables. You can update fields one by one, or you can update all the fields in your document at once.
+In this article
+Update a field
+Update all fields in a document
+Update a field
+In a document you have open, right-click a field, such as a table of contents, a page number, or a cross-reference, and click
+Update Field
+.
+Note
+If you're updating a table of contents, in the
+Update Table of Contents
+dialog box, select whether you want to update page numbers only or the entire table. Updating page numbers only simply updates the page numbers for the existing sections. It doesn't add new sections to your table of contents. To update your table of contents with new sections from your document, select
+Update entire table
+.
+If you're having trouble distinguishing which parts of your text are fields, you can set all fields to show up with grey background. To do this, click
+File
+>
+Options
+>
+Advanced
+, and under
+Show document content
+, from the
+Field shading
+drop-down menu, select
+Always
+.
+Top of Page
+Update all fields in a document
+Press
+Ctrl
++
+A
+.
+Press
+F9
+.
+If your document has tables with fields or formulas, you might need to select each table separately and press
+F9
+.
+Tip
+To make sure that you don't forget to update your table of contents before you print the document, set Word to update fields automatically before printing. Click
+File
+>
+Options
+>
+Display
+, and under
+Printing options
+, select the check box for
+Update fields before printing
+.
+Note
+Sometimes a field is not updated because the item the field refers to no longer exists. The link or bookmark might also be broken. For more information, see
+Troubleshoot bookmarks
+.
+Top of Page
+See Also
+Insert fields
+Field codes in Word
+Create or update a cross-reference
+Update a table of contents
+Use a formula in a Word table
+Create a table of contents

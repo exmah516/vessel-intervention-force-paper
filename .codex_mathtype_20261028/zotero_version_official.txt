@@ -1,0 +1,181 @@
+Source: https://www.zotero.org/support/changelog
+Access date: 2026-10-28
+
+Zotero Version History
+#
+Changes in released versions of Zotero 10.0 are documented on this page. To follow development, see the
+commit log on GitHub
+. More recent changes may be available in a
+beta build
+.
+Changes in 10.0.6 (October 7, 2026)
+#
+Fixed Find Full Text not finding files on some sites
+Fixed Find Full Text stalling on various server errors
+[Mac] Re-enabled local voices in Read Aloud on macOS 27 and fixed clicking after each sentence
+Fixed slow rendering of PDFs with JPEG2000 images
+[Security] Updated Mozilla platform to 140.17.0esr
+[Developer] Local API: Decode
++
+as a space in form-encoded requests
+Changes in 10.0.5 (September 30, 2026)
+#
+Fixed potential errors in large databases after Zotero 10 update
+Fixed attachment not being placed under new parent item after ISBN-based document recognition
+[Mac] Temporarily disable local voices on macOS due to loud audio pop after each sentence
+Don’t match an item by a trashed child item in a search
+Fixed missing action buttons in RTF Scan’s Verify Cited Items table
+[Developer] Local API: Fixed object writes with API-client-supplied keys
+Changes in 10.0.4 (September 22, 2026)
+#
+Zotero for Mac only
+Restored old Zotero Connector for Safari for macOS 11 Big Sur and macOS 12 Monterey
+Changes in 10.0.3 (September 17, 2026)
+#
+[Windows] Fixed dragging file attachments to and from parent items (since 10.0.2)
+Fixed launching of non-HTTP URLs (since 10.0.2)
+Fixed WebDAV authentication for passwords containing ‘%’ followed by two hex digits
+Fixed rendering of some PDF sections when using a reader theme
+Fixed items list row contents shifting when showing a between-rows drop indicator
+Fixed Locate button when missing file was on a path too long for the filesystem
+[Mac] Try to automatically restore Zotero Connector for Safari if broken after app update due to macOS bug
+Changes in 10.0.2 (September 9, 2026)
+#
+Show recently used collections in the Add to Collection menu
+Fixed some elements being omitted in exported PDFs
+Fixed some missing attachments never being downloaded
+[Linux] Improved error messages when system keystore isn’t available
+Show clearer errors at startup for database corruption or a read-only database (since 10.0)
+[Windows] Fixed dragging attachments to File Explorer (since 10.0)
+Fixed sync errors due to non-ASCII characters in credentials (since 10.0)
+Read Aloud fixes
+Fixed Read Aloud not starting on some Linux systems
+Preserve horizontal focus during Read Aloud
+Split sentences followed by footnote markers
+Reading Mode fixes
+Fixed back/forward buttons
+Fixed page navigation
+Fixed highlights covering the whole paragraph for sentences containing italics
+Prevent auto-scrolling after a manual scroll when using Read Aloud
+Fixed error using CSL 0.8 styles (since 8.0)
+Fixed “false” appearing in Added By/Modified By columns for trashed collections
+[Security] Updated Mozilla platform to 140.15.0esr
+Miscellaneous bug fixes
+Developer-specific changes/fixes
+#
+Singular selection getters
+such as
+CollectionTree#getSelectedSearch()
+no longer throw when a single row is selected in the collections list; plugins should still be updated to use the new plural getters
+Changes in 10.0.1 (August 24, 2026)
+#
+Fixed database access on network filesystems on macOS and Linux
+Fixed bug that could result in Zotero crashing after being open for a while with some plugins installed
+Fixed potential error requiring restart while editing note
+Fixed intermittent stuck “Loading items…” at startup
+Don’t prompt to save an unchanged saved search
+Fixed embedded PDF annotations sometimes not appearing after opening reader
+Fixed mangled full-text index statistics after searching in settings
+Fixed main window being brought to front when using CSL Preview window
+Changes in 10.0 (August 17, 2026)
+#
+See the
+Zotero 10 announcement
+for more details.
+Redesigned advanced search
+Now opens directly above the items list via a button in the quick-search bar and can filter any view, including collections and saved searches
+Supports nested condition groups for complex searches
+Allows choosing a result level — top-level items, attachments, annotations, or notes — with conditions automatically mapped across levels
+Terms in the quick-search bar automatically populate advanced search with equivalent conditions
+New search conditions
+Annotation Type, Color, and Author
+Attachment Storage Type
+# of Annotations, # of Attachments, # of Notes, # of Tags
+New “is empty”/”is not empty” operators
+Accent-insensitive searching and other search improvements
+Searches now ignore accents and typographic characters (“cafe” → “café”, “can't” → “can’t”)
+Much faster full-text content searches
+Chinese, Japanese, and Korean searches in the quick-search bar now match full phrases, much more quickly
+Faster, more reliable indexing of new attachment content
+Multi-collection selection
+Select multiple collections, saved searches, or even libraries in the collections pane to view all of their items together
+View, search, and interact with items across libraries, grouped by library with sticky headers as you scroll
+Cmd/Ctrl-A in the collections pane expands the selection to all rows within the same parent
+Batch editing
+Edit fields on multiple items at once
+Combine with in-window advanced search and multi-collection selection to find and fix metadata across one or more libraries
+Undo support
+Undo and redo many operations using Edit → Undo/Redo or standard keyboard shortcuts
+Plugins can opt their operations into undo history
+Smarter Read Aloud
+Better skipping of in-text citations, headers, footers, tables, figures, and equations
+Paragraphs are read continuously across columns and pages
+Individual sentences are now highlighted as they’re read, with word and paragraph highlighting options available in the settings
+Faster startup for large documents
+Reading Mode for PDFs
+View PDFs as clean, reflowable text with adjustable font, size, and line spacing — no headers, footers, or multi-column layouts
+Images, tables, and figures are shown as rendered in the original PDF
+Highlight, underline, and add notes in Reading Mode, with annotations and reading position shared with the standard PDF view
+Improved Zotero Connector for Safari
+Adds support for various features previously available only for other browsers, such as automatic proxy detection and redirection
+Requires Safari 18 on macOS 13 Ventura or later; older macOS versions keep the previous connector
+Reader improvements
+Dramatically lower memory usage from reader tabs
+Much more precise EPUB position restoration (after closing and reopening the reader or resizing the window)
+EPUB/snapshot: Text-selection popup now appears closer to the mouse cursor
+Citation dialog improvements
+Citation preview pane
+Add all selected items on a + click in Library mode
+Show guidance about typing locators in input field
+Make collections pane resizable
+Database-related improvements
+Improved database write performance
+Automatically compact database to reduce disk-space usage
+Drop versioned database backups to reduce disk-space usage and force a regular backup before all database upgrades
+[Mac] Support Word plugin installation on macOS 27 Golden Gate
+Fixed downloading of files over 2 GB (since Zotero 8)
+Changed Read Aloud keyboard shortcut to Cmd/Ctrl-Shift-L/R
+Allow “Annotate Sentence” panel to be move and remember position
+Show validation errors for file-renaming templates
+Fixed new profile not creating new data directory on Windows
+Added “Clear All Last Read Dates…” to Recently Read context menu
+Renamed “Sync” settings pane to “Account”
+Improved saving of files from PubMed Central
+Show Abstract section when merging items
+Keep “Add Item by Identifier” open if populated when app loses focus
+Added File menu options to note tabs
+Improved performance of large creator lists in item pane
+Reduced menu padding on Windows and Linux
+Don’t mark file as read when using Show File / Show in Finder
+Fixed system-handler detection for PDFs/EPUBs on Windows 11
+Encrypt API key and WebDAV password using OS keychain
+Automatically repair unusable login manager
+Skip retraction banner during initial sync on a new computer
+[Security] Updated Mozilla platform to
+140.13.0esr
+Various other improvements and bug fixes
+Developer-specific changes/fixes
+#
+Local API write support
+Instantaneous rebuilding after code changes
+Fixed profiler (Performance tab) in developer tools
+For plugin-related changes, see
+Zotero 10 for Developers
+.
+Older Changes
+#
+View the 9.0 changelog
+On this page
+Zotero Version History
+Changes in 10.0.6 (October 7, 2026)
+Changes in 10.0.5 (September 30, 2026)
+Changes in 10.0.4 (September 22, 2026)
+Changes in 10.0.3 (September 17, 2026)
+Changes in 10.0.2 (September 9, 2026)
+Developer-specific changes/fixes
+Changes in 10.0.1 (August 24, 2026)
+Changes in 10.0 (August 17, 2026)
+Developer-specific changes/fixes
+Older Changes
+Last updated 2026-10-07
+Edit on GitHub

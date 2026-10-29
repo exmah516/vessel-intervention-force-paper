@@ -1,0 +1,17 @@
+{
+  "old": 26,
+  "changed": [
+    {
+      "opts": 0,
+      "valign": 1,
+      "hjust": 0,
+      "vjust": 1,
+      "rows": 1,
+      "cols": 2
+    }
+  ],
+  "after": [],
+  "width": 58.0,
+  "height": 31.0,
+  "baseline": 14.0
+}

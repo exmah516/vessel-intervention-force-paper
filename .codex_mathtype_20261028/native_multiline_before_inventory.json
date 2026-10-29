@@ -1,0 +1,269 @@
+[
+  {
+    "occurrence": 11,
+    "bookmarks": [
+      "JQR_eq_1"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 1
+      }
+    ]
+  },
+  {
+    "occurrence": 19,
+    "bookmarks": [
+      "JQR_eq_2"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 20,
+    "bookmarks": [
+      "JQR_eq_3"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 1,
+        "cols": 2
+      },
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 1,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 1
+      }
+    ]
+  },
+  {
+    "occurrence": 49,
+    "bookmarks": [
+      "JQR_eq_11"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 3,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 54,
+    "bookmarks": [
+      "JQR_eq_13"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 58,
+    "bookmarks": [
+      "JQR_eq_14"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 70,
+    "bookmarks": [
+      "JQR_eq_16"
+    ],
+    "layout": [
+      {
+        "kind": 4,
+        "opts": 0,
+        "halign": 1,
+        "valign": 1
+      }
+    ]
+  },
+  {
+    "occurrence": 75,
+    "bookmarks": [
+      "JQR_eq_17"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 3,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 92,
+    "bookmarks": [
+      "JQR_eq_20"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 100,
+    "bookmarks": [
+      "JQR_eq_21"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 3,
+        "cols": 2
+      },
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 1,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 1
+      }
+    ]
+  },
+  {
+    "occurrence": 106,
+    "bookmarks": [
+      "JQR_eq_22"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 143,
+    "bookmarks": [
+      "JQR_eq_23"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 2,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 147,
+    "bookmarks": [
+      "JQR_eq_25"
+    ],
+    "layout": [
+      {
+        "kind": 4,
+        "opts": 0,
+        "halign": 1,
+        "valign": 1
+      }
+    ]
+  },
+  {
+    "occurrence": 157,
+    "bookmarks": [
+      "JQR_eq_26"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 1,
+        "cols": 2
+      }
+    ]
+  },
+  {
+    "occurrence": 158,
+    "bookmarks": [
+      "JQR_eq_27"
+    ],
+    "layout": [
+      {
+        "kind": 5,
+        "opts": 0,
+        "valign": 1,
+        "hjust": 0,
+        "vjust": 1,
+        "rows": 1,
+        "cols": 2
+      }
+    ]
+  }
+]
