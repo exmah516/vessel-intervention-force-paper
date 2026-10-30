@@ -546,10 +546,10 @@ OUTPUT JQR_LaTeX_Template.xdv
 INPUT ./fig1.png
 INPUT ./fig1.png
 INPUT ./fig1.png
+INPUT ./fig4.png
+INPUT ./fig4.png
+INPUT ./fig4.png
 INPUT c:/texlive/2026/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT ./fig4.png
-INPUT ./fig4.png
-INPUT ./fig4.png
 INPUT ./JQR_LaTeX_Template.bbl
 INPUT ./JQR_LaTeX_Template.bbl
 INPUT JQR_LaTeX_Template.bbl

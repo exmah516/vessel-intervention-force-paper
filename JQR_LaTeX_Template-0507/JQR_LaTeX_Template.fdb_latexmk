@@ -1,22 +1,22 @@
 # Fdb version 4
-["bibtex JQR_LaTeX_Template"] 1793031872.9999 "JQR_LaTeX_Template.aux" "JQR_LaTeX_Template.bbl" "JQR_LaTeX_Template" 1793031932.18525 0
+["bibtex JQR_LaTeX_Template"] 1793345465.21296 "JQR_LaTeX_Template.aux" "JQR_LaTeX_Template.bbl" "JQR_LaTeX_Template" 1793345611.07026 0
   "./jqr-num.bst" 1746663130 43614 f0f6141534b0260d7d09c52fba3d6b6b ""
-  "./references.bib" 1792561122 9502 894133ee7dc3fb2aacd7a1e02ff2a436 ""
-  "JQR_LaTeX_Template.aux" 1793031929 11503 7ce9ea07d15d815d355d4cc0bf707fec "xelatex"
+  "./references.bib" 1793345454 10616 b2131f0c7d0e5cb3c0570ebffd87a026 ""
+  "JQR_LaTeX_Template.aux" 1793345603 11843 f14595823db55f10da80dbfa45f00c4e "xelatex"
   (generated)
   "JQR_LaTeX_Template.bbl"
   "JQR_LaTeX_Template.blg"
   (rewritten before read)
-["xdvipdfmx"] 1793031930.58278 "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template.pdf" "JQR_LaTeX_Template" 1793031932.19384 0
-  "JQR_LaTeX_Template.xdv" 1793031929 230212 322b8f9ab7d5123280ce8b6c2d3b14c8 "xelatex"
+["xdvipdfmx"] 1793345605.01466 "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template.pdf" "JQR_LaTeX_Template" 1793345611.08491 0
+  "JQR_LaTeX_Template.xdv" 1793345603 243316 53658a3421de07dee6e18d50e1ec4f74 "xelatex"
   (generated)
   "JQR_LaTeX_Template.pdf"
   (rewritten before read)
-["xelatex"] 1793031927.00807 "JQR_LaTeX_Template.tex" "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template" 1793031932.18545 0
-  "JQR_LaTeX_Template.aux" 1793031929 11503 7ce9ea07d15d815d355d4cc0bf707fec "xelatex"
-  "JQR_LaTeX_Template.bbl" 1793031873 9698 56c36d460747920d14d03c3f58e9f132 "bibtex JQR_LaTeX_Template"
-  "JQR_LaTeX_Template.out" 1793031929 3696 a2d73a8a6ce14bfd474cec54cc4edbd5 "xelatex"
-  "JQR_LaTeX_Template.tex" 1793028635 41975 3525382061aae7dcf52fa653e073ef10 ""
+["xelatex"] 1793345600.95701 "JQR_LaTeX_Template.tex" "JQR_LaTeX_Template.xdv" "JQR_LaTeX_Template" 1793345611.07052 0
+  "JQR_LaTeX_Template.aux" 1793345603 11843 f14595823db55f10da80dbfa45f00c4e "xelatex"
+  "JQR_LaTeX_Template.bbl" 1793345465 7247 80f41fe2f7e538124d1805446563368f "bibtex JQR_LaTeX_Template"
+  "JQR_LaTeX_Template.out" 1793345603 3611 b479c74f2cf0563c40d1996b9a2196b1 "xelatex"
+  "JQR_LaTeX_Template.tex" 1793345600 47000 975dd50fa51c2a2293060f9788bc4edd ""
   "JQRnew.cls" 1746663130 17453 19ce5a0006db23c04b6836b04e385812 ""
   "c:/Windows/Fonts/msyh.ttc" 1738878900 19704352 1e10e74402e59d54499af795caf0b135 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1783006662 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -266,7 +266,7 @@
   "c:/texlive/2026/texmf-dist/web2c/texmf.cnf" 1783006072 43630 e9fa012910491fe5ae08a72c3c2997a7 ""
   "c:/texlive/2026/texmf-var/web2c/xetex/xelatex.fmt" 1783008154 5948931 5ede3dc0dbd7f3f10eb689b06869c314 ""
   "c:/texlive/2026/texmf.cnf" 1783008083 713 e69b156964470283e0530f5060668171 ""
-  "fig1.png" 1792981626 221643 b33f99349b2723c884b47ea86b6c970e ""
+  "fig1.png" 1793145319 2612399 d832b85be3206f9f9a6aefb38cbe42d9 ""
   "fig4.png" 1792981626 618974 8095974437d18ae6797168416e6365e8 ""
   "newtxtext.sty" 1746663130 11564 f6668174a44b1e50fcb343a9adfa375b ""
   (generated)

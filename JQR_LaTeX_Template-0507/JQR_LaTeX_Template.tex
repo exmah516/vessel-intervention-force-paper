@@ -33,9 +33,9 @@
                3. 中国科学院大学，北京\quad 100049},
  %
  % ----- 中文摘要
- cnabstract = {\revised{【目的】针对往复夹持递送引起的近端测力波动，建立轴向力反馈重构方法。【方法】将递送与交接过程划分为S1～S10，校正测量信号中的惯性与零载基线，利用S1末稳态载荷和S8末实测承载确定轴向补偿初值。以前向推进行程建立包含弹性恢复与附加阻力衰减的双指数模型，采用不含实时测力输入的GRU网络修正轴向残差。S2～S8保持锁存值，S9对GRU残差淡入，并在恢复完成、停止或回拉时撤除补偿。扭矩通道仅进行测量校正与交接锁存。【结果】采用同位置同轨迹配对递送试次评价轴向反馈误差、全周期波动及阻力阶跃响应，并设置消融和血管模型操作者实验。重构误差、阶跃保留比、介入总时间与成功率结果为[待补]。【结论】所建方法将轴向实测载荷与恢复补偿分别处理，为往复夹持递送中的轴向力反馈重构提供了方法。}},
+ cnabstract = {\revised{【目的】针对往复夹持递送引起的近端测力波动，建立轴向力反馈重构方法。【方法】将递送与交接过程划分为S1～S10，校正测量信号中的惯性与零载基线，利用S1末稳态载荷和S8末实测承载确定轴向补偿初值。以前向推进行程建立包含弹性恢复与附加阻力衰减的双指数模型；将每个递送周期按恢复相位划分为20个单元，以单周期门控循环网络编码单元特征，再由跨最近10个周期的同相位注意力聚合特征，在不输入实时测力的条件下修正轴向残差。S2～S8保持锁存值，S9对GRU残差淡入，并在恢复完成、停止或回拉时撤除补偿。扭矩通道仅进行测量校正与交接锁存。【结果】采用同位置同轨迹配对递送试次评价轴向反馈误差、全周期波动及阻力阶跃响应，并设置消融和血管模型操作者实验。重构误差、阶跃保留比、介入总时间与成功率结果为[待补]。【结论】所建方法将轴向实测载荷与恢复补偿分别处理，为往复夹持递送中的轴向力反馈重构提供了方法。}},
  % ---- 中文关键字
- cnkeywords = {\revised{介入机器人；往复夹持；轴向力反馈；载荷恢复；GRU神经网络}},
+ cnkeywords = {\revised{介入机器人；往复夹持；轴向力反馈；载荷恢复；门控循环单元；跨周期注意力}},
  %
  % ---- 英文相关信息
  entitle    = {Disturbance Modeling and Residual Suppression of Force Feedback for Vascular Intervention Robot in Reciprocating Clamping Delivery},
@@ -45,10 +45,10 @@
                3. \textit{University of Chinese Academy of Sciences, Beijing} 100049, \textit{China}},
  %
  % ---- 英文摘要
- enabstract = {\revised{[Objective] An axial force feedback reconstruction method is developed for measurement fluctuations during reciprocating clamping delivery. [Methods] The delivery and handover cycle is divided into stages S1--S10. Inertia and the zero-load baseline are corrected, and the initial axial compensation is determined from the stored load at the end of S1 and the measured load at the end of S8. A double-exponential model describes elastic recovery and decay of an additional resistance term as functions of forward travel. A GRU network without real-time force inputs predicts the axial residual. The feedback is held during S2--S8; the GRU residual is introduced gradually in S9, and compensation is withdrawn upon recovery completion, stopping, or retraction. Torque feedback uses measurement correction and holding during handover. [Results] Matched-position and matched-trajectory delivery trials are used to evaluate axial feedback errors, cycle-level fluctuations, and resistance-step responses. Ablation tests and operator tasks in a vascular phantom are included. Reconstruction errors, step retention ratios, intervention times, and success rates are [to be added]. [Conclusions] The method treats measured axial load and recovery compensation separately to reconstruct axial force feedback during reciprocating clamping delivery.}},
+ enabstract = {\revised{[Objective] An axial force feedback reconstruction method is developed for measurement fluctuations during reciprocating clamping delivery. [Methods] The delivery and handover cycle is divided into stages S1--S10. Inertia and the zero-load baseline are corrected, and the initial axial compensation is determined from the stored load at the end of S1 and the measured load at the end of S8. A double-exponential model describes elastic recovery and decay of an additional resistance term as functions of forward travel. Each recovery cycle is divided into 20 units by phase; a gated recurrent unit encodes the unit features within a cycle, and attention over the 10 most recent cycles at the same phase aggregates features to predict the axial residual without real-time force inputs. The feedback is held during S2--S8; the residual is introduced gradually in S9, and compensation is withdrawn upon recovery completion, stopping, or retraction. Torque feedback uses measurement correction and holding during handover. [Results] Matched-position and matched-trajectory delivery trials are used to evaluate axial feedback errors, cycle-level fluctuations, and resistance-step responses. The network is compared with a temporal convolutional network, a self-attention encoder, a parameter-matched per-sample network, and its single-cycle variant; a learning curve over training-set size is reported. Ablation tests and operator tasks in a vascular phantom are included. Reconstruction errors, step retention ratios, intervention times, and success rates are [to be added]. [Conclusions] The method treats measured axial load and recovery compensation separately, and restores the axial feedback of reciprocating clamping delivery to a near-continuous waveform.}},
  %
  % ---- 英文关键字
- enkeywords = {\revised{intervention robot; reciprocating clamping; axial force feedback; load recovery; gated recurrent unit (GRU)}}
+ enkeywords = {\revised{intervention robot; reciprocating clamping; axial force feedback; load recovery; gated recurrent unit (GRU); cross-cycle attention}}
 }
 
 % ----- 加载宏包
@@ -73,15 +73,22 @@
 \maketitle
 
 % 引言部分不设节标题（遵循《机器人》期刊约定）
-血管内介入治疗是实现心血管及脑血管疾病微创诊治的重要手段。在传统手术中，医师需在X射线透视引导下手动推进并旋转导丝与导管，这一过程不仅高度依赖术者的精准操作技巧与临床经验，还使术者长期暴露于电离辐射并承受沉重的铅衣负担\ucite{ref1}。血管介入机器人通过主从遥操作模式驱动柔性器械完成递送与旋转，可将术者与辐射源物理隔离，并提供高精度的可重复运动轨迹。然而，主从遥操作隔绝了术者与器械的直接物理接触，器械在血管内的受力状态必须经过从端测量与主端再现才能传递至术者\ucite{ref2}。因此，在测量器械操作载荷的基础上形成连续、清晰的主端力反馈，是帮助术者判断器械受阻状态的重要环节。
+血管介入机器人通过主从遥操作驱动导丝和导管完成推进与旋转，使术者能够远离X射线透视区域开展操作\ucite{ref2}。在手动递送中，术者通过指端感受器械阻力，并结合影像判断器械的运动与受力状态；在遥操作中，这一直接触觉联系需要通过从端测量和主端力反馈重建。手术机器人力反馈研究指出，从端接触力的测量、主端力的再现以及反馈控制的稳定性共同影响术者获得的触觉信息\ucite{ref29}。因此，力反馈既需要反映器械与环境之间的相互作用，也需要减少机器人自身运动引入的附加波动，使术者能够辨别操作阻力的变化。
 
-介入器械的力感知方案主要分为体内远端测力和体外近端测力两类，二者反映不同空间尺度的受力信息。远端测力将光纤布拉格光栅（FBG）等微型传感元件集成于器械尖端以直接感知末端接触力\ucite{ref3}，但受限于微细器械尺寸与封装工艺，制造成本高且难以兼容常规一次性耗材。相比之下，近端测力在体外驱动端通过传力路径中的力传感器\ucite{ref4,ref6}或驱动电机电流\ucite{ref5}获取沿器械传递的综合操作阻力，无需改造常规器械且便于无菌分离，但近端测力通道与机械驱动过程紧密耦合，器械真实负载与传动机构自身的运行干扰将同时作用于测量信号。
+从测量位置看，介入器械的力感知可分为体内远端测力和体外近端测力。远端方案将微型传感元件集成于器械尖端以获取局部接触力，例如He等\ucite{ref3}在导管尖端集成光纤布拉格光栅传感器，结合温度补偿测量导管与血管壁的接触力。这类方案需要兼顾器械尺寸、传感元件封装和弯曲性能。
+% 在首页自然进入第二栏的位置为模板页脚预留空间。
+\JQRpubidadjcol
+近端方案则在体外驱动机构的传力路径中布置力传感器\ucite{ref6,ref8}，或利用驱动电机电流估计载荷\ucite{ref5}。这类方法可与常规器械配合使用，获取沿器械传递的综合操作阻力，其中既包含尖端接触作用，也包含器械与鞘管、管腔之间的摩擦作用\ucite{ref2,ref7}。由于驱动与测力共用器械接触和传力部件，机构摩擦、惯性及姿态变化也会影响测量结果。针对这一问题，Duan等\ucite{ref17}采用杠杆放大式测力结构，缩短传力路径并减小摩擦与惯性对测量的影响。因此，近端测力的准确性不仅取决于传感器性能，还与器械驱动方式及其传力过程有关。
 
-器械与驱动机构的接触方式决定了近端传力特性。滚轮摩擦驱动需维持法向预紧力，在推进与旋转复合运动时还会受到界面微滑移的影响\ucite{ref5}；仿人手往复夹持机构则通过面接触建立静摩擦连接\ucite{ref7}，便于控制夹紧力，并分别测量轴向递送力与周向旋转扭矩\ucite{ref8}。受直线导轨行程限制，此类机构通过主、副夹爪“夹持递送---释放回退---重新夹持”的周期性往复运动实现长距离输送\ucite{ref9,ref10}。对于承担近端测力功能的移动主爪，往复加减速引起的浮动组件惯性、旋转运动引起的支路惯性以及夹爪接触切换会改变测力支路的受力平衡，造成反馈波动。
+滚轮驱动通过滚轮与器械之间的摩擦实现连续输送，夹持驱动则通过夹爪夹紧器械并带动其平移\ucite{ref5,ref7}。受单次平移行程限制，往复夹持机构需要在递送与回程之间完成载荷交接。以移动夹持器递送、固定夹持器保持器械的结构，通过两者交替夹持将有限行程转换为长距离递送\ucite{ref2,ref3}；Cao等\ucite{ref10}进一步通过往复递送和多操作器协同实现多器械操作。另一类结构采用双移动夹持器，Al-Ahmad等\ucite{ref7}通过编织套筒夹持器的速度匹配与重叠夹持维持器械连续运动。这些方案在回程期间的器械运动和承载方式上存在差别。对于传感器安装于移动主爪、由固定夹持器接替承载的结构，移动主爪释放后，其测力支路随之卸载；空载回程的加减速与夹爪开闭又会引入附加瞬态载荷。重新推进时，停止后的器械载荷还需要随运动重新建立，使换手期的力反馈同时受到机构运动与承载状态变化的影响。
 
-针对近端测量中的机构附加干扰分量，现有研究主要从运行偏置标定、动力学模型补偿及数据驱动估计等方面展开。在机理建模与标定方面，Sankaran等\ucite{ref5}在不同转速下采集机构自由递送时的空载电流，建立运行偏置与转速的映射关系并从总力中予以扣除。Bao等\ucite{ref8}综合分析了摩擦、重力及旋转速度对测量结果的影响，构建了基于载荷与转速的动态补偿模型，并在时变加载实验中验证了其相较于静态零偏补偿的优势。Wang等\ucite{ref12}建立了递送机构的平移与旋转动力学模型，结合运动学测量实时修正测力基线，并对扭矩信号的抖动进行了滤波处理。在数据驱动建模方面，时序神经网络为表征夹持与传力过程中的复杂非线性关系提供了有效途径。Lyu等\ucite{ref13}将机器人运动状态、夹持间距与软体夹持器的视觉形变序列输入长短期记忆网络（LSTM），实现了器械操作力与扭矩的端到端估计；Wang等\ucite{ref14}采用时间卷积网络（TCN）建立了近端测量与导丝远端接触力之间的时序映射关系。
+针对机构运动引入的附加分量，现有研究通过运行偏置标定与动力学分析建立补偿关系。Sankaran等\ucite{ref5}利用空载运行电流及其与转速的关系标定近端力估计偏置；Bao等\ucite{ref8}综合考虑摩擦、重力和旋转速度，建立与载荷及转速相关的补偿模型；Wang等\ucite{ref12}分析递送机构的平移和旋转动力学，并通过夹紧与松开器械的对比试验评价测力误差。这些方法着重分离机构运行对近端测量的影响，而主爪脱离器械时，测力支路已不再传递器械外载，单纯扣除运行偏置不能恢复该阶段的载荷信息。保持换手前的反馈值可以避免卸载跳变直接传至主端，但若在重新推进起点立即切回实测信号，停止前后的载荷差异会重新出现在反馈中；若将保持延长至载荷恢复结束，又会推迟新增阻力的反馈。因此，交接期的输出连续性需要与恢复推进后的实时受力响应共同考虑。
 
-上述研究分别讨论了运行偏置校正、连续运动补偿和时序力估计，但往复夹持递送还包含主副夹爪交替承载。载荷交接、回程启停惯性以及柔顺接触的变形重建与微滑移，会与真实血管阻力变化同时出现在近端测量信号中，形成卸载台阶和附加波动。因此，需要根据往复夹持的传力过程重构连续递送时的反馈载荷，在减小换手波动的同时保留有效承载阶段新增的血管阻力变化。
+重新推进时的载荷变化与传力部件的变形及接触界面的摩擦状态有关。弹性夹持垫和测力元件在卸载、静止与重新承载过程中经历变形调整，黏弹性接触研究揭示了加载历史对接触载荷和接触区域演化的影响\ucite{ref20}。器械重新推进还改变其与鞘管、管腔之间的摩擦接触状态；动态摩擦模型表明，预滑移、起动摩擦和黏滑转换使摩擦力具有运动历史依赖性\ucite{ref28}。在柔性腱鞘传动中，Sun等\ucite{ref30}通过分布式摩擦与弹性伸长建模表明，局部曲率及其沿路径的位置会改变张力分布和总伸长量，说明接触路径也是影响柔性传力变形的重要因素。对于往复递送，接触变形的重新加载与起动附加阻力的演化共同影响近端载荷恢复，因而需要描述停止前后载荷之间的过渡过程。低阶模型能够以少量参数描述这一过程的主要趋势，但随着器械插入位置和接触分布改变，固定参数模型仍会产生与递送状态和运动历史有关的预测偏差。
+
+时序学习为描述历史相关的受力关系提供了方法。Lyu等\ucite{ref13}将软体夹持器的视觉形变、夹持间距和运动速度序列输入长短期记忆网络（LSTM），估计器械操作力与扭矩；Wang等\ucite{ref14}采用时间卷积网络（TCN）学习近端测量与远端接触力之间的映射。这些方法利用历史信息估计操作载荷或远端接触力，而换手后的反馈恢复还涉及交接前后承载状态的衔接。对于解析模型难以描述的偏差，物理模型与学习方法的结合可通过残差补偿或力学约束实现。在机械臂接触力估计中，卷积神经网络被用于补偿动力学观测器的估计误差\ucite{ref21}，时序残差学习进一步将关节动力学偏差与末端力估计偏差分级修正\ucite{ref22}；柔性手术机器人研究则将准静态力学关系引入LSTM，以约束形状与接触力的预测\ucite{ref27}。上述研究将物理关系用于载荷估计，并通过数据拟合补充实际受力过程的描述。对于往复夹持递送，尚需区分载荷恢复偏差与新增外部阻力：二者可能在重新推进时同时出现，仅依据波形平滑程度或变化快慢难以分离。当实时测力值参与补偿量预测时，新增阻力也会进入补偿计算，其在反馈中的保留程度取决于训练目标、网络输入以及补偿量与实测值的组合方式。因此，恢复过程的建模与残差修正需要同时考虑对真实阻力变化的响应。
+
+针对上述问题，有必要研究往复夹持递送中的力反馈波动抑制方法，在改善反馈连续性的同时保留真实阻力变化。
 
 \section{问题描述（Problem description）}
 
@@ -155,7 +162,7 @@ F_M+F_S=F_{\mathrm{out}},\\
 \tau_M+\tau_S=\tau_{\mathrm{out}}.
 \end{cases}
 \end{equation}
-式中，$F_M,\tau_M$ 与 $F_S,\tau_S$ 分别为主、副爪作用于器械的轴向推力和驱动扭矩，以远端推进和右手定则正转为正；$F_{\mathrm{out}},\tau_{\mathrm{out}}$ 为外部轴向合阻力和合阻力矩，以阻碍上述正向运动为正，即等于外部作用在统一坐标下分量的相反数。记 $\bm w_M=[F_M,\tau_M]^{\rm T}$，连续递送参考载荷为 $\bm w_{\mathrm{ref}}=[F_{\mathrm{ref}},\tau_{\mathrm{ref}}]^{\rm T}$。副爪完全释放时，$F_S=\tau_S=0$，主爪平衡当时的全部外载。
+式中，$F_M,\tau_M$ 与 $F_S,\tau_S$ 分别为主、副爪作用于器械的轴向推力和驱动扭矩，以远端推进和右手定则正转为正；$F_{\mathrm{out}},\tau_{\mathrm{out}}$ 为外部轴向合阻力和合阻力矩，以阻碍上述正向运动为正，即等于外部作用在统一坐标下分量的相反数。记 $\bm w_M=[F_M,\tau_M]^{\rm T}$，连续递送参考载荷为 $\bm w_{\mathrm{ref}}(s)=[F_{\mathrm{ref}}(s),\tau_{\mathrm{ref}}(s)]^{\rm T}$，$s$ 为累计有效插入深度，其定义见2.2节。副爪完全释放时，$F_S=\tau_S=0$，主爪平衡当时的全部外载。
 \revend
 
 \revbegin
@@ -193,6 +200,23 @@ F_M+F_S=F_{\mathrm{out}},\\
 \bicaption{\revised{测力支路与双爪交接受力关系}}{\revised{Force-sensing branches and load transfer during gripper handover}}
 \label{fig2}
 \end{figure}
+\revend
+
+\revbegin
+\subsection{参考载荷与速度相关项的划分}
+\revend
+
+\revbegin
+本文以主爪持续夹持、同一起点同一条管路的连续递送载荷为参考。连续递送时插入深度随时间单调增加，因此参考载荷可以写成插入深度的函数 $w_{\mathrm{ref}}(s)$，$s$ 为累计有效插入深度，空载回程不计入。往复递送在 $2\sim5\,{\rm s}$ 内多次经过同一深度，任一时刻的轴向阻力取决于当时的插入深度、瞬时速度和运动方向。将其写为
+\begin{equation}
+\label{eq:load-decomp}
+F_{\mathrm{out}}(s,v,\sigma)=F_0(s)+F_v(s,v,\sigma),
+\end{equation}
+式中，$v=\dot x_M$ 为瞬时递送速度，$\sigma=\operatorname{sgn}v$ 为运动方向；$F_0(s)$ 由插入深度对应的器械构型和管路几何决定，$F_v$ 包含黏性阻力、停顿后的起动附加阻力及随方向变化的那部分迟滞。
+\revend
+
+\revbegin
+$F_v$ 对速度和方向的依赖已由测量模型中的惯性项、零载基线以及式\eqref{eq:recovery-ode}的恢复模型承担：$\lambda_F$、$\Delta_F$ 和 $D_c$ 按递送速度分段辨识，停顿后的起动附加阻力随推进行程衰减的形式与速度无关。扣除这两部分后，网络只需描述 $F_0(s)$ 中由构型和管路决定的偏差，该项在往复递送与连续递送中取同一数值。式\eqref{eq:load-decomp}的划分是可直接检验的：同一深度下往复递送与恒速递送得到的残差应一致，检验方法见第3.2节。
 \revend
 
 \revbegin
@@ -307,20 +331,64 @@ F_{\mathrm{base}}[k]=F_{\mathrm{meas}}[k]
 \revend
 
 \revbegin
-GRU网络用于估计恢复模型未描述的轴向残差。输入向量为
+网络用于估计恢复模型未描述的轴向残差。逐点输入向量为
 \begin{equation}
 \label{eq:gru-input}
 \begin{aligned}
 \bm x_k=\big[&\widehat D_{9,F},\widehat w_{M,k_9,F},\widehat A_{9,F},
 \bm q_M[k]^{\rm T},\\
-&\Delta t[k],s_{\mathrm{rec}}[k],L_{\mathrm{ins}}[k]\big]^{\rm T}.
+&s_{\mathrm{rec}}[k],L_{\mathrm{ins}}[k],\sigma[k]\big]^{\rm T}.
 \end{aligned}
 \end{equation}
-式中，$\Delta t[k]$ 为距S9起点的时间，$L_{\mathrm{ins}}[k]$ 为扣除空载回程后的累计有效插入深度，用于描述随插入位置变化的恢复残差。输入中的载荷量在本次S9开始时确定，网络不接收S9的实时测力值。
+式中，$L_{\mathrm{ins}}[k]$ 为扣除空载回程后的累计有效插入深度，用于描述随插入位置变化的恢复残差；$\sigma[k]$ 为运动方向。输入中的载荷量在本次S9开始时确定，网络不接收S9的实时测力值。
 \revend
 
 \revbegin
-输入窗口为 $\bm X_k=[\bm x_{k-N+1},\ldots,\bm x_k]^{\rm T}$。每次S9开始时重置窗口，以首个有效样本补齐不足的历史长度。网络由输入标准化层、两层单向GRU及单输出线性层组成，采用标准GRU更新关系\ucite{ref26}，反标准化后得到轴向残差 $e_F[k]$。残差的逐点限幅及淡入为
+网络按两种时间尺度组织：单周期内描述恢复过程的形状，跨周期描述同一相位上重复出现的部分。记第 $c$ 个恢复段为 $\mathcal K_c=\{k:k_9^{(c)}\le k<k_9^{(c+1)}\}$，$T_c$ 为其时长，相位定义为
+\begin{equation}
+\label{eq:phase}
+\varphi[k]=\frac{t_k-t_9^{(c)}}{T_c}\in[0,1).
+\end{equation}
+将 $[0,1)$ 等分为 $M$ 个单元，第 $m$ 个单元的样本集合记为 $\Omega_{c,m}=\{k\in\mathcal K_c:(m-1)/M\le\varphi[k]<m/M\}$；若单元内无样本，取相邻两单元边界时刻的输入线性插值。单元特征与单周期编码为
+\begin{equation}
+\label{eq:cell-encoder}
+\begin{aligned}
+\bm z_{c,m}&=\frac{1}{|\Omega_{c,m}|}\sum_{k\in\Omega_{c,m}}\bm x_k,\\
+\bm h_{c,m}&=\mathrm{GRU}\big(\bm z_{c,m},\bm h_{c,m-1}\big),
+\end{aligned}
+\end{equation}
+$\mathrm{GRU}(\cdot)$ 采用标准更新关系\ucite{ref26}，$\bm h_{c,0}=\bm 0$。
+\revend
+
+\revbegin
+跨周期聚合只在同一单元上进行。以第 $c$ 周期的第 $m$ 单元为查询，取此前 $K$ 个周期同一单元的编码为键和值：
+\begin{equation}
+\label{eq:cross-cycle}
+\begin{aligned}
+\bm q_{c,m}&=\bm W_q\bm h_{c,m},\\
+\kappa_{c,m,j}&=\bm W_k\bm h_{c-j,m},\quad
+\upsilon_{c,m,j}=\bm W_v\bm h_{c-j,m},\\
+\alpha_{c,m,j}&=\frac{\exp\!\left(\bm q_{c,m}^{\rm T}\kappa_{c,m,j}/\sqrt d\right)}
+{\sum_{j'=1}^{K_c}\exp\!\left(\bm q_{c,m}^{\rm T}\kappa_{c,m,j'}/\sqrt d\right)},\\
+\bm g_{c,m}&=\sum_{j=1}^{K_c}\alpha_{c,m,j}\upsilon_{c,m,j}.
+\end{aligned}
+\end{equation}
+其中 $K_c=\min(K,c-1)$ 为该段之前已有周期中参与聚合的个数；$K_c=0$ 时取 $\bm g_{c,m}=\bm 0$，网络退化为单周期输出。单头，$d$ 为编码维度。残差在单元上给出，单元内按相位线性插值为逐点值：
+\begin{equation}
+\label{eq:cell-output}
+e_F[k]=w_o^{\rm T}
+\begin{bmatrix}\bm h_{c,m}\\\bm g_{c,m}\end{bmatrix}+b_o,
+\quad k\in\Omega_{c,m},
+\end{equation}
+单元边界处对相邻两单元的输出按 $\varphi[k]$ 线性插值，避免台阶。
+\revend
+
+\revbegin
+两级结构的分工与数据量的对应关系如下。第一级只处理 $M$ 个单元，保留恢复过程内部的先后次序；第二级只在同一相位单元之间比较，周期性不需要从原始采样中学习。相位对齐由式\eqref{eq:phase}显式给出，网络只学习同一相位上随血管路径和器械构型重复出现的偏差及其缓慢变化。取 $M=20$、$K=10$、编码维度 $d=32$ 时，两级网络的可训练参数约 $7.6\times10^3$ 个：第一级GRU约 $4.4\times10^3$，第二级三组投影与输出层约 $3.2\times10^3$。作为对照，在相同编码维度下用两层双头自注意力直接处理S9逐点序列，参数约 $2.6\times10^4$ 个，为本文结构的3倍以上；加宽至 $d=64$、四头时约为 $6.6\times10^4$ 个。
+\revend
+
+\revbegin
+二级注意力使用的前序周期只取运动量与指令，不取历史实测力，故在S4～S8测力支路卸载期间仍可计算。训练时每个恢复段使用其自身之前已完成的周期，测试时使用同一试次此前已发生的周期；试次开头的周期没有历史，按 $K_c=0$ 退化为单周期输出，其误差单独统计。残差的逐点限幅及淡入为
 \begin{equation}
 \label{eq:residual-limit}
 \begin{aligned}
@@ -383,7 +451,7 @@ F_{\mathrm{fb}}[k]&=F_{\mathrm{meas}}[k]+\rho_kC_e,\\
 \label{eq:gru-loss}
 \begin{aligned}
 \mathcal L={}&\frac{1}{|\Omega_{\mathrm{S9}}|}\sum_{k\in\Omega_{\mathrm{S9}}}
-\left(\frac{F_{\mathrm{ref}}[k]-F_{\mathrm{base}}[k]-r_F[k]}{F_*}\right)^2\\
+\left(\frac{F_{\mathrm{ref}}(s[k])-F_{\mathrm{base}}[k]-r_F[k]}{F_*}\right)^2\\
 &+\frac{\gamma_{\mathrm{sm}}}{|\mathcal P_{\mathrm{S9}}|}
 \sum_{(j,k)\in\mathcal P_{\mathrm{S9}}}
 \left(\frac{r_F[k]-r_F[j]}{F_*}\right)^2.
@@ -407,19 +475,20 @@ F_{\mathrm{fb}}[k]&=F_{\mathrm{meas}}[k]+\rho_kC_e,\\
 \subsection{实验平台}
 
 \revbegin
-实验平台基于双操作手协同血管介入机器人构建，受测器械包括0.014英寸导引导丝与5F介入导管，主夹爪滑台平移及旋转由伺服电机驱动。近端测力机构采用两只力恒LH-S09A3单轴拉压传感器，分别测量轴向力和切向力；切向力经标定等效力臂换算为扭矩。测量与控制系统基于倍福控制总线构建，以 $250\,{\rm Hz}$ 同步记录测力读数、各轴位置、速度、加速度及夹爪开关指令。数据处理在工控机（Intel Core i7-11700，16 GB RAM）上完成。
+实验平台基于双操作手协同血管介入机器人构建，受测器械包括0.014英寸导引导丝与6F介入导管，主夹爪滑台平移及旋转由伺服电机驱动。近端测力机构采用两只力恒LH-S09A3单轴拉压传感器，分别测量轴向力和切向力；切向力经标定等效力臂换算为扭矩。测量与控制系统基于倍福控制总线构建，以 $250\,{\rm Hz}$ 同步记录测力读数、各轴位置、速度、加速度及夹爪开关指令。数据处理在工控机（Intel Core i7-11700，16 GB RAM）上完成。
 \revend
 
 \revbegin
-实验配置分为以下两类，如图\ref{fig5}所示。
+实验配置分为以下三类，如图\ref{fig5}所示。
 \begin{enumerate}[label=\arabic*),nosep,itemsep=0pt,topsep=2pt,partopsep=0pt,parsep=0pt,leftmargin=2\ccwd]
 \item 测量参数标定配置。将测力支路与外部标准力传感器串联，施加已知轴向载荷及已知力臂的切向载荷，标定传递矩阵 $\bm H_0$ 和传感器等效力臂 $\ell_s$。空载角度扫描与平移、旋转启停试验分别用于辨识零载基线和惯性参数。
+\item 分段恒速参考采集配置。参考载荷 $w_{\mathrm{ref}}(s)$ 按插入深度分段采集。将器械置入血管模型或具有远端加载单元的管路，由长行程直线滑台以恒定速度递送，每段行程 $25\,{\rm mm}$，相邻段重叠 $10\,{\rm mm}$，覆盖待评价的插入深度范围；每段开始前沿同一管路重新置入器械。每段递送速度取 $5$、$10$ 和 $20\,{\rm mm/s}$ 三档，每档重复3次。同一深度在相同速度下重复10次，用于统计参考载荷的重复性。血管模型取2～3条路径，器械取2种刚度，其余条件不变。
 \item 配对递送与血管模型实验配置。将器械置入血管模型或具有远端加载单元的管路，分别执行换手递送和不换手连续递送。换手试次从给定起点推进 $8\sim10\,{\rm mm}$ 后完成换手，再推进约 $10\,{\rm mm}$；配对试次从同一起点连续推进相同总行程。两类试次采用相同的器械、初始受力状态、管路和递送轨迹，推进阶段的速度及旋转轨迹保持一致。
 \end{enumerate}
 \revend
 
 \revbegin
-配对试次按累计有效推进位移对齐，空载回程不计入有效推进位移；伴随旋转的试次同时匹配旋转轨迹。以不换手试次经惯性和零载基线校正的载荷作为 $\bm w_{\rm ref}$。在交接停止区间，参考值取对应有效推进位置的连续递送载荷。重复不换手试次用于估计参考载荷的重复性。具体管路、远端加载方式、试次分组及重复次数为[待补]。
+配对递送与分段恒速采集按累计有效插入深度对齐，空载回程不计入插入深度；伴随旋转的试次同时匹配旋转轨迹。$w_{\mathrm{ref}}(s)$ 由分段恒速采集结果按深度拼接得到，重叠段取加权平均，权重随段内位置线性过渡。在交接停止区间，参考值取对应插入深度的连续递送载荷，并报告交接期间的停顿时长对参考值的影响。往复递送与恒速递送在同一深度的差异按式\eqref{eq:load-decomp}的划分检验，方法见3.2节。试次分组、重复次数及具体管路参数为[待补]。
 \revend
 
 \revbegin
@@ -458,7 +527,15 @@ F_{\mathrm{fb}}[k]&=F_{\mathrm{meas}}[k]+\rho_kC_e,\\
 \revend
 
 \revbegin
-物理参数辨识、网络训练和独立测试按完整试次划分，测试前冻结模型参数及标准化参数。逐周期拟合用于分析参数与曲线特征的关系。GRU采用2层单向结构，隐层规模分别为64和32，输入窗口长度为30个采样点，对应约 $0.12\,{\rm s}$；输出为一个轴向残差。训练、验证与测试试次数，优化参数，锁存窗口 $N_{\rm lock}$、残差淡入长度 $N_b$、限幅参数 $\eta$ 与 $e_{0,F}$、停止判定参数及撤除时长 $T_{\rm off}$ 为[待补]。
+$\lambda_F$、$\Delta_F$ 和 $D_c$ 按递送速度分别辨识，并检验三者随速度的变化是否可由 $F_v$ 的黏性和起动分量解释：若 $\Delta_F$ 随速度增大而增大、而 $D_c$ 基本不变，则式\eqref{eq:recovery-ode}所描述的形状与速度无关，速度只改变附加阻力的幅值。该结论决定残差项中是否还需保留速度通道。各速度档的参数、变化趋势和显著性检验为[待补]。
+\revend
+
+\revbegin
+式\eqref{eq:load-decomp}的划分通过两组数据检验。在分段恒速采集中，同一深度、同一速度下10次重复的载荷变异系数给出参考的重复性下限；对往复递送与恒速递送在相同深度处配对，计算各自扣除 $F_v$ 后残差的差，并按深度分段报告其均值与离散度。若两者的差与同深度重复试验的离散度处于同一量级，则该深度上的残差可视为与递送方式无关，由往复数据训练的网络可直接用于连续递送参考。若在部分深度区间内差异显著，则在这些区间内另行标定，并在结果中按深度标出。重复次数、深度分段和统计结果为[待补]。
+\revend
+
+\revbegin
+物理参数辨识、网络训练和独立测试按完整试次划分，测试前冻结模型参数及标准化参数。逐周期拟合用于分析参数与曲线特征的关系。网络结构取 $M=20$ 个相位单元、$K=10$ 个历史周期、编码维度 $d=32$，第一级为单层单向GRU，第二级为单头注意力，输出为一个轴向残差；$M$、$K$ 与 $d$ 的取值通过验证集选择。训练、验证与测试试次数，优化参数，锁存窗口 $N_{\rm lock}$、残差淡入长度 $N_b$、限幅参数 $\eta$ 与 $e_{0,F}$、停止判定参数及撤除时长 $T_{\rm off}$ 为[待补]。
 \revend
 
 \subsection{对比实验结果与指标分析}
@@ -575,6 +652,38 @@ G_{\rm step}&=\frac{\Delta F_{\rm fb}}{\Delta F_{\rm ref}},\\
 \revend
 
 \revbegin
+\subsubsection{网络结构与数据量对比}
+\revend
+
+\revbegin
+网络部分比较四种结构，均使用相同的输入量、训练集、损失函数和评价窗口。单周期结构去掉式\eqref{eq:cross-cycle}的第二级；TCN以膨胀卷积替代第一级GRU，卷积核长3、通道32、层数4，在 $M=20$ 个相位单元上的感受野覆盖一个完整周期；逐点网络不使用相位单元与周期结构，以逐点输入直接回归残差，隐层宽度取相近参数量。四种结构的可训练参数量在表\ref{tab2}中一并给出。
+\revend
+
+\revbegin
+为回答训练数据量的问题，取训练试次数 $N_{\rm tr}\in\{10,25,50,100\}$，在相同的验证集上比较四种结构，给出各结构的验证误差随 $N_{\rm tr}$ 的变化。训练集小于全量时按试次抽取，抽取比例固定为10组增量，各结构使用同一组训练试次。另按留一种器械刚度、留一条血管路径分别设置条件留出，报告各结构在未参与训练条件下的误差。训练曲线、拐点位置及各结构的参数量与误差统计为[待补]。
+\revend
+
+\revbegin
+\begin{table}[H]
+\RevisionColor
+\centering
+\bicaption{\revised{残差网络结构与可训练参数量}}{\revised{Residual network structures and trainable parameters}}
+\label{tab2}
+\small
+\begin{tabular}{lccc}
+\toprule
+结构 & 周期编码 & 跨周期聚合 & 可训练参数量 \\
+\midrule
+本文（两级） & 相位单元GRU & 同相位注意力 & 约 $7.6\times10^3$ \\
+单周期变体 & 相位单元GRU & 无 & 约 $4.4\times10^3$ \\
+TCN & 膨胀卷积 & 无 & 约 $1.1\times10^4$ \\
+逐点网络 & 无 & 无 & 约 $7.5\times10^3$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+\revend
+
+\revbegin
 \subsubsection{血管模型连续递送重构与操作者感知实验}
 \revend
 
@@ -603,11 +712,19 @@ G_{\rm step}&=\frac{\Delta F_{\rm fb}}{\Delta F_{\rm ref}},\\
 \section{讨论（Discussion）}
 
 \revbegin
-轴向恢复模型将初期载荷增长与随后附加阻力的衰减合并描述。初始加载斜率 $k_0$ 联系了载荷缺口、附加阻力幅值与恢复特征行程；在弹性恢复假设下，较低的加载斜率对应较长的恢复行程。跨周期比例关系及峰位比较结果为[待补]。部分周期起步段与物理模型的偏差由GRU残差修正，其贡献通过初始行程误差和消融结果评价。
+轴向恢复模型将初期载荷增长与随后附加阻力的衰减合并描述。初始加载斜率 $k_0$ 联系了载荷缺口、附加阻力幅值与恢复特征行程；在弹性恢复假设下，较低的加载斜率对应较长的恢复行程。跨周期比例关系及峰位比较结果为[待补]。部分周期起步段与物理模型的偏差由残差网络修正，其贡献通过初始行程误差和消融结果评价。
 \revend
 
 \revbegin
-实测值与补偿量分别进入轴向输出，使恢复模型和GRU的过渡处理集中于补偿量。阶跃实验评价新增阻力的幅值保留与响应延迟，血管模型实验进一步比较不同轴向反馈条件下的介入总时间及高难部位成功率；相关结果及其对操作者判断受阻状态的影响为[待补]。
+残差网络采用两级结构而非逐点编码，依据是本文数据的时间结构。一次恢复过程约 $2\sim5\,{\rm s}$，含 $500\sim1250$ 个采样点，而同一试次的相邻样本在力信号带宽内高度相关。若以逐点序列为输入，有效样本数远小于采样点数，网络的容量需由少数独立周期支撑；本文结构将一次恢复压缩为 $M=20$ 个单元，并把周期性交给相位对齐，网络只在同一相位上学习随深度和管路变化的偏差。这与 $\bm w_{\mathrm{ref}}(s)$ 的定义相对应：参考量是深度的函数，网络学习的也是深度的函数，时间只用来给出同一深度上的重复观测。表\ref{tab2}的四种结构与 $N_{\rm tr}$ 的学习曲线为这一取舍提供依据，网络结构对比结果见3.3.4节。
+\revend
+
+\revbegin
+实测值与补偿量分别进入轴向输出，使恢复模型和残差网络的过渡处理集中于补偿量。阶跃实验评价新增阻力的幅值保留与响应延迟，血管模型实验进一步比较不同轴向反馈条件下的介入总时间及高难部位成功率；相关结果及其对操作者判断受阻状态的影响为[待补]。
+\revend
+
+\revbegin
+参考载荷的适用范围由采集方式决定。分段恒速采集每段 $25\,{\rm mm}$、重叠 $10\,{\rm mm}$，各段开始前器械重新置入管路，因此采集到的是同一插入深度下的阻力，而不是器械在长路径中累积弯曲后的阻力。器械插入至深度 $s$ 时体内段长度恒为 $s$，屈曲状态由该长度决定，故分次到达与一次到达在同一深度对应同一构型；两者的差别在于器械自身的弯曲历史和黏弹性松弛，其大小由同深度重复试验的系数变异给出。在柔性器械和多分支迂曲管路中，同一深度的阻力还随所经过的分支变化，本文在2～3条路径和2种器械刚度上分别报告，结论限定于所测路径与器械。超出该范围时，需要按深度重新采集参考。
 \revend
 
 \revbegin
@@ -617,7 +734,7 @@ G_{\rm step}&=\frac{\Delta F_{\rm fb}}{\Delta F_{\rm ref}},\\
 \section{结论（Conclusions）}
 
 \revbegin
-本文针对往复夹持递送引起的近端测力波动，建立了测量校正、交接受力分析、轴向重加载模型与GRU残差修正相结合的反馈方法。以S1末稳态载荷和S8末实测承载确定轴向补偿初值，用前向行程描述弹性恢复及附加阻力衰减，并在恢复完成、停止或回拉时平滑撤除补偿。扭矩通道采用测量校正与交接锁存。配对递送误差、阶跃响应、消融及操作者实验的定量结论为[待补]。
+本文针对往复夹持递送引起的近端测力波动，建立了测量校正、交接受力分析、轴向重加载模型与残差网络修正相结合的反馈方法。以S1末稳态载荷和S8末实测承载确定轴向补偿初值，用前向行程描述弹性恢复及附加阻力衰减，并在恢复完成、停止或回拉时平滑撤除补偿。残差网络按单周期相位单元编码、跨周期同相位聚合的两级结构组织，不接收实时测力值。扭矩通道采用测量校正与交接锁存。配对递送误差、阶跃响应、结构与数据量对比、消融及操作者实验的定量结论为[待补]。
 \revend
 
 \noindent
