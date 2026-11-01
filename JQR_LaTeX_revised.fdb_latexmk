@@ -1,26 +1,26 @@
 # Fdb version 4
-["bibtex JQR_LaTeX_revised"] 1793523138.49061 "JQR_LaTeX_revised.aux" "JQR_LaTeX_revised.bbl" "JQR_LaTeX_revised" 1793523149.78694 0
+["bibtex JQR_LaTeX_revised"] 1793546757.55336 "JQR_LaTeX_revised.aux" "JQR_LaTeX_revised.bbl" "JQR_LaTeX_revised" 1793546770.05055 0
   "./JQR_LaTeX_Template-0507/jqr-num.bst" 1746663130 43614 f0f6141534b0260d7d09c52fba3d6b6b ""
-  "./JQR_LaTeX_Template-0507/references.bib" 1793522702 12064 9b323d881e15c087cf15809fd007385e ""
-  "JQR_LaTeX_revised.aux" 1793523141 12984 7ec29e59da2020905c3c7d30602ff6db "xelatex"
+  "./JQR_LaTeX_Template-0507/references.bib" 1793536688 14749 8c8582ec313c17a55bb54a8e7c5639a0 ""
+  "JQR_LaTeX_revised.aux" 1793546760 14405 dec296afecc5399d3dd87d30e6fa9529 "xelatex"
   (generated)
   "JQR_LaTeX_revised.bbl"
   "JQR_LaTeX_revised.blg"
   (rewritten before read)
-["xdvipdfmx"] 1793523142.60169 "JQR_LaTeX_revised.xdv" "JQR_LaTeX_revised.pdf" "JQR_LaTeX_revised" 1793523149.79612 0
-  "JQR_LaTeX_revised.xdv" 1793523141 276384 c7ad2cfbac4f1a7c934752948dbad8f6 "xelatex"
+["xdvipdfmx"] 1793546762.0046 "JQR_LaTeX_revised.xdv" "JQR_LaTeX_revised.pdf" "JQR_LaTeX_revised" 1793546770.0668 0
+  "JQR_LaTeX_revised.xdv" 1793546760 280372 9ffe1df811394ec0c0ebb0ea6e9acae0 "xelatex"
   (generated)
   "JQR_LaTeX_revised.pdf"
   (rewritten before read)
-["xelatex"] 1793523138.87657 "JQR_LaTeX_revised.tex" "JQR_LaTeX_revised.xdv" "JQR_LaTeX_revised" 1793523149.78719 0
+["xelatex"] 1793546757.96348 "JQR_LaTeX_revised.tex" "JQR_LaTeX_revised.xdv" "JQR_LaTeX_revised" 1793546770.05084 0
   "Fig4_最终版.pdf" 1793512537 82693 0bae15c2cee7f950dd01bed62518434b ""
   "JQR_LaTeX_Template-0507/JQRnew.cls" 1746663130 17453 19ce5a0006db23c04b6836b04e385812 ""
   "JQR_LaTeX_Template-0507/fig1.png" 1793145319 2612399 d832b85be3206f9f9a6aefb38cbe42d9 ""
   "JQR_LaTeX_Template-0507/fig4.png" 1792981626 618974 8095974437d18ae6797168416e6365e8 ""
-  "JQR_LaTeX_revised.aux" 1793523141 12984 7ec29e59da2020905c3c7d30602ff6db "xelatex"
-  "JQR_LaTeX_revised.bbl" 1793523138 7181 62c08ec257622b52084437e594189cb0 "bibtex JQR_LaTeX_revised"
-  "JQR_LaTeX_revised.out" 1793523141 3785 bd6d4bcbe82dacd874a3d7e190d15481 "xelatex"
-  "JQR_LaTeX_revised.tex" 1793523068 54611 d4cb5e1a0843f05af882db08fbdd75b9 ""
+  "JQR_LaTeX_revised.aux" 1793546760 14405 dec296afecc5399d3dd87d30e6fa9529 "xelatex"
+  "JQR_LaTeX_revised.bbl" 1793546757 8827 8a1c1ff07feddae8642e204a3a18d82f "bibtex JQR_LaTeX_revised"
+  "JQR_LaTeX_revised.out" 1793546760 3677 9ea196ada5d934c4f377cf81d5226dfa "xelatex"
+  "JQR_LaTeX_revised.tex" 1793546542 55166 1ae37bfa2b0b6593e0c9bd1e66d5cf27 ""
   "c:/Windows/Fonts/msyh.ttc" 1738878900 19704352 1e10e74402e59d54499af795caf0b135 ""
   "c:/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1783006662 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/texlive/2026/texmf-dist/fonts/tfm/adobe/symbol/psyr.tfm" 1783007703 1408 5937f58aa508ea2cea4901c07d10f5fe ""

@@ -1,4 +1,4 @@
-\begin{thebibliography}{19}
+\begin{thebibliography}{25}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \baselineskip=11bp plus0.1pt minus0.1pt
@@ -41,13 +41,21 @@ KESNER~S~B, HOWE~R~D.
 \newblock The International Journal of Robotics Research, 2014, 33\allowbreak
   (4): 631-644.
 
-\bibitem[Lai et~al.(2022)Lai, Cao, Liu, Tjin, and Phee]{ref31}
-LAI~W, CAO~L, LIU~J, et~al.
-\newblock \href{http://dx.doi.org/10.1109/TMECH.2021.3071437}{A three-axial
-  force sensor based on fiber bragg gratings for surgical
-  robots}\allowbreak[J].
-\newblock IEEE/ASME Transactions on Mechatronics, 2022, 27\allowbreak (2):
-  777-789.
+\bibitem[Jin et~al.(2021{\natexlab{a}})Jin, Guo, Guo, Shi, Tamiya, Kawanishi,
+  and Hirata]{ref35}
+JIN~X, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3107188}{Total force
+  analysis and safety enhancing for operating both guidewire and catheter in
+  endovascular surgery}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2021{\natexlab{a}}, 21\allowbreak (20):
+  22499-22509.
+
+\bibitem[Sankaran et~al.(2020)Sankaran, Chembrammel, and Kesavadas]{ref5}
+SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2045}{Force calibration for an
+  endovascular robotic system with proximal force measurement}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2020, 16\allowbreak (2): e2045.
 
 \bibitem[Zhao et~al.(2018)Zhao, Guo, Xiao, et~al.]{ref4}
 ZHAO~Y, GUO~S, XIAO~N, et~al.
@@ -56,20 +64,37 @@ ZHAO~Y, GUO~S, XIAO~N, et~al.
   interventional surgery}\allowbreak[J].
 \newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 33.
 
-\bibitem[Thakur et~al.(2009)Thakur, Holdsworth, and Drangova]{ref33}
-THAKUR~Y, HOLDSWORTH~D~W, DRANGOVA~M.
-\newblock \href{http://dx.doi.org/10.1109/TBME.2008.921148}{Characterization of
-  catheter dynamics during percutaneous transluminal catheter
-  procedures}\allowbreak[J].
-\newblock IEEE Transactions on Biomedical Engineering, 2009, 56\allowbreak (8):
-  2140-2143.
-
-\bibitem[Sankaran et~al.(2020)Sankaran, Chembrammel, and Kesavadas]{ref5}
-SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
-\newblock \href{http://dx.doi.org/10.1002/rcs.2045}{Force calibration for an
-  endovascular robotic system with proximal force measurement}\allowbreak[J].
+\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
+WANG~S, LIU~Z, SHU~X, et~al.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
+  sensing of a novel cardiovascular interventional surgery
+  robot}\allowbreak[J].
 \newblock The International Journal of Medical Robotics and Computer Assisted
-  Surgery, 2020, 16\allowbreak (2): e2045.
+  Surgery, 2022, 18\allowbreak (4): e2406.
+
+\bibitem[Jin et~al.(2021{\natexlab{b}})Jin, Guo, Guo, Shi, Tamiya, and
+  Hirata]{ref36}
+JIN~X, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3066424}{Development of a
+  tactile sensing robot-assisted system for vascular interventional
+  surgery}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2021{\natexlab{b}}, 21\allowbreak (10):
+  12284-12294.
+
+\bibitem[Thakur et~al.(2009)Thakur, Bax, Holdsworth, and Drangova]{ref37}
+THAKUR~Y, BAX~J~S, HOLDSWORTH~D~W, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TBME.2009.2017203}{Design and
+  performance evaluation of a remote catheter navigation system}\allowbreak[J].
+\newblock IEEE Transactions on Biomedical Engineering, 2009, 56\allowbreak (7):
+  1901-1908.
+
+\bibitem[Chowdhury et~al.(2025)Chowdhury, Gharamaleki, Lee, Kim, Kim, Vidal,
+  Youn, and Choi]{ref38}
+CHOWDHURY~A~M~M~B, GHARAMALEKI~N~L, LEE~H, et~al.
+\newblock \href{http://dx.doi.org/10.1038/s44182-025-00023-6}{Dual active
+  tilted roller actuation system (datras) with an electromagnetic actuation
+  system for vascular intervention}\allowbreak[J].
+\newblock npj Robotics, 2025, 3: 8.
 
 \bibitem[Wang et~al.(2021)Wang, Liu, Yan, et~al.]{ref6}
 WANG~K, LIU~J, YAN~W, et~al.
@@ -116,14 +141,6 @@ BAO~X, GUO~S, XIAO~N, et~al.
   interventional robot}\allowbreak[J].
 \newblock Biomedical Microdevices, 2018, 20\allowbreak (3): 74.
 
-\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
-WANG~S, LIU~Z, SHU~X, et~al.
-\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
-  sensing of a novel cardiovascular interventional surgery
-  robot}\allowbreak[J].
-\newblock The International Journal of Medical Robotics and Computer Assisted
-  Surgery, 2022, 18\allowbreak (4): e2406.
-
 \bibitem[Tiezzi et~al.(2007)Tiezzi and Kao]{ref20}
 TIEZZI~P, KAO~I.
 \newblock \href{http://dx.doi.org/10.1109/TRO.2006.889494}{Modeling of
@@ -146,6 +163,29 @@ SUN~Z, WANG~Z, PHEE~S~J.
   system}\allowbreak[J].
 \newblock IEEE/ASME Transactions on Mechatronics, 2014, 19\allowbreak (4):
   1243-1250.
+
+\bibitem[Dahl(1968)]{dahl1968}
+DAHL~P~R.
+\newblock A solid friction model: TOR-0158(3107-18)-1\allowbreak[R].
+\newblock The Aerospace Corporation, 1968.
+
+\bibitem[Dieterich(1979)]{dieterich1979}
+DIETERICH~J~H.
+\newblock Modeling of rock friction: 1. experimental results and constitutive
+  equations\allowbreak[J].
+\newblock Journal of Geophysical Research, 1979, 84\allowbreak (B5): 2161-2168.
+
+\bibitem[Ruina(1983)]{ruina1983}
+RUINA~A.
+\newblock Slip instability and state variable friction laws\allowbreak[J].
+\newblock Journal of Geophysical Research, 1983, 88\allowbreak (B12):
+  10359-10370.
+
+\bibitem[Marone(1998)]{marone1998}
+MARONE~C.
+\newblock Laboratory-derived friction laws and their application to seismic
+  faulting\allowbreak[J].
+\newblock Annual Review of Earth and Planetary Sciences, 1998, 26: 643-696.
 
 \bibitem[Cho et~al.(2014)Cho, van Merri{\"e}nboer, Gulcehre, et~al.]{ref26}
 CHO~K, VAN MERRI{\"E}NBOER~B, GULCEHRE~C, et~al.
