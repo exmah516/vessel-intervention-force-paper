@@ -405,12 +405,13 @@ F_{\mathrm{fb}}[k]&=F_{\mathrm{meas}}[k]+\rho_kC_e,\\
 \end{equation}
 式中，$F_{\mathrm{ref}}$ 由式\eqref{eq:reference}构造，$F_*>0$ 为由训练集确定的力归一化尺度，$\gamma_{\mathrm{sm}}$ 为平滑权重。训练、验证与测试按完整试次划分，输入标准化参数仅由训练集计算。方法流程如图\ref{fig4}所示。
 
-\begin{figure}[H]
+% 通栏图4：由最终版 SVG 转为矢量 PDF，按原图175 mm宽度居中排在页顶。
+\begin{figure*}[!t]
 \centering
-\fbox{\parbox{0.92\linewidth}{\raggedright [图4待补：(a) 两路测量经传递矩阵、惯性和零载基线校正；S1末锁存，S8末取轴向初值，恢复模型给出补偿量。(b) 两级残差网络：S9按前向行程分为 $M$ 个单元，第一级GRU逐单元编码；第二级以上一单元的编码为查询，对前 $K_c$ 个周期同一单元的编码加权。(c) 补偿量与残差相加，残差经限幅和淡入，在恢复完成、停止或回拉时撤除补偿；扭矩直接输出校正值；两通道在S2～S8锁存。]}}
+\makebox[\textwidth][c]{\includegraphics[width=175mm]{Fig4_final.pdf}}
 \bicaption{轴向力重构的反馈流程与两级残差网络}{Feedback scheme and two-level residual network for axial force reconstruction}
 \label{fig4}
-\end{figure}
+\end{figure*}
 
 \section{实验验证与分析（Experimental validation and analysis）}
 
