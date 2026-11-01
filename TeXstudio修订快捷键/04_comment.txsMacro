@@ -1,0 +1,16 @@
+{
+  "formatVersion": 2,
+  "name": "添加批注",
+  "type": "Snippet",
+  "tag": [
+    "%<%:cutInsert,multiline%>\\comment{%|批注内容%|}"
+  ],
+  "description": [
+    "直接输入批注；如果先选中了文字，原文会保留，批注紧跟其后。"
+  ],
+  "abbrev": "",
+  "trigger": "",
+  "menu": "论文修订",
+  "shortcut": "Shift+F4",
+  "checkState": 2
+}

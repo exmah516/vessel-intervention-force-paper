@@ -1,0 +1,3 @@
+\contentsline {replaced}{Replaced: \truncate {\Changestruncatewidth }{夹持式血管介入机器人能够直接测量器械近端力，但有限的导轨行程使其在输送中必须反复回退和重新夹持，这一过程中，长距离输送需要较大空间且有屈曲风险，重新夹持则会造成操作中断和力觉波动。因此，需要研究有限行程约束下兼顾输送连续性、运动精度与力觉稳定性的控制方法，以提高机器人辅助介入的可靠性和安全性。}}{1}{section*.1}%
+\contentsline {comment}{Commented: \truncate {\Changestruncatewidth }{这里好像根本没有提到力反馈干扰会打破反馈控制的稳定性}}{2}{section*.2}%
+\contentsline {comment}{Commented: \truncate {\Changestruncatewidth }{这里逻辑不对，叙述太乱，应该先说近端方案有滚轮式，滚轮式有什么缺点，然后说有夹持式，夹持式可以实现xx效果。然而夹持式近端测力也会引入一些近端测力带来的干扰分量}}{2}{section*.3}%

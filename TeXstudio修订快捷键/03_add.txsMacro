@@ -1,0 +1,16 @@
+{
+  "formatVersion": 2,
+  "name": "新增修订",
+  "type": "Snippet",
+  "tag": [
+    "\\added{%<新增内容%:select,multiline%>}"
+  ],
+  "description": [
+    "在光标处插入新增内容，或先选中文字再标记为新增。"
+  ],
+  "abbrev": "",
+  "trigger": "",
+  "menu": "论文修订",
+  "shortcut": "Shift+F3",
+  "checkState": 2
+}

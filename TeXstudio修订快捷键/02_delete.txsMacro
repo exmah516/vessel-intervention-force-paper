@@ -1,0 +1,16 @@
+{
+  "formatVersion": 2,
+  "name": "标记删除（保留原文）",
+  "type": "Snippet",
+  "tag": [
+    "\\deleted{%<原文%:cutInsert,multiline%>}%|"
+  ],
+  "description": [
+    "选中要删除的正文后运行，原文保留并显示删除线。"
+  ],
+  "abbrev": "",
+  "trigger": "",
+  "menu": "论文修订",
+  "shortcut": "Shift+F2",
+  "checkState": 2
+}

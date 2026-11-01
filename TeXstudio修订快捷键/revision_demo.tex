@@ -1,0 +1,24 @@
+% !TeX program = xelatex
+\documentclass[twocolumn]{ctexart}
+\usepackage[draft,commentmarkup=footnote]{changes}
+\usepackage{xeCJKfntef}
+\setdeletedmarkup{\CJKsout{#1}}
+\begin{document}
+\section*{修订快捷键示例}
+替换：\replaced{修改后的表述}{原来的表述}。
+
+删除：\deleted{这是一段需要删除的旧内容，长度足够跨过双栏中的一行，用于检查中文删除线和自动换行是否正常。}
+
+新增：\added{这是补充的说明。}
+
+批注：待核实的表述\comment{这里需要补充实验依据。}
+
+\section*{快捷键练习区}
+先选中这句话，再按 Shift+F1 替换。
+
+先选中这句话，再按 Shift+F2 标记删除。
+
+在此处按 Shift+F3 新增内容。
+
+选中这句话，再按 Shift+F4 添加批注。
+\end{document}

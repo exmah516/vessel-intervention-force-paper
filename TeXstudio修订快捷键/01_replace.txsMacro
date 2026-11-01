@@ -1,0 +1,16 @@
+{
+  "formatVersion": 2,
+  "name": "替换修订（保留原文）",
+  "type": "Snippet",
+  "tag": [
+    "\\replaced{%|新内容%|}{%<原文%:cutInsert,multiline%>}"
+  ],
+  "description": [
+    "选中原文后运行，直接输入新内容。原文保留在第二组花括号内。Ctrl+Z 撤销。"
+  ],
+  "abbrev": "",
+  "trigger": "",
+  "menu": "论文修订",
+  "shortcut": "Shift+F1",
+  "checkState": 2
+}
