@@ -1,7 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  2 NOV 2026 02:09
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  2 NOV 2026 07:41
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **JQR_LaTeX_revised.tex
 (./JQR_LaTeX_revised.tex
@@ -2024,36 +2023,35 @@ File: ./figure3_manuscript.png Graphic file (type bmp)
 <./figure3_manuscript.png>
  [5]
 LaTeX Font Info:    Trying to load font information for T1+ntxsups on input lin
-e 331.
+e 328.
  (c:/texlive/2026/texmf-dist/tex/latex/newtx/t1ntxsups.fd
 File: t1ntxsups.fd 2023/09/17 v1.0
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 7.52812pt on input line 331.
+(Font)              scaled to size 7.52812pt on input line 328.
 Package hyperref Info: bookmark level for unknown comment defaults to 0 on inpu
-t line 331.
+t line 328.
 File: ./Fig4_最终版.pdf Graphic file (type pdf)
 <use ./Fig4_最终版.pdf>
 
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
 []\TU/SimSun(0)/m/n/10.53937 正 常 恢 复 阶 段 的 总 补 偿 量 为 $\OML/ztmcm/m/it/10.53937 
 C\OT1/ztmcm/m/n/10.53937 [\OML/ztmcm/m/it/10.53937 k\OT1/ztmcm/m/n/10.53937 ] =
 
  []
 
-[7]
+[6]
 File: JQR_LaTeX_Template-0507/fig4.png Graphic file (type bmp)
 <JQR_LaTeX_Template-0507/fig4.png>
- [8]
+ [7] [8]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 527.
+(Font)              scaled to size 5.0pt on input line 524.
  [9] [10] (./JQR_LaTeX_revised.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.03pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.5pt on input line 1.
- [11])
+)
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "KaiTi/BI" (it probably doesn't
@@ -2113,10 +2111,11 @@ Package fontspec Info:
 \openout6 = `JQR_LaTeX_revised.loc'.
 
 
-Overfull \vbox (0.8692pt too high) has occurred while \output is active []
 
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
-[12] (./JQR_LaTeX_revised.aux)
+[11] (./JQR_LaTeX_revised.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/08/05>
@@ -2129,12 +2128,12 @@ Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
 (rerunfilecheck)             Checksum: D33A20433FE3A3C28848B347A7682AB5;3709.
  ) 
 Here is how much of TeX's memory you used:
- 37431 strings out of 468168
- 790161 string characters out of 5436525
+ 37429 strings out of 468168
+ 790108 string characters out of 5436525
  1288524 words of memory out of 5000000
- 65404 multiletter control sequences out of 15000+600000
+ 65402 multiletter control sequences out of 15000+600000
  729848 words of font info for 223 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  137i,18n,143p,1695b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on JQR_LaTeX_revised.pdf (12 pages).
+Output written on JQR_LaTeX_revised.pdf (11 pages).

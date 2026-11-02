@@ -114,22 +114,19 @@ cnabstract = {针对夹持类血管介入机器人往复夹持递送引起的近
 
 \revbegin
 受直线导轨行程限制，长距离递送由周期性短行程往复运动完成。根据运动和夹持时序，将一个往复周期划分为S1～S10十个阶段，如图\ref{fig1}所示。
-\begin{enumerate}[label=\arabic*),nosep,itemsep=0pt,topsep=2pt,partopsep=0pt,parsep=0pt,leftmargin=2\ccwd]
-\item 递送与停止（S1～S2）：递送机构独立夹持器械推进，并可同时旋转（S1）；单次行程结束时滑台减速停止，支撑机构尚未闭合（S2）。
-\item 承载切换（S3～S4）：支撑机构闭合，两个机构共同夹持器械（S3）；随后递送机构释放，由支撑机构承载（S4）。
-\item 空载回程（S5～S6）：递送机构脱离器械后沿导轨退回（S5），在起点减速停止（S6），期间器械由支撑机构保持。
-\item 重新承载与递送（S7～S10）：递送机构在起点闭合，两个机构再次共同夹持（S7）；支撑机构释放后，静止的递送机构独立承载（S8）；递送机构恢复前向推进，在规定行程窗口内补偿重新承载时的载荷变化（S9）；补偿撤除后进入正常递送阶段（S10）。
-\end{enumerate}
-\revend
-
-\revbegin
-\begin{figure}[H]
+\begin{figure}[!b]
 \RevisionColor
 \centering
 \includegraphics[width=\linewidth]{fig1.png}
 \bicaption{\revised{往复夹持递送工作过程}}{\revised{Stages of reciprocating clamping delivery}}
 \label{fig1}
 \end{figure}
+\begin{enumerate}[label=\arabic*),nosep,itemsep=0pt,topsep=2pt,partopsep=0pt,parsep=0pt,leftmargin=2\ccwd]
+\item 递送与停止（S1～S2）：递送机构独立夹持器械推进，并可同时旋转（S1）；单次行程结束时滑台减速停止，支撑机构尚未闭合（S2）。
+\item 承载切换（S3～S4）：支撑机构闭合，两个机构共同夹持器械（S3）；随后递送机构释放，由支撑机构承载（S4）。
+\item 空载回程（S5～S6）：递送机构脱离器械后沿导轨退回（S5），在起点减速停止（S6），期间器械由支撑机构保持。
+\item 重新承载与递送（S7～S10）：递送机构在起点闭合，两个机构再次共同夹持（S7）；支撑机构释放后，静止的递送机构独立承载（S8）；递送机构恢复前向推进，在规定行程窗口内补偿重新承载时的载荷变化（S9）；补偿撤除后进入正常递送阶段（S10）。
+\end{enumerate}
 \revend
 
 \subsection{测力波动与补偿目标}
@@ -669,9 +666,7 @@ G_{\rm step}&=\frac{\Delta F_{\rm fb}}{\Delta F_{\rm ref}},\\
 本模型将速率--状态摩擦的状态演化线性化为指数形式，并以恢复窗口内推进速度近似恒定为前提，未显式包含速率--状态摩擦的直接速率效应。辨识得到的 $D_c$ 为毫米量级[待补]，远大于单个微凸体接触的特征尺度，应解释为分布接触条件下的等效特征滑移距离，而非单一界面的微观参数。参数 $b_F$ 与 $D_c$ 是导管鞘及血管壁接触路径的集总等效量；器械经过大曲率段时，接触状态改变可能需要分段辨识。
 \revend
 
-\revbegin
-在切换期间的输出保持阶段（S2～S8），器械由当前承载的夹持组件保持，连续递送参考载荷在该短时段内近似不变。扭矩在S9采用校正实测值；长柔器械在弯曲管腔中的扭转储能与甩转不属于轴向恢复模型描述的载荷过程。
-\revend
+
 
 \section{结论（Conclusions）}
 
@@ -680,11 +675,6 @@ G_{\rm step}&=\frac{\Delta F_{\rm fb}}{\Delta F_{\rm ref}},\\
 \revend
 
 \noindent
-\textbf{数据可用性声明}
-
-\revbegin
-[待补：与本研究对应的数据集名称、存储平台、访问链接及开放状态。]
-\revend
 
 % -------- 参考文献表
 \bibliographystyle{JQR_LaTeX_Template-0507/jqr-num}
