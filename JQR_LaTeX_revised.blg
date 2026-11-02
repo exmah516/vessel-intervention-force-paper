@@ -10,44 +10,44 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: JQR_LaTeX_Template-0507/references.bib
-You've used 25 entries,
+You've used 23 entries,
             5264 wiz_defined-function locations,
-            1188 strings with 12674 characters,
-and the built_in function-call counts, 192306 in all, are:
-= -- 3995
-> -- 22424
-< -- 27984
-+ -- 7719
-- -- 1431
-* -- 1354
-:= -- 26621
-add.period$ -- 75
-call.type$ -- 25
-change.case$ -- 185
-chr.to.int$ -- 6872
-cite$ -- 25
-duplicate$ -- 582
-empty$ -- 1514
-format.name$ -- 785
-if$ -- 49894
+            1174 strings with 12397 characters,
+and the built_in function-call counts, 182817 in all, are:
+= -- 3799
+> -- 21368
+< -- 26618
++ -- 7342
+- -- 1390
+* -- 1283
+:= -- 25320
+add.period$ -- 69
+call.type$ -- 23
+change.case$ -- 177
+chr.to.int$ -- 6537
+cite$ -- 23
+duplicate$ -- 536
+empty$ -- 1394
+format.name$ -- 757
+if$ -- 47417
 int.to.chr$ -- 2
-int.to.str$ -- 26
+int.to.str$ -- 24
 missing$ -- 0
-newline$ -- 142
-num.names$ -- 75
-pop$ -- 9026
+newline$ -- 132
+num.names$ -- 69
+pop$ -- 8566
 preamble$ -- 1
-purify$ -- 25
+purify$ -- 23
 quote$ -- 0
-skip$ -- 20992
+skip$ -- 19966
 stack$ -- 0
-substring$ -- 8820
-swap$ -- 48
-text.length$ -- 424
+substring$ -- 8376
+swap$ -- 46
+text.length$ -- 404
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 319
+type$ -- 293
 warning$ -- 0
-while$ -- 541
+while$ -- 511
 width$ -- 0
-write$ -- 380
+write$ -- 351

@@ -1,0 +1,39 @@
+{
+  "source": "D:\\Work_files\\Vessel intervention Robot\\力波动方法\\write\\论文撰写\\JQR_LaTeX_revised.tex",
+  "sha256": "c6418bb39866158bcccd0e451fcfc5615befa2e1ddbb297d36061ea72dbc9786",
+  "removed_equation_labels": [
+    "eq:aging-law",
+    "eq:hold-duration",
+    "eq:inertia",
+    "eq:initial-slope",
+    "eq:lambda-online",
+    "eq:peak-error",
+    "eq:recovery-time",
+    "eq:rmse-mae",
+    "eq:step-metrics"
+  ],
+  "removed_figure_labels": [
+    "fig8"
+  ],
+  "remaining_labels": 34,
+  "references": 14,
+  "dangling_references": [],
+  "pending_markers": 48,
+  "table_rows": 7,
+  "table_pending_cells": 21,
+  "figure_numbers": {
+    "fig1": "1",
+    "fig2": "2",
+    "fig3": "3",
+    "fig4": "4",
+    "fig5": "5",
+    "fig6": "6",
+    "fig9": "7",
+    "fig7": "8",
+    "fig10": "9"
+  },
+  "pages": 10,
+  "compile": "passed",
+  "tex_size": 46812,
+  "pdf_size": 5334342
+}

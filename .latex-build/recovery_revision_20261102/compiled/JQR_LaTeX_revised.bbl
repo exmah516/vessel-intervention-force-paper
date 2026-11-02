@@ -1,0 +1,187 @@
+\begin{thebibliography}{23}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{#1}
+\baselineskip=11bp plus0.1pt minus0.1pt
+\expandafter\ifx\csname urlstyle\endcsname\relax\else
+  \urlstyle{same}\fi
+\expandafter\ifx\csname href\endcsname\relax
+  \DeclareUrlCommand\doi{\urlstyle{rm}}
+  \def\eprint#1#2{#2}
+\else
+  \def\doi#1{\href{https://doi.org/#1}{\nolinkurl{#1}}}
+  \let\eprint\href
+\fi
+
+\bibitem[Guo et~al.(2019)Guo, Song, Yin, et~al.]{ref2}
+GUO~S, SONG~Y, YIN~X, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TRO.2019.2896763}{A novel
+  robot-assisted endovascular catheterization system with haptic force
+  feedback}\allowbreak[J].
+\newblock IEEE Transactions on Robotics, 2019, 35\allowbreak (3): 685-696.
+
+\bibitem[Patel et~al.(2022)Patel, Atashzar, and Tavakoli]{ref29}
+PATEL~R~V, ATASHZAR~S~F, TAVAKOLI~M.
+\newblock \href{http://dx.doi.org/10.1109/JPROC.2022.3180052}{Haptic feedback
+  and force-based teleoperation in surgical robotics}\allowbreak[J].
+\newblock Proceedings of the IEEE, 2022, 110\allowbreak (7): 1012-1027.
+
+\bibitem[He et~al.(2018)He, Wang, and Zuo]{ref3}
+HE~C, WANG~S, ZUO~S.
+\newblock \href{http://dx.doi.org/10.1007/s11548-018-1722-x}{A linear stepping
+  endovascular intervention robot with variable stiffness and force
+  sensing}\allowbreak[J].
+\newblock International Journal of Computer Assisted Radiology and Surgery,
+  2018, 13\allowbreak (5): 671-682.
+
+\bibitem[Kesner et~al.(2014)Kesner and Howe]{ref34}
+KESNER~S~B, HOWE~R~D.
+\newblock \href{http://dx.doi.org/10.1177/0278364913511350}{Robotic catheter
+  cardiac ablation combining ultrasound guidance and force
+  control}\allowbreak[J].
+\newblock The International Journal of Robotics Research, 2014, 33\allowbreak
+  (4): 631-644.
+
+\bibitem[Jin et~al.(2021{\natexlab{a}})Jin, Guo, Guo, Shi, Tamiya, Kawanishi,
+  and Hirata]{ref35}
+JIN~X, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3107188}{Total force
+  analysis and safety enhancing for operating both guidewire and catheter in
+  endovascular surgery}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2021{\natexlab{a}}, 21\allowbreak (20):
+  22499-22509.
+
+\bibitem[Sankaran et~al.(2020)Sankaran, Chembrammel, and Kesavadas]{ref5}
+SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2045}{Force calibration for an
+  endovascular robotic system with proximal force measurement}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2020, 16\allowbreak (2): e2045.
+
+\bibitem[Zhao et~al.(2018)Zhao, Guo, Xiao, et~al.]{ref4}
+ZHAO~Y, GUO~S, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0275-7}{Operating force
+  information on-line acquisition of a novel slave manipulator for vascular
+  interventional surgery}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 33.
+
+\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
+WANG~S, LIU~Z, SHU~X, et~al.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
+  sensing of a novel cardiovascular interventional surgery
+  robot}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2022, 18\allowbreak (4): e2406.
+
+\bibitem[Jin et~al.(2021{\natexlab{b}})Jin, Guo, Guo, Shi, Tamiya, and
+  Hirata]{ref36}
+JIN~X, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3066424}{Development of a
+  tactile sensing robot-assisted system for vascular interventional
+  surgery}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2021{\natexlab{b}}, 21\allowbreak (10):
+  12284-12294.
+
+\bibitem[Thakur et~al.(2009)Thakur, Bax, Holdsworth, and Drangova]{ref37}
+THAKUR~Y, BAX~J~S, HOLDSWORTH~D~W, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TBME.2009.2017203}{Design and
+  performance evaluation of a remote catheter navigation system}\allowbreak[J].
+\newblock IEEE Transactions on Biomedical Engineering, 2009, 56\allowbreak (7):
+  1901-1908.
+
+\bibitem[Chowdhury et~al.(2025)Chowdhury, Gharamaleki, Lee, Kim, Kim, Vidal,
+  Youn, and Choi]{ref38}
+CHOWDHURY~A~M~M~B, GHARAMALEKI~N~L, LEE~H, et~al.
+\newblock \href{http://dx.doi.org/10.1038/s44182-025-00023-6}{Dual active
+  tilted roller actuation system (datras) with an electromagnetic actuation
+  system for vascular intervention}\allowbreak[J].
+\newblock npj Robotics, 2025, 3: 8.
+
+\bibitem[Wang et~al.(2021)Wang, Liu, Yan, et~al.]{ref6}
+WANG~K, LIU~J, YAN~W, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s11548-020-02278-w}{Force feedback
+  controls of multi-gripper robotic endovascular intervention: design,
+  prototype, and experiments}\allowbreak[J].
+\newblock International Journal of Computer Assisted Radiology and Surgery,
+  2021, 16\allowbreak (1): 179-192.
+
+\bibitem[Guo et~al.(2018)Guo, Wang, Xiao, et~al.]{ref15}
+GUO~S, WANG~Y, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0278-4}{Study on real-time
+  force feedback for a master--slave interventional surgical robotic
+  system}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 37.
+
+\bibitem[Wang et~al.(2020)Wang, Yuan, Zeng, et~al.]{ref9}
+WANG~K, YUAN~H, ZENG~Y, et~al.
+\newblock \href{http://dx.doi.org/10.1109/ICMA49215.2020.9233703}{Reciprocating
+  operation method for vascular intervention surgery
+  robot}\allowbreak[C]//\allowbreak
+2020 IEEE International Conference on Mechatronics and Automation (ICMA).
+\newblock 2020: 1613-1618.
+
+\bibitem[Cao et~al.(2024)Cao, Guo, Guo, et~al.]{ref10}
+CAO~S, GUO~S, GUO~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TIM.2023.3342853}{A reciprocating
+  delivery device-based endovascular intervention robot with multimanipulators
+  collaboration}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2024, 73: 1-12.
+
+\bibitem[Al-Ahmad et~al.(2023)Al-Ahmad, Ourak, Vlekken, et~al.]{ref7}
+AL-AHMAD~O, OURAK~M, VLEKKEN~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2023.3291026}{Force control with
+  a novel robotic catheterization system based on braided sleeve
+  grippers}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2023, 5\allowbreak
+  (3): 602-613.
+
+\bibitem[Bao et~al.(2018)Bao, Guo, Xiao, et~al.]{ref8}
+BAO~X, GUO~S, XIAO~N, et~al.
+\newblock \href{http://dx.doi.org/10.1007/s10544-018-0318-0}{Compensatory force
+  measurement and multimodal force feedback for remote-controlled vascular
+  interventional robot}\allowbreak[J].
+\newblock Biomedical Microdevices, 2018, 20\allowbreak (3): 74.
+
+\bibitem[Tiezzi et~al.(2007)Tiezzi and Kao]{ref20}
+TIEZZI~P, KAO~I.
+\newblock \href{http://dx.doi.org/10.1109/TRO.2006.889494}{Modeling of
+  viscoelastic contacts and evolution of limit surface for robotic contact
+  interface}\allowbreak[J].
+\newblock IEEE Transactions on Robotics, 2007, 23\allowbreak (2): 206-217.
+
+\bibitem[Canudas~de Wit et~al.(1995)Canudas~de Wit, Olsson, {\AA}str{\"o}m, and
+  Lischinsky]{ref28}
+CANUDAS~DE WIT~C, OLSSON~H, {\AA}STR{\"O}M~K~J, et~al.
+\newblock \href{http://dx.doi.org/10.1109/9.376053}{A new model for control of
+  systems with friction}\allowbreak[J].
+\newblock IEEE Transactions on Automatic Control, 1995, 40\allowbreak (3):
+  419-425.
+
+\bibitem[Sun et~al.(2014)Sun, Wang, and Phee]{ref30}
+SUN~Z, WANG~Z, PHEE~S~J.
+\newblock \href{http://dx.doi.org/10.1109/TMECH.2013.2278613}{Elongation
+  modeling and compensation for the flexible tendon--sheath
+  system}\allowbreak[J].
+\newblock IEEE/ASME Transactions on Mechatronics, 2014, 19\allowbreak (4):
+  1243-1250.
+
+\bibitem[Dahl(1968)]{dahl1968}
+DAHL~P~R.
+\newblock A solid friction model: TOR-0158(3107-18)-1\allowbreak[R].
+\newblock The Aerospace Corporation, 1968.
+
+\bibitem[Ruina(1983)]{ruina1983}
+RUINA~A.
+\newblock Slip instability and state variable friction laws\allowbreak[J].
+\newblock Journal of Geophysical Research, 1983, 88\allowbreak (B12):
+  10359-10370.
+
+\bibitem[Cho et~al.(2014)Cho, van Merri{\"e}nboer, Gulcehre, et~al.]{ref26}
+CHO~K, VAN MERRI{\"E}NBOER~B, GULCEHRE~C, et~al.
+\newblock \href{http://dx.doi.org/10.3115/v1/D14-1179}{Learning phrase
+  representations using {RNN} encoder--decoder for statistical machine
+  translation}\allowbreak[C]//\allowbreak
+Proceedings of the 2014 Conference on Empirical Methods in Natural Language
+  Processing (EMNLP).
+\newblock Doha, Qatar: ACL, 2014: 1724-1734.
+
+\end{thebibliography}

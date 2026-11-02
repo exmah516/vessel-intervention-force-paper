@@ -1,4 +1,4 @@
-\begin{thebibliography}{25}
+\begin{thebibliography}{23}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \baselineskip=11bp plus0.1pt minus0.1pt
@@ -169,23 +169,11 @@ DAHL~P~R.
 \newblock A solid friction model: TOR-0158(3107-18)-1\allowbreak[R].
 \newblock The Aerospace Corporation, 1968.
 
-\bibitem[Dieterich(1979)]{dieterich1979}
-DIETERICH~J~H.
-\newblock Modeling of rock friction: 1. experimental results and constitutive
-  equations\allowbreak[J].
-\newblock Journal of Geophysical Research, 1979, 84\allowbreak (B5): 2161-2168.
-
 \bibitem[Ruina(1983)]{ruina1983}
 RUINA~A.
 \newblock Slip instability and state variable friction laws\allowbreak[J].
 \newblock Journal of Geophysical Research, 1983, 88\allowbreak (B12):
   10359-10370.
-
-\bibitem[Marone(1998)]{marone1998}
-MARONE~C.
-\newblock Laboratory-derived friction laws and their application to seismic
-  faulting\allowbreak[J].
-\newblock Annual Review of Earth and Planetary Sciences, 1998, 26: 643-696.
 
 \bibitem[Cho et~al.(2014)Cho, van Merri{\"e}nboer, Gulcehre, et~al.]{ref26}
 CHO~K, VAN MERRI{\"E}NBOER~B, GULCEHRE~C, et~al.
