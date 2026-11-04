@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  4 NOV 2026 22:16
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  4 NOV 2026 22:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1752,21 +1752,7 @@ Package: xeCJKfntef 2022/08/05 v3.9.1 xeCJK font effect
 \l__xeCJK_under_symbol_box=\box112
 \c__xeCJK_filll_skip=\skip176
 )
-(./JQR_LaTeX_revised.aux
-Invalid UTF-8 byte or sequence at line 92 replaced by U+FFFD.
-)
-Runaway argument?
-{{7}{7}{\revised {夹持切换� 
-! File ended while scanning use of \@newl@bel.
-<inserted text> 
-                \par 
-l.81 \begin{document}
-                     
-I suspect you have forgotten a `}', causing me
-to read past where you wanted me to stop.
-I'll try to recover; but if the error is serious,
-you'd better type `E' or `X' now and fix your file.
-
+(./JQR_LaTeX_revised.aux)
 \openout1 = `JQR_LaTeX_revised.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
@@ -1789,6 +1775,7 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
 LaTeX Font Info:    ... okay on input line 81.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
 *geometry* verbose mode - [ preamble ] result:
@@ -2020,41 +2007,146 @@ Package mdframed Info: mdframed inside a box
  mdframed uses option nobreak mdframed on input line 83.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.03pt on input line 83.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 7.0pt on input line 92.
-
-Package natbib Warning: Citation `ref2' on page 1 undefined on input line 92.
-
-
-Package natbib Warning: Citation `ref29' on page 1 undefined on input line 92.
-
-
-Package natbib Warning: Citation `ref3' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref34' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref35' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref5' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref4' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref12' on page 1 undefined on input line 94.
-
-
-Package natbib Warning: Citation `ref36' on page 1 undefined on input line 94.
-
 [1
 
 
 ]
+File: 图1.bmp Graphic file (type bmp)
+<图1.bmp>
+ [2]
+File: ./figure2_manuscript.png Graphic file (type bmp)
+<./figure2_manuscript.png>
+ [3]
+File: ./figure3_manuscript.png Graphic file (type bmp)
+<./figure3_manuscript.png>
+ [4]
+File: Fig4_最终版_修改.pdf Graphic file (type pdf)
+<use Fig4_最终版_修改.pdf>
 
-Package natbib Warning: Citation `ref37' on page 2 undefined on input line 96.
+Underfull \hbox (badness 10000) in paragraph at lines 327--329
+\TU/SimSun(0)/m/n/10.53937 式 中，| $\OML/ztmcm/m/it/10.53937 ^^V[]$ \TU/SimSun(0)
+/m/n/10.53937 为 插 值 系 数，| $[] \OT1/ztmcm/m/n/10.53937 = 0$\TU/SimSun(0)/m/n/10.
+53937 ，| $[]\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/
+n/10.53937 ) =
+ []
 
 
-Package natbib Warning: Citation `ref5' on p
+Underfull \hbox (badness 2326) in paragraph at lines 327--329
+[]\OT1/ztmcm/m/n/10.53937 (\OMS/ztmcm/m/n/10.53937 ^^@\OML/ztmcm/m/it/10.53937 
+a; []\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/n/10.53
+937 ))$\TU/SimSun(0)/m/n/10.53937 ，| $\OML/ztmcm/m/it/10.53937 ^^Q \U/msa/m/n/1
+0.53937 > \OT1/ztmcm/m/n/10.53937 0$ \TU/SimSun(0)/m/n/10.53937 为 限 幅 比 例，| $\O
+ML/ztmcm/m/it/10.53937 e[] > \OT1/ztmcm/m/n/10.53937 0$
+ []
+
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 5.0pt on input line 335.
+[5]
+File: 图5.png Graphic file (type bmp)
+<图5.png>
+ [6]
+File: ./result_figures_20261104/figureA_recovery.pdf Graphic file (type pdf)
+<use ./result_figures_20261104/figureA_recovery.pdf>
+ (./result_tables_20261104/recovery_fit.tex)
+File: ./result_figures_20261104/figureB_feedback.pdf Graphic file (type pdf)
+<use ./result_figures_20261104/figureB_feedback.pdf>
+ [7]
+(./result_tables_20261104/human_replay.tex)
+File: ./result_figures_20261104/figureD_human_replay.pdf Graphic file (type pdf
+)
+<use ./result_figures_20261104/figureD_human_replay.pdf>
+ [8] (./JQR_LaTeX_revised.bbl
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 8.03pt on input line 1.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.5pt on input line 1.
+)
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "KaiTi/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'KaiTi(0)' created for font 'KaiTi' with
+(fontspec)             options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"KaiTi/OT:script=hani;language=dflt;"
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/BI" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/B" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "SimSun/I" (it probably doesn't
+(fontspec)             exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'SimSun(1)' created for font 'SimSun' with
+(fontspec)             options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"SimSun/OT:script=hani;language=dflt;"
+
+\Changes@OutFile=\write5
+\openout5 = `JQR_LaTeX_revised.soc'.
+
+\tf@loc=\write6
+\openout6 = `JQR_LaTeX_revised.loc'.
+
+
+
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
+
+[9] (./JQR_LaTeX_revised.aux)
+ ***********
+LaTeX2e <2025-11-01>
+L3 programming layer <2022/08/05>
+ ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
+(rerunfilecheck)             Checksum: 7029B25C67B88FAB755A75B4E408A8A7;2663.
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 132 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 37383 strings out of 468168
+ 789820 string characters out of 5436525
+ 1284423 words of memory out of 5000000
+ 65345 multiletter control sequences out of 15000+600000
+ 721451 words of font info for 209 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 137i,15n,143p,1670b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+Output written on JQR_LaTeX_revised.pdf (9 pages).
