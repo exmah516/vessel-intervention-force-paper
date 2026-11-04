@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\bicaption{操作者记录离线回放的反馈连续性}{Feedback continuity in offline replay of operator recordings}
+\label{tab:human-replay}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccc}
+\toprule
+方法 & 跌落/N & 跳变/N & 峰峰值/N\\
+\midrule
+校正测量 & \makecell{4.101\\{[3.357, 4.672]}} & \makecell{0.194\\{[0.078, 0.357]}} & \makecell{4.939\\{[4.527, 5.469]}}\\
+恢复模型补偿 & \makecell{0.749\\{[0.458, 1.352]}} & \makecell{0.169\\{[0.103, 0.328]}} & \makecell{2.491\\{[1.833, 3.931]}}\\
+物理+网络 & \makecell{0.811\\{[0.492, 1.433]}} & \makecell{0.163\\{[0.099, 0.326]}} & \makecell{2.570\\{[1.846, 3.883]}}\\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}
+{\footnotesize 注：3份记录、67个主体周期，中位数[四分位区间]；网络先取同周期5次重复训练所得指标的中位数。重新夹紧等待由位置估计，初始累计推进偏置设0 mm。该表为条件离线回放，不含主端力渲染，不属于两种反馈条件的操作者任务对照。}
+\end{table}

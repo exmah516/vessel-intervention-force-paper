@@ -1,0 +1,17 @@
+\begin{table}[!htbp]
+\centering
+\bicaption{恢复曲线预测误差}{Prediction errors of the recovery curves}
+\label{tab:recovery-fit}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lccc}
+\toprule
+模型 & 整窗/N & 前1 mm/N & 前2 mm/N\\
+\midrule
+仅弹性加载 & 0.489 & 0.643 & 0.652\\
+仅附加摩擦 & 0.780 & 1.458 & 1.216\\
+完整恢复模型 & 0.404 & 0.478 & 0.508\\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}
+{\footnotesize 注：外部15文件、113周期，相对实测恢复曲线计算；每文件内先平均周期RMSE，再对文件等权平均。行程从0.77 mm启用点重新计零。完整模型正确有峰43、正确无峰23、误报3、漏报44；双方有峰时峰值与峰位绝对误差分别为0.338 N、0.770 mm。图示使用冻结的 $k_0=1.901\,\mathrm{N/mm}$、$b_F=0.283\,\mathrm{N}$、$D_c=2.344\,\mathrm{mm}$；仅附加摩擦模型固定 $\lambda=0.010\,\mathrm{mm}$，拟合达到搜索边界。}
+\end{table}
