@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  4 NOV 2026 22:57
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  5 NOV 2026 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2014,16 +2014,15 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 File: 图1.bmp Graphic file (type bmp)
 <图1.bmp>
  [2]
-File: ./figure2_manuscript.png Graphic file (type bmp)
-<./figure2_manuscript.png>
+File: 图2去掉导轨.png Graphic file (type bmp)
+<图2去掉导轨.png>
  [3]
 File: ./figure3_manuscript.png Graphic file (type bmp)
 <./figure3_manuscript.png>
- [4]
 File: Fig4_最终版_修改.pdf Graphic file (type pdf)
 <use Fig4_最终版_修改.pdf>
-
-Underfull \hbox (badness 10000) in paragraph at lines 327--329
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 321--323
 \TU/SimSun(0)/m/n/10.53937 式 中，| $\OML/ztmcm/m/it/10.53937 ^^V[]$ \TU/SimSun(0)
 /m/n/10.53937 为 插 值 系 数，| $[] \OT1/ztmcm/m/n/10.53937 = 0$\TU/SimSun(0)/m/n/10.
 53937 ，| $[]\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/
@@ -2031,7 +2030,7 @@ n/10.53937 ) =
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 327--329
+Underfull \hbox (badness 2326) in paragraph at lines 321--323
 []\OT1/ztmcm/m/n/10.53937 (\OMS/ztmcm/m/n/10.53937 ^^@\OML/ztmcm/m/it/10.53937 
 a; []\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/n/10.53
 937 ))$\TU/SimSun(0)/m/n/10.53937 ，| $\OML/ztmcm/m/it/10.53937 ^^Q \U/msa/m/n/1
@@ -2040,27 +2039,35 @@ ML/ztmcm/m/it/10.53937 e[] > \OT1/ztmcm/m/n/10.53937 0$
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 335.
+(Font)              scaled to size 5.0pt on input line 329.
 [5]
-File: 图5.png Graphic file (type bmp)
-<图5.png>
- [6]
-File: ./result_figures_20261104/figureA_recovery.pdf Graphic file (type pdf)
-<use ./result_figures_20261104/figureA_recovery.pdf>
+File: 图5实验设置.png Graphic file (type bmp)
+<图5实验设置.png>
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[6]
+File: 图6.png Graphic file (type bmp)
+<图6.png>
+File: 图7不同模型形式的S9阶段补偿误差分析.png Graphic file (type bmp)
+<图7不同模型形式的S9阶段补偿误差分析.png>
  (./result_tables_20261104/recovery_fit.tex)
-File: ./result_figures_20261104/figureB_feedback.pdf Graphic file (type pdf)
-<use ./result_figures_20261104/figureB_feedback.pdf>
+File: 图8多周期反馈补偿效果.png Graphic file (type bmp)
+<图8多周期反馈补偿效果.png>
+File: 单个S9阶段误差.png Graphic file (type bmp)
+<单个S9阶段误差.png>
  [7]
-(./result_tables_20261104/human_replay.tex)
-File: ./result_figures_20261104/figureD_human_replay.pdf Graphic file (type pdf
-)
-<use ./result_figures_20261104/figureD_human_replay.pdf>
- [8] (./JQR_LaTeX_revised.bbl
+File: figureD_human_replay_v3_legend_lower_20261105.png Graphic file (type bmp)
+
+<figureD_human_replay_v3_legend_lower_20261105.png>
+ (./JQR_LaTeX_revised.bbl
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.03pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.5pt on input line 1.
-)
+
+[8])
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "KaiTi/BI" (it probably doesn't
@@ -2120,9 +2127,8 @@ Package fontspec Info:
 \openout6 = `JQR_LaTeX_revised.loc'.
 
 
+Overfull \vbox (0.86128pt too high) has occurred while \output is active []
 
-Package balance Warning: You have called \balance in second column
-(balance)                Columns might not be balanced.
 
 [9] (./JQR_LaTeX_revised.aux)
  ***********
@@ -2134,19 +2140,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
-(rerunfilecheck)             Checksum: 7029B25C67B88FAB755A75B4E408A8A7;2663.
- )
-(\end occurred inside a group at level 1)
-
-### semi simple group (level 1) entered at line 132 (\begingroup)
-### bottom level 
+(rerunfilecheck)             Checksum: E4CE12ECAE3EDDFFFB9DAFDC411FD967;2524.
+ ) 
 Here is how much of TeX's memory you used:
- 37383 strings out of 468168
- 789820 string characters out of 5436525
- 1284423 words of memory out of 5000000
- 65345 multiletter control sequences out of 15000+600000
- 721451 words of font info for 209 fonts, out of 8000000 for 9000
+ 37346 strings out of 468168
+ 786096 string characters out of 5436525
+ 1286835 words of memory out of 5000000
+ 65311 multiletter control sequences out of 15000+600000
+ 721443 words of font info for 208 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 137i,15n,143p,1670b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,17n,143p,1239b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on JQR_LaTeX_revised.pdf (9 pages).
