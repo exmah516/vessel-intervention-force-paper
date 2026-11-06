@@ -39,15 +39,15 @@ cnabstract = {
  cnkeywords = {\revised{血管介入机器人；力反馈；往复运动；载荷恢复}},
  %
  % ---- 英文相关信息
- entitle    = {Disturbance Modeling and Compensation of Force Feedback for Vascular Intervention Robot in Reciprocating Clamping Delivery},
- enauthor   = {\revised{SUI Kaicheng\addr{1,2,3}, ZHENG Liming\addr{1,2,3}, LIN Peng\addr{1,2}, HU Kunyuan\addr{1,2*}, LIU Hao\addr{1,2*}}},
+ entitle    = {Disturbance Modeling and Compensation of Force Feedback for for Vascular Intervention Robot in Reciprocating Clamping Delivery},
+ enauthor   = {\revised{SUI Kaicheng\addr{1,2,3}, ZHENG Liming\addr{1,2,3}, LIN Peng\addr{1,2},  LIU Hao\addr{1,2*}, HU Kunyuan\addr{1,2*}}},
  enaddress  = {1. \textit{State Key Laboratory of Robotics, Shenyang Institute of Automation, Chinese Academy of Sciences, Shenyang} 110016, \textit{China}; \\
                2. \textit{Key Laboratory of Minimally Invasive Surgical Robot, Liaoning Province, Shenyang} 110016, \textit{China}; \\
                3. \textit{University of Chinese Academy of Sciences, Beijing} 100049, \textit{China}},
  %
  % ---- 英文摘要
 enabstract = {
-A clamping-type vascular intervention robot delivers instruments over long distances through alternating clamping by multiple mechanisms and reciprocating motion. However, the periodic switching of motion states causes the proximal force measurement to deviate from the actual load on the instrument, which disturbs the operator's haptic perception, reduces intervention efficiency, and increases safety risks. To address this problem, a disturbance modeling and compensation method for force feedback is proposed. The disturbance is shown to arise jointly from load transfer during load-bearing switching and from the re-establishment of the force transmission chain and friction state during re-advancement. Based on this, a disturbance model is established to compensate for it. For the effects of insertion depth and cycle history that are difficult to model explicitly, a gated recurrent unit (GRU) with cross-cycle attention is employed to estimate the model residual from preceding-cycle information. Experimental results show that, after compensation, the root-mean-square error of the force feedback in the re-advancement stage is reduced by 49.5\%, and the operators' total intervention time is shortened.
+Clamping-type vascular intervention robot delivers instruments over long distances through alternating clamping by multiple mechanisms and reciprocating motion. However, the periodic switching of motion states causes the proximal force measurement to deviate from the actual load on the instrument, which disturbs the operator's haptic perception, reduces intervention efficiency, and increases safety risks. To address this problem, a disturbance modeling and compensation method for force feedback is proposed. The disturbance is shown to arise jointly from load transfer during gripper handover and from the re-establishment of the force transmission chain and friction state during resumed advancement. Based on this, a disturbance model is established to compensate for it. For the effects of insertion depth and cycle history that are difficult to model explicitly, a gated recurrent unit (GRU) with cross-cycle attention is employed to estimate the model residual from preceding-cycle information. Experimental results show that, after compensation, the root-mean-square error of the force feedback in the resumed advancement stage is reduced by 49.5\%, and the operators' total intervention time is shortened.
 },
  %
  % ---- 英文关键字
@@ -130,7 +130,7 @@ A clamping-type vascular intervention robot delivers instruments over long dista
 往复夹持递送使测力通道周期性经历承载、卸载、重新承载的过程，夹持组件开合冲击、停止后的载荷松弛及重新推进时的载荷恢复也会反映在近端测量信号中。因此，本文以近端测得的器械载荷作为对象，通过受力分析和分阶段处理，将往复夹持递送中随承载状态变化而波动的力反馈，重构为相同运动、机构、器械下连续递送时的力反馈。
 
 
-\section{受力分析与力反馈重构方法（Load analysis and force feedback reconstruction）}
+\section{受力分析与力反馈重构方法（Load analysis and force feedback reconstruction method）}
 
 \subsection{测量模型与承载切换中的载荷转移}
 
@@ -147,8 +147,8 @@ F_M+F_S=F_{\mathrm{out}},\\
 
 \begin{figure}[b]
 	\centering
-	\includegraphics[width=\linewidth]{图2去掉导轨.png}
-	\bicaption{测力通道与递送机构、支撑机构的受力关系}{Force-sensing channels and load transfer between the delivery and support mechanisms}
+	\includegraphics[width=\linewidth]{图2.png}
+	\bicaption{递送机构的测力结构与受力关系}{Force-sensing structure and loads of the delivery mechanism}
 	\label{fig2}
 \end{figure}
 
@@ -186,7 +186,7 @@ s_{\mathrm r}(t)=\int_{t_{k_9}}^{t}
 \end{equation}
 
 
-S9中的载荷恢复包含两部分作用，一是递送机构重新承载后，夹持组件、浮动传力组件及器械段组成的串联传力链随推进逐步加载；二是器械在S2～S8静止后，与外部器械和血管壁之间形成的静摩擦需要转化为滑动摩擦，重新推进时形成附加阻力，并在一定滑移距离内过渡至滑动摩擦水平\ucite{dahl1968,ruina1983}，恢复过程及补偿量如图\ref{fig3}所示。以推进行程为自变量，令 $\hat F(s_{\mathrm r})$ 为模型给出的载荷，将两项作用表示为一阶方程
+S9中的载荷恢复包含两部分作用，一是递送机构重新承载后，夹持组件、浮动传力组件及器械段组成的串联传力链随推进逐步加载；二是器械在S2～S8静止后，与外部器械和血管壁之间形成的静摩擦需要转化为滑动摩擦，重新推进时形成附加阻力，并在一定滑移距离内过渡至滑动摩擦水平\ucite{dahl1968,ruina1983}，恢复过程中的两种作用如图\ref{fig3}所示。以推进行程为自变量，令 $\hat F(s_{\mathrm r})$ 为模型给出的载荷，将两项作用表示为一阶方程
 
 \begin{equation}
 \label{eq:recovery-ode}
@@ -211,7 +211,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 \begin{figure}[!t]
 \centering
 \includegraphics[width=\linewidth]{图3.png}
-\bicaption{载荷恢复与补偿量示意}{Load recovery and the compensation term}
+\bicaption{重新推进阶段载荷恢复的两项作用}{Two effects in load recovery during re-advancing}
 \label{fig3}
 \end{figure}
 
@@ -337,7 +337,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 
 
-测量参数标定时，将测力单元与外部标准力传感器通过刚性零件串联，通过机构运动施加载荷及已知力臂的切向载荷，标定传递矩阵 $\bm H_0$ ，并通过空载下的平移、旋转、夹持组件开闭辨识空载响应项。连续递送参考由递送机构持续夹持器械采集，血管鞘、血管模型路径和起始插入位置与往复递送试次匹配，配对时按插入深度对齐，在连续递送记录中，速度较快相邻采样点之间线性插值。图\ref{fig5}展示测力单元标定与递送平台，外接标准力传感器用于标定，血管模型构成器械递送路径。
+测量参数标定时，将测力单元与外部标准力传感器通过刚性零件串联，通过机构运动施加载荷及已知力臂的切向载荷，标定传递矩阵 $\bm H_0$ ，并通过空载下的平移、旋转、夹持组件开闭辨识空载响应项。连续递送参考由递送机构持续夹持器械采集，血管鞘、血管模型路径和起始插入位置与往复递送试次匹配，配对时按插入深度对齐，同一深度处的参考值由连续递送记录相邻采样点线性插值得到。图\ref{fig5}展示测力单元标定与递送平台，外接标准力传感器用于标定，血管模型构成器械递送路径。
 
 
 \begin{figure}[h]
@@ -350,7 +350,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 往复递送试次由程序设定的运动指令完成，用于物理模型参数辨识、网络训练和性能评价，所有试次均操控器械经血管鞘进入血管模型完成。推进速度按介入常用范围设多档，设定范围为 $7$～$60\,\mathrm{mm/s}$。为使数据覆盖不同的停顿条件，各周期静止时长在 $1$～$2.5\,\mathrm{s}$ 内变化，插入深度随周期增加。每组试次包含10个往复周期，单次单向行程为 $20\,\mathrm{mm}$，记录机构位置、速度、加速度、电缸状态和力传感器数据。
 
-在上述条件下共采集90组试次，剔除器械卡滞导致其受损，无法正常递进的3组后，余下87组按完整试次划分，同一组的往复记录与连续递送参考归入同一子集：外部留出集12组，仅用于测试模型结果，其余75组中训练集55组、验证集20组。
+在上述条件下共采集90组试次，剔除器械卡滞导致其受损，无法正常递送的3组后，余下87组按完整试次划分，同一组的往复记录与连续递送参考归入同一子集：外部留出集12组，仅用于测试模型结果，其余75组中训练集55组、验证集20组。
 
 \subsection{物理模型的机理验证}
 
@@ -365,14 +365,14 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 \input{result_tables_20261104/recovery_fit.tex}
 
-\begin{figure}[!htbp]
+\begin{figure}[!tb]
 \centering
 \includegraphics[width=\linewidth]{图6.png}
 \bicaption{\revised{典型重新承载阶段的补偿效果}}{\revised{Compensation effect in a typical reloading stage}}
 \label{fig6}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!tb]
 	\centering
 	\includegraphics[width=\linewidth]{图7不同模型形式的S9阶段补偿误差分析.png}
 	\bicaption{\revised{物理模型不同形式的S9阶段补偿误差}}{\revised{S9 compensation errors of different forms of the physics-based model}}
@@ -386,7 +386,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 本节评价最终输出给主端的反馈相对参考载荷的误差。测试前冻结物理模型参数、网络参数及由训练集计算的标准化参数，网络采用 $M=20$ 个行程单元、$K=10$ 个历史周期和维度 $d=32$ 的单层GRU编码器与单头跨周期注意力。比较方法共四种：原始数据、物理模型、物理模型+单周期GRU（去掉第二级跨周期注意力）以及本文方法，按依次加入各模块的方式分析其作用。外部留出集上的误差见表\ref{tab1}。
 
-\begin{table}[!htbp]
+\begin{table}[!tb]
 	\centering
 	\bicaption{外部留出集上的力反馈误差}{Force feedback errors on the external held-out set}
 	\label{tab1}
@@ -407,14 +407,14 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 与原始数据相比，物理模型将 $E_{\mathrm{S9}}$ 由 $0.752\,\mathrm{N}$ 降至 $0.404\,\mathrm{N}$，$E_{1\,\mathrm{mm}}$ 由 $1.605\,\mathrm{N}$ 降至 $0.478\,\mathrm{N}$，分别降低 $46.3\%$ 和 $70.2\%$。这表明重新承载阶段的反馈误差主要来自待恢复载荷差，物理模型已补偿其中的大部分。在此基础上，本文方法将 $E_{\mathrm{S9}}$ 进一步降至 $0.380\,\mathrm{N}$，相对原始数据共降低 $49.5\%$，$E_{1\,\mathrm{mm}}$ 降至 $0.475\,\mathrm{N}$。单周期GRU同样降低了 $E_{\mathrm{S9}}$，但 $E_{1\,\mathrm{mm}}$ 升至 $0.507\,\mathrm{N}$；引入前序周期同一行程单元的信息后，$E_{1\,\mathrm{mm}}$ 降至 $0.475\,\mathrm{N}$，说明跨周期注意力主要改善了起步段的残差估计。
 
 
-\begin{figure}[!htbp]
+\begin{figure}[!tb]
 \centering
 \includegraphics[width=\linewidth]{图8多周期反馈补偿效果.png}
 \bicaption{\revised{夹持切换与重新推进过程中的多周期反馈}}{\revised{Force feedback over multiple cycles during clamping handover and reloaded delivery}}
 \label{fig8}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!tb]
 	\centering
 	\includegraphics[width=\linewidth]{单个S9阶段误差.png}
 	\bicaption{\revised{单次S9恢复过程的反馈误差}}{\revised{Feedback errors during one S9 recovery}}
@@ -425,7 +425,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 
 
-图\ref{fig8}为外部留出集中一组试次的多周期反馈。原始数据在S2～S8随承载切换降至接近0，并在S9中逐级回升，形成周期性的跌落；本文方法在S2～S8保持切换前稳态载荷，在S9中与恢复后的实测载荷衔接，各周期的反馈波形基本连续。为观察单次恢复过程中误差的变化，图\ref{fig9}选取外部留出集中典型误差为中位数的S9周期，给出物理模型与本文方法的反馈误差。在S9起点的误差均接近0，在实测载荷快速上升处出现短时正偏差，其中本文方法的偏差峰值较小。进入恢复后段，实测载荷已基本恢复，物理模型的补偿量仍未衰减完，形成持续的正偏差；本文方法较早回到0附近。由此可见，物理模型消除了重新推进初期的主要误差，残差网络进一步修正了恢复后段的过补偿。
+图\ref{fig8}为外部留出集中一组试次的多周期反馈。原始数据在S2～S8随承载切换降至接近0，并在S9中逐级回升，形成周期性的跌落；本文方法在S2～S8保持切换前稳态载荷，在S9中与恢复后的实测载荷衔接，各周期的反馈波形基本连续。为观察单次恢复过程中误差的变化，图\ref{fig9}选取外部留出集中典型误差为中位数的S9周期，给出稳态值保持不变、物理模型、本文方法的反馈误差。在S9起点的误差均接近0，在实测载荷快速上升处出现短时正偏差，其中本文方法的偏差峰值较小。进入恢复后段，实测载荷已基本恢复，物理模型的补偿量仍未衰减完，形成持续的正偏差；本文方法较早回到0附近。由此可见，物理模型消除了重新推进初期的主要误差，残差网络进一步修正了恢复后段的过补偿。
 
 
 
@@ -468,7 +468,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 \begin{figure}[!htbp]
 \centering
 \includegraphics[width=7.6cm]{figureD_human_replay_v3_legend_lower_20261105.png}
-\bicaption{典型的操作过程力反馈记录}{Record of feedback over leader-follower experiment}
+\bicaption{主从操作中的典型力反馈记录}{Typical force feedback record in the leader–follower experiment}
 \label{fig:human-replay}
 \end{figure}
 

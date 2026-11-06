@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  6 NOV 2026 16:49
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  6 NOV 2026 17:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1975,9 +1975,14 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 ]
 File: 图1.bmp Graphic file (type bmp)
 <图1.bmp>
- [2]
-File: 图2去掉导轨.png Graphic file (type bmp)
-<图2去掉导轨.png>
+
+Underfull \hbox (badness 1009) in paragraph at lines 133--133
+\T1/ntxtlf/b/n/12.045 y-sis and force feed-back re-con-struc-tion
+ []
+
+[2]
+File: 图2.png Graphic file (type bmp)
+<图2.png>
  [3]
 File: 图3.png Graphic file (type bmp)
 <图3.png>
@@ -2109,15 +2114,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
-(rerunfilecheck)             Checksum: 8FC69DE01C87654C34DFB73FC644BBA7;2540.
+(rerunfilecheck)             Checksum: B4040049BB0424F48AB71990CF8BB28B;2578.
  ) 
 Here is how much of TeX's memory you used:
  37303 strings out of 468168
- 785077 string characters out of 5436525
- 1287853 words of memory out of 5000000
+ 785041 string characters out of 5436525
+ 1287859 words of memory out of 5000000
  65282 multiletter control sequences out of 15000+600000
  730023 words of font info for 242 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 137i,15n,143p,1239b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,15n,143p,1241b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on JQR_LaTeX_revised.pdf (9 pages).

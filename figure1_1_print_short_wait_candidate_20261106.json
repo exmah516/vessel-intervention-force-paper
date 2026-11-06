@@ -1,0 +1,99 @@
+{
+  "record": "20261031_083641_交接等待时间0s（与第一组位置相同）",
+  "cycles": [
+    4,
+    5
+  ],
+  "samples": 5469,
+  "source_sha256": "f97cddac1b83101943f89710dd4f203620c0f0777c7923c7a061fc76089de45e",
+  "phase_boundaries_absolute_s": [
+    13.754,
+    14.972,
+    16.474,
+    17.692,
+    19.222
+  ],
+  "main_reclamp_to_next_forward_start_s": 0.3119999999999976,
+  "last_0p2s_force_median_difference_N": 0.009907187560000086,
+  "event_rows": [
+    {
+      "event": "phase4-to-phase5",
+      "time_s": 14.972,
+      "row": 1218
+    },
+    {
+      "event": "phase5-to-phase6",
+      "time_s": 16.474,
+      "row": 2720
+    },
+    {
+      "event": "phase6-to-phase7",
+      "time_s": 17.692,
+      "row": 3938
+    },
+    {
+      "event": "next-cycle-forward-start",
+      "time_s": 18.005,
+      "row": 4251
+    },
+    {
+      "event": "cylinder1_cmd:550->5",
+      "time_s": 15.473,
+      "row": 1719
+    },
+    {
+      "event": "cylinder2_cmd:1000->5",
+      "time_s": 15.973,
+      "row": 2219
+    },
+    {
+      "event": "cylinder2_cmd:5->1000",
+      "time_s": 17.693,
+      "row": 3939
+    },
+    {
+      "event": "cylinder1_cmd:5->550",
+      "time_s": 17.743,
+      "row": 3989
+    }
+  ],
+  "cycle_force_features": [
+    {
+      "cycle": 4,
+      "start_s": 13.754,
+      "end_s": 14.971,
+      "start_force_N": 1.38786259902,
+      "peak_force_N": 4.02802722024,
+      "peak_time_from_start_s": 0.40300000000000047,
+      "tail_median_last_0p2s_N": 3.66456069311,
+      "tail_iqr_last_0p2s_N": [
+        3.66374284978,
+        3.66668886067
+      ]
+    },
+    {
+      "cycle": 5,
+      "start_s": 18.005,
+      "end_s": 19.222,
+      "start_force_N": 1.62176348471,
+      "peak_force_N": 3.92044976174,
+      "peak_time_from_start_s": 0.33500000000000085,
+      "tail_median_last_0p2s_N": 3.65465350555,
+      "tail_iqr_last_0p2s_N": [
+        3.6488029464475003,
+        3.65710703553
+      ]
+    }
+  ],
+  "plot_style": {
+    "width_cm": 7.6,
+    "height_cm": 3.0,
+    "font_pt": 9,
+    "force_display_scale": "existing figure1 script: reconstructed force / 2.12",
+    "raw_and_existing_21ms_median_traces": true
+  },
+  "source_sample_count": 43512,
+  "selected_window_samples": 5469,
+  "samples_outside_selected_window": 38043,
+  "new_filtering_or_scaling_of_source_data": false
+}

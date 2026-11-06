@@ -147,7 +147,7 @@ F_M+F_S=F_{\mathrm{out}},\\
 
 \begin{figure}[b]
 	\centering
-	\includegraphics[width=\linewidth]{图2去掉导轨.png}
+	\includegraphics[width=\linewidth]{图2.png}
 	\bicaption{测力通道与递送机构、支撑机构的受力关系}{Force-sensing channels and load transfer between the delivery and support mechanisms}
 	\label{fig2}
 \end{figure}
@@ -210,7 +210,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 \begin{figure}[!t]
 \centering
-\includegraphics[width=\linewidth]{./figure3_manuscript.png}
+\includegraphics[width=\linewidth]{图3.png}
 \bicaption{载荷恢复与补偿量示意}{Load recovery and the compensation term}
 \label{fig3}
 \end{figure}
@@ -365,14 +365,14 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 \input{result_tables_20261104/recovery_fit.tex}
 
-\begin{figure}[!htbp]
+\begin{figure}[!bp]
 \centering
 \includegraphics[width=\linewidth]{图6.png}
 \bicaption{\revised{典型重新承载阶段的补偿效果}}{\revised{Compensation effect in a typical reloading stage}}
 \label{fig6}
 \end{figure}
 
-\begin{figure}[!htbp]
+\begin{figure}[!bp]
 	\centering
 	\includegraphics[width=\linewidth]{图7不同模型形式的S9阶段补偿误差分析.png}
 	\bicaption{\revised{物理模型不同形式的S9阶段补偿误差}}{\revised{S9 compensation errors of different forms of the physics-based model}}
@@ -382,7 +382,7 @@ f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
 
 \subsection{力反馈性能评价}
 
-本节评价最终输出给主端的反馈相对参考载荷的误差。测试前冻结物理模型参数、网络参数及由训练集计算的标准化参数，网络采用 $M=20$ 个行程单元、$K=10$ 个历史周期和维度 $d=32$ 的单层GRU编码器与单头跨周期注意力。比较方法共四种：原始数据、物理模型、物理模型+单周期GRU（去掉第二级跨周期注意力）以及本文方法，按依次加入各模块的方式分析其作用。外部留出集上的误差见表\ref{tab:feedback}。
+本节评价最终输出给主端的反馈相对参考载荷的误差。测试前冻结物理模型参数、网络参数及由训练集计算的标准化参数，网络采用 $M=20$ 个行程单元、$K=10$ 个历史周期上限和维度 $d=32$ 的单层GRU编码器与单头跨周期注意力。比较方法共四种：原始数据、物理模型、物理模型+单周期GRU（去掉第二级跨周期注意力）以及本文方法，按依次加入各模块的方式分析其作用。外部留出集上的误差见表\ref{tab:feedback}。
 
 \begin{table}[!htbp]
 	\centering
