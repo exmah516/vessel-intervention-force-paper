@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  6 NOV 2026 13:06
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  6 NOV 2026 16:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -6,13 +6,13 @@ entering extended mode
 (./JQR_LaTeX_revised.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
-(./JQR_LaTeX_Template-0507/JQRnew.cls
+(./JQR_LaTeX_Template-0507/JQRnewSubmission.cls
 
 LaTeX Warning: You have requested document class `JQR_LaTeX_Template-0507/JQRne
-w',
-               but the document class provides `JQRnew'.
+wSubmission',
+               but the document class provides `JQRnewSubmission'.
 
-Document Class: JQRnew 2023/04/27, v1.0 by latexstudio.net
+Document Class: JQRnewSubmission 2023/04/27, v1.0 by latexstudio.net
 (c:/texlive/2026/texmf-dist/tex/latex/ctex/ctexart.cls
 (c:/texlive/2026/texmf-dist/tex/latex/ctex/config/ctexbackend.cfg
 File: ctexbackend.cfg 2022/07/14 v2.5.10 Backend configuration file (CTEX)
@@ -1826,72 +1826,6 @@ Package hyperref Info: Link coloring OFF on input line 79.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 9.03374pt on input line 81.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 81.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 81.
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/BI" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/B" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "FangSong/I" (it probably
-(fontspec)             doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
-(fontspec)             with options [Script={CJK}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.:
-(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Microsoft YaHei Bold/I" (it
-(fontspec)             probably doesn't exist).
-
-
-Package fontspec Info: 
-(fontspec)             Could not resolve font "Microsoft YaHei/I" (it probably
-(fontspec)             doesn't exist).
-
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 81
-.
-
-(c:/texlive/2026/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
-File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
-)
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.48535pt on input line 81.
-
-Package fontspec Info: 
-(fontspec)             Font family 'MicrosoftYaHei(0)' created for font
-(fontspec)             'Microsoft YaHei' with options
-(fontspec)             [Script={CJK},BoldFont={* Bold}].
-(fontspec)              
-(fontspec)              This font family consists of the following NFSS
-(fontspec)             series/shapes:
-(fontspec)              
-(fontspec)             - 'normal' (m/n) with NFSS spec.: <->"Microsoft
-(fontspec)             YaHei/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold' (b/n) with NFSS spec.: <->"Microsoft YaHei
-(fontspec)             Bold/OT:script=hani;language=dflt;"
-(fontspec)             - 'bold italic' (b/it) with NFSS spec.: <->"Microsoft
-(fontspec)             YaHei/BI/OT:script=hani;language=dflt;"
-
-LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.84042pt on input line 81.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
  81.
 
@@ -1971,6 +1905,32 @@ Package fontspec Info:
 LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
 (Font)              using `TU/SimHei(0)/m/n' instead on input line 81.
 
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/BI" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/B" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Could not resolve font "FangSong/I" (it probably
+(fontspec)             doesn't exist).
+
+
+Package fontspec Info: 
+(fontspec)             Font family 'FangSong(0)' created for font 'FangSong'
+(fontspec)             with options [Script={CJK}].
+(fontspec)              
+(fontspec)              This font family consists of the following NFSS
+(fontspec)             series/shapes:
+(fontspec)              
+(fontspec)             - 'normal' (m/n) with NFSS spec.:
+(fontspec)             <->"FangSong/OT:script=hani;language=dflt;"
+
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.05249pt on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
@@ -1987,6 +1947,8 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 81.
 Package mdframed Info: mdframed inside a box 
  mdframed uses option nobreak mdframed on input line 81.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.045pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 12.045pt on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
@@ -2017,11 +1979,11 @@ File: 图1.bmp Graphic file (type bmp)
 File: 图2去掉导轨.png Graphic file (type bmp)
 <图2去掉导轨.png>
  [3]
-File: ./figure3_manuscript.png Graphic file (type bmp)
-<./figure3_manuscript.png>
+File: 图3.png Graphic file (type bmp)
+<图3.png>
 File: Fig4_最终版_修改.drawio.pdf Graphic file (type pdf)
 <use Fig4_最终版_修改.drawio.pdf>
- [4]
+
 Underfull \hbox (badness 10000) in paragraph at lines 290--292
 \TU/SimSun(0)/m/n/10.53937 式 中，| $\OML/ztmcm/m/it/10.53937 ^^V[]$ \TU/SimSun(0)
 /m/n/10.53937 为 插 值 系 数，| $[] \OT1/ztmcm/m/n/10.53937 = 0$\TU/SimSun(0)/m/n/10.
@@ -2038,17 +2000,18 @@ a; []\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/n/10.53
 ML/ztmcm/m/it/10.53937 e[] > \OT1/ztmcm/m/n/10.53937 0$
  []
 
+[4]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 5.0pt on input line 297.
-[5]
+ [5]
 File: 图5实验设置.png Graphic file (type bmp)
 <图5实验设置.png>
  (./result_tables_20261104/recovery_fit.tex)
 File: 图6.png Graphic file (type bmp)
 <图6.png>
- [6]
 File: 图7不同模型形式的S9阶段补偿误差分析.png Graphic file (type bmp)
 <图7不同模型形式的S9阶段补偿误差分析.png>
+ [6]
 File: 图8多周期反馈补偿效果.png Graphic file (type bmp)
 <图8多周期反馈补偿效果.png>
 File: 单个S9阶段误差.png Graphic file (type bmp)
@@ -2071,6 +2034,8 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.29004> not available
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.10005> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
  [8])
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 9.03374pt on input line 495.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "KaiTi/BI" (it probably doesn't
@@ -2147,11 +2112,11 @@ Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
 (rerunfilecheck)             Checksum: 8FC69DE01C87654C34DFB73FC644BBA7;2540.
  ) 
 Here is how much of TeX's memory you used:
- 37407 strings out of 468168
- 787206 string characters out of 5436525
- 1286826 words of memory out of 5000000
- 65369 multiletter control sequences out of 15000+600000
- 736073 words of font info for 251 fonts, out of 8000000 for 9000
+ 37303 strings out of 468168
+ 785077 string characters out of 5436525
+ 1287853 words of memory out of 5000000
+ 65282 multiletter control sequences out of 15000+600000
+ 730023 words of font info for 242 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  137i,15n,143p,1239b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 

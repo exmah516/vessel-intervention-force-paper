@@ -1,0 +1,77 @@
+{
+  "record": "20261024_225842_导管鞘和血管模型中的正常导管-纯轴向往复-重夹后稳定等待2s",
+  "cycles": [
+    8,
+    9
+  ],
+  "samples": 6541,
+  "source_sha256": "b2ebbfab4b0dc5276c8a47f6f57b16e58070da757c93ed30a3f609d1406fa419",
+  "phase_boundaries_absolute_s": [
+    37.604,
+    38.917,
+    39.318,
+    40.631,
+    44.145
+  ],
+  "event_rows": [
+    {
+      "event": "return-motion-start",
+      "time_s": 39.318,
+      "row": 1714
+    },
+    {
+      "event": "cylinder1_cmd:400->5",
+      "time_s": 38.917,
+      "row": 1313
+    },
+    {
+      "event": "cylinder2_cmd:600->5",
+      "time_s": 39.117,
+      "row": 1513
+    },
+    {
+      "event": "cylinder2_cmd:5->600",
+      "time_s": 40.631,
+      "row": 3027
+    }
+  ],
+  "cycle_force_features": [
+    {
+      "cycle": 8,
+      "start_s": 37.604,
+      "end_s": 38.915,
+      "start_force_N": 1.61762109651,
+      "peak_force_N": 4.06262422371,
+      "peak_time_from_start_s": 0.3149999999999977,
+      "tail_median_last_0p2s_N": 3.63394604387,
+      "tail_iqr_last_0p2s_N": [
+        3.60301102791,
+        3.64687582873
+      ]
+    },
+    {
+      "cycle": 9,
+      "start_s": 42.833,
+      "end_s": 44.144,
+      "start_force_N": 1.77572959692,
+      "peak_force_N": 3.98635076761,
+      "peak_time_from_start_s": 0.3049999999999997,
+      "tail_median_last_0p2s_N": 3.60153358522,
+      "tail_iqr_last_0p2s_N": [
+        3.57763633237,
+        3.63647869584
+      ]
+    }
+  ],
+  "plot_style": {
+    "width_cm": 7.6,
+    "height_cm": 3.0,
+    "font_pt": 9,
+    "force_display_scale": "existing figure1 script: reconstructed force / 2.12",
+    "raw_and_existing_21ms_median_traces": true
+  },
+  "source_sample_count": 54104,
+  "selected_window_samples": 6541,
+  "samples_outside_selected_window": 47563,
+  "new_filtering_or_scaling_of_source_data": false
+}
