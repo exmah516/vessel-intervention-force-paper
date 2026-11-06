@@ -1,0 +1,540 @@
+% !TeX program = xelatex
+% !TeX encoding = utf-8
+% 《机器人》LaTeX模板
+% 面向往复夹持递送的血管介入机器人力反馈扰动建模与残差补偿
+
+% 仅指定文档类路径，避免读入模板目录内其他稿件的编译缓存。
+\documentclass{JQR_LaTeX_Template-0507/JQRnew}
+
+
+% 修订标记：正文及公式按原稿逐段对照；干净版关闭颜色。
+\providecommand{\RevisionColor}{\color{black}}
+\newcommand{\revised}[1]{{\RevisionColor#1}}
+
+\JQRsetup{
+ % 期刊出版信息
+ volume     = xx,
+ number     = x,
+ year       = 2026,
+ month      = 11,
+ doi        = 240001,
+ % 通信作者
+corrauthor = {\revised{刘浩，E-mail：liuhao@sia.cn；胡琨元，E-mail：hukunyuan@sia.cn}},
+ % 日期
+ dates      = {2026-xx},
+ %
+ % ---- 中文相关信息
+ cntitle    = {面向往复夹持递送的血管介入机器人力反馈扰动建模与补偿},
+ cnauthor   = {隋凯丞\addr{1,2,3}, 郑力铭\addr{1,2,3}, 林\quad 鹏\addr{1,2}, 刘\quad 浩\addr{1,2*}, 胡琨元\addr{1,2*}},
+ runtitle   = {隋凯丞，等：面向往复夹持递送的血管介入机器人力反馈扰动建模与补偿},
+ cnaddress  = {1. 中国科学院沈阳自动化研究所 机器人学国家重点实验室，辽宁~~沈阳\quad 110016；\\
+               2. 辽宁省微创手术机器人重点实验室，辽宁~~沈阳\quad 110016；\\
+               3. 中国科学院大学，北京\quad 100049},
+ %
+ % ----- 中文摘要
+cnabstract = {
+夹持式血管介入机器人通过多机构交替夹持与往复运动实现器械长距离递送，然而，运动状态的周期性切换使近端测力偏离器械实际受力，干扰术者手感，降低介入效率并增加安全风险。为此，提出一种力反馈扰动建模与补偿方法。揭示扰动由承载切换中的载荷转移与重新推进时传力链和摩擦状态的重建共同引起，据此建立扰动模型并加以补偿。对于插入深度与周期历史等难以显式建模的影响，采用门控循环单元（GRU）与跨周期注意力，利用前序信息估计模型残差。实验结果表明，补偿后重新推进阶段力反馈的均方根误差降低49.5\%，操作者的介入总时间缩短。
+},
+ % ---- 中文关键字
+ cnkeywords = {\revised{血管介入机器人；力反馈；往复运动；载荷恢复}},
+ %
+ % ---- 英文相关信息
+ entitle    = {Disturbance Modeling and Compensation of Force Feedback for Vascular Intervention Robot in Reciprocating Clamping Delivery},
+ enauthor   = {\revised{SUI Kaicheng\addr{1,2,3}, ZHENG Liming\addr{1,2,3}, LIN Peng\addr{1,2}, HU Kunyuan\addr{1,2*}, LIU Hao\addr{1,2*}}},
+ enaddress  = {1. \textit{State Key Laboratory of Robotics, Shenyang Institute of Automation, Chinese Academy of Sciences, Shenyang} 110016, \textit{China}; \\
+               2. \textit{Key Laboratory of Minimally Invasive Surgical Robot, Liaoning Province, Shenyang} 110016, \textit{China}; \\
+               3. \textit{University of Chinese Academy of Sciences, Beijing} 100049, \textit{China}},
+ %
+ % ---- 英文摘要
+enabstract = {
+A clamping-type vascular intervention robot delivers instruments over long distances through alternating clamping by multiple mechanisms and reciprocating motion. However, the periodic switching of motion states causes the proximal force measurement to deviate from the actual load on the instrument, which disturbs the operator's haptic perception, reduces intervention efficiency, and increases safety risks. To address this problem, a disturbance modeling and compensation method for force feedback is proposed. The disturbance is shown to arise jointly from load transfer during load-bearing switching and from the re-establishment of the force transmission chain and friction state during re-advancement. Based on this, a disturbance model is established to compensate for it. For the effects of insertion depth and cycle history that are difficult to model explicitly, a gated recurrent unit (GRU) with cross-cycle attention is employed to estimate the model residual from preceding-cycle information. Experimental results show that, after compensation, the root-mean-square error of the force feedback in the re-advancement stage is reduced by 49.5\%, and the operators' total intervention time is shortened.
+},
+ %
+ % ---- 英文关键字
+ enkeywords = {\revised{vascular intervention robot; force feedback; reciprocating motion; load recovery}}
+}
+
+% ----- 加载宏包
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{pifont}
+\usepackage{balance}
+\usepackage{mwe}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{enumitem}
+\usepackage{float}
+\graphicspath{{JQR_LaTeX_Template-0507/}}
+% 修订稿用 draft；干净稿改为 final。中文删除线支持自动换行。
+\usepackage[draft,commentmarkup=footnote]{changes}
+\usepackage{xeCJKfntef}
+\setdeletedmarkup{\CJKsout{#1}}
+
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+\newcommand{\algorithmicchushi}{\textbf{初始化:}}
+
+\begin{document}
+
+\maketitle
+% 栏底留白，避免通栏图下方正文被拉伸以强制对齐两栏底部。
+\raggedbottom
+
+% 引言部分不设节标题（遵循《机器人》期刊约定）
+% 首栏由模板预留页脚空间，换栏时为第二栏预留相同高度。
+\makeatletter
+\AddToHookNext{cmd/@outputdblcol/after}{\JQRpubidadjcol}
+\makeatother
+血管介入机器人通过主从遥操作驱动导丝和导管完成推进与旋转，使术者能在导管室外远程完成介入手术操作，减少X射线辐射暴露\ucite{ref40,ref41,ref47}。但在遥操作中，术者无法通过指端感受器械阻力，而是需要通过力反馈功能来判断器械状态。接触力的测量影响着术者对器械受力状态的判断和操作，并进一步影响着手术的安全性\ucite{ref44,ref48}。力反馈既需要反映器械与环境之间的相互作用，也需要减少不必要的干扰波动，使术者能够辨别操作阻力的变化。
+
+ 从测量位置看，血管介入机器人相关的力感知可分为体内远端测力和体外近端测力。远端方案将体积较小的光纤布拉格光栅传感器\ucite{ref3,ref19}、压阻式传感器\ucite{ref35}集成于器械尖端，以获取局部接触载荷。这类方案需要兼顾器械尺寸、传感元件封装、弯曲性能与生物相容性，传感器集成也增加了器械制造与临床适配的复杂性。近端测力可通过驱动电机电流\ucite{ref5}估计器械载荷，也可在机构\ucite{ref17,ref42,ref43}中设置力传感器，此类布置保留了常规介入器械的末端结构，综合成本低、适配器械型号多。
+
+滚轮式机构通过滚轮压紧器械，滚轮连续转动即可实现器械递送或撤出。Thakur等采用驱动轮与弹簧加载的从动滚轮配合推进导管\ucite{ref37}；Sankaran等通过滚轮驱动器械，并利用驱动电机电流估计近端操作力\ucite{ref5}；Chowdhury等利用双主动倾斜滚轮实现器械平移与旋转\ucite{ref38}。此类机构对器械的驱动力受到接触摩擦和压紧程度的限制，且易产生平移和旋转的运动耦合。
+
+ 仿生手指夹持机构则通过相对设置的夹持面夹紧器械。Wang等设计了集成力感的多夹持器血管介入机器人\ucite{ref6}；Cao等设计了协同操作导丝和导管的多操作器\ucite{ref10}；Al-Ahmad等通过双编织套夹持器实现介入器械的连续运动\ucite{ref7}。以上机构均采用往复式递送，通过交替夹持，在有限的平移长度下实现器械长距离输送。由于使用近端测力方法时，器械载荷经递送机构的夹持组件和传力链传至测力元件，因此机构进行往复式递送时，测力元件受力状态随递送阶段改变，其中包含机构运动和承载状态变化的影响\ucite{ref9,ref12}。
+
+ 针对机构运动和传力过程对力感知的影响，已有研究依据测力结构的受力关系建立补偿方法，通过测力部件的受力分析，建立与载荷、旋转速度相关的补偿关系\ucite{ref8}，或结合平移与旋转动力学、夹紧与松开状态下的对比测量及滤波，减小机构运行引起的测量误差\ucite{ref12}。学习方法也被用于机器人力感知，例如以机器人运动和软夹持器变形数据训练LSTM，估计柔性血管介入机器人的操作力和力矩\ucite{ref13,ref14}；Kim等采用GRU补偿六轴力/力矩传感器的温度漂移\ucite{ref39}；Zhou等将动力学模型与双阶段时序残差网络结合，补偿动力学模型和力估计误差\ucite{ref22}，这类方法能够捕捉到力学分析方法无法捕捉的未建模动态与高阶非线性信息，更好的实现估计与补偿。
+
+由此，本文提出结合物理建模与残差学习的力反馈重构方法。分析承载切换引起的测量变化，区分测量值不反映外载的切换阶段与外载本身低于切换前稳态载荷的重新承载阶段，以弹性加载与停顿后附加摩擦阻力衰减描述重新推进时的载荷恢复，并采用GRU及跨周期注意力估计物理模型未描述的残差。在机器人平台上开展程控递送实验与主从操作实验，评价反馈重构误差及操作者的介入表现。文章第1节描述往复夹持递送过程与补偿目标，第2节介绍受力分析、载荷恢复模型与反馈方法，第3节给出实验验证，第4节为讨论部分。
+
+
+
+
+\section{问题描述（Problem description）}
+
+\subsection{往复夹持递送过程}
+
+
+本文研究采用递送机构和支撑机构交替夹持器械的夹持式血管介入机器人。递送机构安装于沿直线导轨移动的滑台上，负责器械的轴向推进与周向旋转，并测量近端力；支撑机构安装于近血管鞘入口端，在递送机构释放与回退期间保持器械位置。
+
+受直线导轨行程限制，这类机构长距离递送器械时，均采用周期性短行程往复运动完成。根据运动和夹持时序，将一个往复周期划分为S1～S10十个阶段，如图\ref{fig1}所示。
+\begin{figure}[h]
+\RevisionColor
+\centering
+\includegraphics[width=\linewidth]{图1.bmp}
+\bicaption{\revised{往复夹持递送工作过程}}{\revised{Stages of reciprocating clamping delivery}}
+\label{fig1}
+\end{figure}
+\begin{enumerate}[label=\arabic*),nosep,itemsep=0pt,topsep=2pt,partopsep=0pt,parsep=0pt,leftmargin=2\ccwd]
+\item 递送与停止（S1～S2）：递送机构独立夹持器械推进，并可同时旋转（S1）；单次行程结束时滑台减速停止，支撑机构准备夹持器械（S2）。
+\item 承载切换（S3～S4）：支撑机构夹持组件闭合，两个机构共同夹持器械（S3）；随后递送机构释放器械，由支撑机构承载（S4）。
+\item 空载回程（S5～S6）：递送机构脱离器械后沿导轨退回（S5），在起点减速停止（S6），期间器械由支撑机构保持。
+\item 重新承载与递送（S7～S10）：递送机构夹持器械，两机构再次共同夹持（S7）；支撑机构释放后，静止的递送机构独立承载（S8）；递送机构恢复前向推进，整体力学状态重新演化（S9）；力学状态恢复稳定，正常递送（S10）。
+\end{enumerate}
+
+
+\subsection{测力波动与补偿目标}
+
+往复夹持递送使测力通道周期性经历承载、卸载、重新承载并演化的过程，夹持组件开合冲击、停止后的载荷松弛及重新推进时的载荷恢复也会反映在近端测量信号中。因此，本文以近端力感获取的器械载荷作为对象，通过受力分析和分阶段处理，将往复夹持递送中随承载状态变化而波动的力反馈，重构为相同运动、机构、器械与交互条件下连续递送时的力反馈。
+
+
+\section{受力分析与力反馈重构方法（Load analysis and force feedback reconstruction）}
+
+\subsection{测量模型与承载切换中的载荷转移}
+
+
+典型的递送机构的结构如图\ref{fig2}所示，通过传力组件将器械对夹持组件的反作用力传递到力传感器中。对于这种机构，轴向力和绕轴扭矩满足 
+
+\begin{equation}
+\label{eq:balance}
+\begin{cases}
+F_M+F_S=F_{\mathrm{out}},\\
+\tau_M+\tau_S=\tau_{\mathrm{out}}.
+\end{cases}
+\end{equation}
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=\linewidth]{图2去掉导轨.png}
+	\bicaption{测力通道与递送机构、支撑机构的受力关系}{Force-sensing channels and load transfer between the delivery and support mechanisms}
+	\label{fig2}
+\end{figure}
+
+式中，$F_M,\tau_M$ 与 $F_S,\tau_S$ 分别为递送机构和支撑机构作用于器械的轴向推力和驱动扭矩，$F_{\mathrm{out}},\tau_{\mathrm{out}}$ 为器械传导到近端的合阻力和合阻力矩，记 $\bm w_M=[F_M,\tau_M]^{\rm T}$。支撑机构完全释放时 $F_S=\tau_S=0$，外载全部由递送机构平衡。
+
+将轴向力与换算后的扭矩组成测量向量 $\bm y=[F_{xm},\tau_{xm}]^{\rm T}$，传感器位于夹持、传力组件和滑台间，测量关系写为
+\begin{equation}
+\label{eq:measurement}
+\bm y=\bm H_0\bm w_M+\bm b(\varphi_M)+\bm p(t)+\bm\varepsilon.
+\end{equation}
+式中，$\bm H_0\in\mathbb R^{2\times2}$ 为离线标定的可逆传递矩阵，反映了传感器读数与外部真实受力间的关系，以及轴向力和扭矩间的串扰，$\bm b(\varphi_M)$ 为空载响应项，包含静态零偏和随递送机构旋转角 $\varphi_M$ 变化的重力干扰，$\bm\varepsilon$ 为测量噪声，$\bm p(t)$ 为夹持组件开合引起的短时冲击。扣除空载响应项后的校正测量值为
+\begin{equation}
+\label{eq:corrected-measurement}
+\tilde{\bm w}[k]=\bm H_0^{-1}\!\left[
+\bm y[k]-\bm b(\varphi_M[k])\right].
+\end{equation}
+式中，$k$ 为离散采样时刻，对应时间为 $t_k$；$\tilde{\bm w}=[\tilde F,\tilde\tau]^{\rm T}$，$\tilde F$、$\tilde\tau$ 分别为轴向力和扭矩的校正测量值。
+
+单机构递送阶段（S1、S2、S9、S10）支撑机构完全释放（$F_S=0$），递送机构独自平衡外载。S3～S7中支撑机构参与或独自承载（$F_S\neq0$），递送机构的测力通道在S4～S6卸载，并在S7重新参与承载。S7外载仍主要由支撑机构承担，此时递送机构的测量值不反映外载，S8支撑机构释放后，静止的递送机构重新独自承载，此时器械静止，外载为器械与血管鞘、血管壁之间静摩擦所平衡的残余载荷，由夹持组件、浮动传力组件及器械段组成的串联传力链中保留的变形决定。S2停止后的载荷松弛，以及S8递送机构承载时器械被夹持处向近端的微小移动，均使这部分变形减小，S8末递送机构实测载荷因而低于切换前的稳态值。
+
+S1与S10输出校正测量值。S2滑台减速停止后载荷松弛，S3～S8的测量值又受承载切换和夹持组件开合冲击影响，均不代表连续递送时的器械载荷，这些阶段的反馈保持S1匀速段末的切换前稳态载荷向量
+\begin{equation}
+	\label{eq:lock}
+	\bar{\bm w}=\frac{1}{N}
+\sum_{j=k_1-N+1}^{k_1}
+\tilde{\bm w}[j].
+\end{equation}
+式中，$k_1$ 为减速指令发出前的最后一个采样时刻，$N$ 为完全位于匀速段内的窗口长度，$\bar{\bm w}=[\bar F,\bar\tau]^{\rm T}$。取S8末支撑机构释放冲击衰减后，平移速度 $\dot x_M$ 与旋转角速度 $\dot\varphi_M$ 均为0的采样时刻 $k_9$，以 $F_0=\tilde F[k_9]$ 作为S9起始时递送机构的载荷，切换前后的载荷差定义为待恢复载荷差：
+\begin{equation}
+	\label{eq:deficit}
+	A=\bar F-F_0.
+\end{equation}
+
+
+\subsection{重新承载后的载荷恢复模型}
+
+恢复模型描述S9中整体力学状态重新演化的前向推进过程，即S8末减小的传力链变形尚未重新建立，器械与器械、器械和血管壁之间尚未过渡至滑动摩擦的阶段。自S8末 $t_{k_9}$ 时刻起累计前向推进行程
+\begin{equation}
+\label{eq:recovery-travel}
+s_{\mathrm r}(t)=\int_{t_{k_9}}^{t}
+\max\!\left(\dot x_M(t'),0\right)\,\mathrm dt'.
+\end{equation}
+
+
+S9中的载荷恢复包含两部分作用，一是递送机构重新承载后，夹持组件、浮动传力组件及器械段组成的串联传力链随推进逐步加载；二是器械在S2～S8静止后，与外部器械和血管壁之间形成的静摩擦需要转化为滑动摩擦，重新推进时形成附加阻力，并在一定滑移距离内过渡至滑动摩擦水平\ucite{dahl1968,ruina1983}，恢复过程及补偿量如图\ref{fig3}所示。以推进行程为自变量，令 $\hat F(s_{\mathrm r})$ 为模型给出的载荷，采用一阶恢复关系
+
+\begin{equation}
+\label{eq:recovery-ode}
+\frac{\mathrm d\hat F}{\mathrm ds_{\mathrm r}}
+=\frac{\bar F+F_{\mathrm a}\mathrm e^{-s_{\mathrm r}/D_c}-\hat F}{\lambda}.
+\end{equation}
+
+式中，$\lambda>0$ 为弹性加载的特征行程，$F_{\mathrm a}\ge0$ 为停顿后附加摩擦阻力的幅值，$D_c>0$ 为附加阻力衰减的特征滑移距离。三个参数由训练集的恢复曲线离线联合确定，在各周期的在线补偿中保持不变。以 $\hat F(0)=F_0$ 为初值积分，得到相对于切换前载荷的恢复补偿量
+
+\begin{equation}
+\label{eq:recovery-comp}
+\begin{aligned}
+f(s_{\mathrm r})&=\bar F-\hat F(s_{\mathrm r})\\
+&=A\mathrm e^{-s_{\mathrm r}/\lambda}\\
+&\quad-\frac{F_{\mathrm a}D_c}{D_c-\lambda}
+\left(\mathrm e^{-s_{\mathrm r}/D_c}-\mathrm e^{-s_{\mathrm r}/\lambda}\right).
+\end{aligned}
+\end{equation}
+当 $D_c=\lambda$ 时，取极限形式
+\begin{equation}
+\label{eq:equal-scales}
+f(s_{\mathrm r})=
+\left(A-F_{\mathrm a}\frac{s_{\mathrm r}}{\lambda}\right)\mathrm e^{-s_{\mathrm r}/\lambda}.
+\end{equation}
+
+当 $F_{\mathrm a}=0$ 时，只剩弹性加载项，载荷单调趋近切换前载荷。若不计弹性加载项（$\lambda\to0$），载荷在重新推进起点即跳回切换前载荷附近，与S8末实测的待恢复载荷差不符。若恢复曲线出现高于切换前载荷的局部峰值，$f$ 在局部峰值附近为负，即从实测值中扣除附加阻力分量。
+
+
+令式\eqref{eq:recovery-ode}右端为零，得到局部峰值对应的行程$s^*$为
+\begin{equation}
+\label{eq:peak-location}
+\begin{aligned}
+s^*&=\frac{\lambda D_c}{D_c-\lambda}
+\ln\frac{(A+B)D_c}{B\lambda},\\
+B&=\frac{F_{\mathrm a}D_c}{D_c-\lambda}.
+\end{aligned}
+\end{equation}
+
+式中，$B$ 为中间系数，对于 $A>0$、$F_{\mathrm a}>0$，$D_c>\lambda$ 时存在位于有限行程内的局部峰值；$D_c<\lambda$ 时还需满足 $A<F_{\mathrm a}D_c/(\lambda-D_c)$。两尺度相等时，$s^*=\lambda(1+A/F_{\mathrm a})$；$F_{\mathrm a}=0$ 时载荷单调趋近切换前的稳态载荷。
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\linewidth]{./figure3_manuscript.png}
+\bicaption{载荷恢复与补偿量示意}{Load recovery and the compensation term}
+\label{fig3}
+\end{figure}
+
+
+
+\subsection{两级残差估计网络与分阶段反馈}
+
+器械插入深度变化会改变传力路径长度和摩擦状态，前序周期的运动与承载切换也会影响本次恢复时的接触状态，这些变化未包含在恢复模型中。因此引入残差估计网络，结合插入深度和前序周期信息修正恢复补偿量。物理模型输出 $F_{\mathrm p}[k]$ 为
+\begin{equation}
+	\label{eq:physical-model-output}
+	F_{\mathrm p}[k]=\tilde F[k]
+	+\mathbb I_{\mathrm r}[k]f(s_{\mathrm r}[k]).
+\end{equation}
+式中，$\mathbb I_{\mathrm r}=1$ 表示S9中已启用且尚未开始撤除的恢复补偿，其余情况为0。网络的逐点输入 $\bm x_k$ 为
+\begin{equation}
+	\label{eq:gru-input}
+	\bm x_k=\big[\bar F,A,t_h,
+	\bm u_M[k]^{\rm T},s_{\mathrm r}[k],s[k],\sigma[k]\big]^{\rm T}.
+\end{equation}
+
+式中，$t_h$ 为S2滑台停止至S9开始的静止时长；$\bm u_M[k]$ 为递送机构平移与旋转的速度和加速度；$s[k]$ 为插入深度，累计递送机构夹持器械时的前向位移，不计空载回程；$\sigma[k]=\operatorname{sgn}\dot x_M[k]$ 为运动方向。$\bar F$、$A$、$t_h$ 均在S9开始时确定，网络不使用S9的实时测力值。
+
+
+网络分为两级（图\ref{fig4}），第一级在单个恢复过程内按推进行程编码，第二级对前序周期同一行程位置的编码加权聚合。记第 $c$ 个往复周期的S9为第 $c$ 个恢复过程，$c$ 为该周期在试次中的序号。将S9起点之后长度为 $s_{\mathrm w}$ 的前向行程等分为 $M$ 个行程单元，第 $m$ 个行程单元的样本集合 $\Omega_{c,m}$ 为
+\begin{equation}
+	\label{eq:phase}
+	\begin{aligned}
+		\Omega_{c,m}&=\big\{k\in\mathrm{S9}^{(c)}:(m-1)\Delta s\le s_{\mathrm r}[k]<m\Delta s\big\},\\
+		\Delta s&=s_{\mathrm w}/M,\quad m=1,\cdots,M.
+	\end{aligned}
+\end{equation}
+式中，$\mathrm{S9}^{(c)}$ 为第 $c$ 个恢复过程的采样时刻集合，$\Delta s$ 为行程单元长度，$s_{\mathrm w}$ 为恢复补偿行程窗口。以S9起点输入 $\bm x_{k_9}$ 初始化GRU得到初始编码 $\bm h_{c,0}$\ucite{ref26}，行程单元特征 $\bm z_{c,m}$ 与编码 $\bm h_{c,m}$ 为
+\begin{equation}
+	\label{eq:cell-encoder}
+	\begin{aligned}
+		\bm h_{c,0}&=\mathrm{GRU}\big(\bm x_{k_9},\bm 0\big),\\
+		\bm z_{c,m}&=\frac{1}{|\Omega_{c,m}|}\sum_{k\in\Omega_{c,m}}\bm x_k,\\
+		\bm h_{c,m}&=\mathrm{GRU}\big(\bm z_{c,m},\bm h_{c,m-1}\big).
+	\end{aligned}
+\end{equation}
+式中，$|\Omega_{c,m}|$ 为集合 $\Omega_{c,m}$ 的样本数，行程单元内无样本时沿用前一行程单元的特征，首个行程单元取 $\bm x_{k_9}$。
+
+% 通栏图4：由最终版 SVG 转为矢量 PDF，按原图175 mm宽度居中排在页顶。
+\begin{figure*}[!t]
+	\centering
+	\makebox[\textwidth][c]{\includegraphics[width=175mm]{Fig4_最终版_修改.pdf}}
+	\bicaption{力重构的反馈流程与两级残差估计网络}{Feedback scheme and two-level residual estimation network for force reconstruction}
+	\label{fig4}
+\end{figure*}
+
+第二级以当前周期上一行程单元结束时的编码为查询 $\bm q_{c,m}$，以同一试次中此前 $K_c$ 个周期第 $m-1$ 个行程单元的编码为键 $\bm\kappa_j$，第 $m$ 个行程单元的编码为值 $\bm\upsilon_j$，加权得到跨周期聚合特征 $\bm g_{c,m}$：
+\begin{equation}
+	\label{eq:cross-cycle}
+	\begin{aligned}
+		\bm q_{c,m}&=\bm W_q\bm h_{c,m-1},\\
+		\bm\kappa_j&=\bm W_k\bm h_{c-j,m-1},\quad
+		\bm\upsilon_j=\bm W_v\bm h_{c-j,m},\\
+		\alpha_j&=\frac{\exp\!\left(\bm q_{c,m}^{\rm T}\bm\kappa_j/\sqrt d\right)}
+		{\sum_{j'=1}^{K_c}\exp\!\left(\bm q_{c,m}^{\rm T}\bm\kappa_{j'}/\sqrt d\right)},\\
+		\bm g_{c,m}&=\sum_{j=1}^{K_c}\alpha_j\bm\upsilon_j.
+	\end{aligned}
+\end{equation}
+式中，$\bm W_q$、$\bm W_k$、$\bm W_v$ 为投影矩阵，$\alpha_j$ 为第 $c-j$ 个周期的注意力权重，$K_c=\min(K,c-1)$，$K$ 为历史周期数上限，$d$ 为编码维度，$K_c=0$ 时取 $\bm g_{c,m}=\bm 0$。$\bm h_{c,m-1}$ 和前序周期的编码在进入第 $m$ 个行程单元时均已算出，该行程单元的残差估计 $\hat e_{c,m}$ 为
+\begin{equation}
+	\label{eq:cell-output}
+	\hat e_{c,m}=\bm w_o^{\rm T}
+	\begin{bmatrix}\bm h_{c,m-1}\\\bm g_{c,m}\end{bmatrix}+b_o .
+\end{equation}
+式中，$\bm w_o$、$b_o$ 为输出层的权重和偏置。逐点残差 $e[k]$ 在行程单元内线性过渡，经限幅并乘以残差权重 $\beta_k$ 后得到残差修正量 $r[k]$：
+\begin{equation}
+	\label{eq:residual-limit}
+	\begin{aligned}
+		e[k]&=(1-\mu_k)\,\hat e_{c,m-1}+\mu_k\,\hat e_{c,m},\quad k\in\Omega_{c,m},\\
+		\mu_k&=\frac{s_{\mathrm r}[k]-(m-1)\Delta s}{\Delta s},\\
+		r[k]&=\beta_k\operatorname{sat}(e[k],\eta A+e_0),\\
+		\beta_k&=\min\!\left\{1,\max\!\left[0,\frac{k-k_9}{N_b}\right]\right\}.
+	\end{aligned}
+\end{equation}
+式中，$\mu_k$ 为插值系数，$\hat e_{c,0}=0$，$\operatorname{sat}(e,a)=\max(-a,\min(e,a))$，$\eta\ge0$ 为限幅比例，$e_0>0$ 为最小限幅，$N_b$ 为 $\beta_k$ 由0增至1所需的采样点数。
+
+恢复补偿和残差修正仅在 $A>0$ 时启用。当 $s_{\mathrm r}\ge s_{\mathrm w}$，或前向速度低于最小有效前向速度 $v_{\min}$ 且持续超过停止判定时长 $T_{\mathrm{st}}$，或出现 $\dot x_M<-v_{\min}$ 的回拉时，开始撤除补偿，记触发时刻为 $t_e$，触发前最后一个正常恢复补偿量为 $C_e$。S9中的补偿量为
+\begin{equation}
+	\label{eq:withdrawal}
+	\begin{aligned}
+		C[k]&=\begin{cases}
+			f(s_{\mathrm r}[k])+r[k],&\text{正常恢复},\\
+			\rho_kC_e,&\text{撤除},\\
+			0,&\text{未启用或已撤除},
+		\end{cases}\\
+		\rho_k&=\max\!\left\{0,1-\frac{t_k-t_e}{T_{\mathrm{off}}}\right\}.
+	\end{aligned}
+\end{equation}
+式中，$\rho_k$ 为撤除权重，$T_{\mathrm{off}}$ 为补偿撤除时长。因停止或回拉而撤除后，本次恢复补偿不再启用，正常推进撤除完毕后进入S10。全周期反馈为
+\begin{equation}
+	\label{eq:phase-output}
+	\bm w_{\mathrm{fb}}[k]=
+	\begin{cases}
+		\bar{\bm w},&k\in\mathrm{S2}\sim\mathrm{S8},\\
+		\begin{bmatrix}\tilde F[k]+C[k]\\
+			\tilde\tau[k]\end{bmatrix},&k\in\mathrm{S9},\\
+		\tilde{\bm w}[k],&k\in\{\mathrm{S1},\mathrm{S10}\}.
+	\end{cases}
+\end{equation}
+由于 $\beta_{k_9}=0$，$F_{\mathrm{fb}}[k_9]=\bar F$，与切换期间保持的输出衔接。实测值以单位权重进入反馈，新增的外部阻力直接反映在输出中。
+
+网络监督的参考载荷 $F_{\mathrm{ref}}(s[k])$ 取配对连续递送记录在同一插入深度处的校正测量值，配对方法见3.1节。令 $\mathcal D$ 为训练集中具有配对参考且处于正常恢复补偿的S9采样时刻集合，$\mathcal P$ 为同一恢复过程内 $\mathcal D$ 中时间相邻的样本对集合，损失函数为
+\begin{equation}
+	\label{eq:gru-loss}
+	\begin{aligned}
+		\mathcal L={}&\frac{1}{|\mathcal D|}\sum_{k\in\mathcal D}
+		\left(\frac{F_{\mathrm{ref}}(s[k])-F_{\mathrm p}[k]-r[k]}{F_*}\right)^2\\
+		&+\frac{\gamma_{\mathrm{sm}}}{|\mathcal P|}
+		\sum_{(j,k)\in\mathcal P}
+		\left(\frac{r[k]-r[j]}{F_*}\right)^2.
+	\end{aligned}
+\end{equation}
+式中，$F_*>0$ 为由训练集确定的力归一化尺度，$\gamma_{\mathrm{sm}}$ 为平滑权重。
+
+
+\section{实验验证与分析（Experimental validation and analysis）}
+
+
+\subsection{实验平台与实验配置}
+
+
+
+实验平台采用课题组自主研制的血管介入机器人，介入器械包括0.014英寸导引导丝与6F介入导管。递送机构的平移与旋转由伺服电机驱动，递送和支撑机构的夹持组件开闭由电缸驱动。递送机构安装力恒LH-S09A3微型力传感器。
+
+
+
+测量参数标定时，将测力单元与外部标准力传感器通过刚性零件串联，通过机构运动施加载荷及已知力臂的切向载荷，标定传递矩阵 $\bm H_0$ 和传感器等效力臂 $\ell_s$，并通过空载角度扫描辨识空载响应项。连续递送参考由递送机构持续夹持器械采集，血管鞘、血管模型路径和起始插入位置与往复递送试次匹配，参考区间按实际插入位置及运动条件配对。图\ref{fig5}展示测力单元标定与递送平台，外接标准力传感器用于标定，血管模型构成器械递送路径。
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\linewidth]{图5实验设置.png}
+\bicaption{\revised{测量参数标定与往复递送实验设置}}{\revised{Experimental configurations for measurement calibration and reciprocating delivery}}
+\label{fig5}
+\end{figure}
+
+
+往复递送试次由程序设定的运动指令完成，用于恢复模型辨识、网络训练和性能评价，所有试次均操控器械经血管鞘进入血管模型完成。推进速度按介入常用范围设多档，设定数字范围为 $7$～$60\,\mathrm{mm/s}$。为使数据覆盖不同的停顿条件，各周期静止时长在 $1$～$2.5\,\mathrm{s}$ 内变化，插入深度随周期增加。每组试次包含10个往复周期，单次单向行程为 $20\,\mathrm{mm}$，记录机构位置、速度、加速度、电缸状态和力传感器数据。
+
+在上述条件下共采集90组试次，剔除器械卡滞导致其受损，无法正常递进的3组后，余下87组按完整试次划分，同一组的往复记录与连续递送参考归入同一子集：外部留出集12组，仅用于测试模型结果，其余75组中训练集55组、验证集20组。
+
+\subsection{载荷转移与恢复模型辨识}
+
+
+
+目前的模型建立在两点假设之上：一是S8末递送机构的实测载荷低于切换前稳态载荷，即存在待恢复载荷差；二是这一缺口在S9中由传力链弹性加载和停顿后附加摩擦阻力衰减共同恢复。因此，首先在留出集中统计待恢复载荷差 $A$，其中位数为 $2.066\,\mathrm{N}$，范围为 $0.525 $～$3.386\,\mathrm{N}$，$A>0$ 的周期占 $100.0\%$。
+
+
+
+
+恢复模型参数由训练集离线联合拟合，为验证2.2节中两项作用机理，将完整恢复模型与仅弹性加载（$F_{\mathrm a}=0$）、仅附加摩擦（$\lambda\to0$）两种形式比较。仅弹性加载时载荷单调趋近切换前载荷，不会出现局部峰值，而外部留出集中有87个周期在S9出现局部峰值（峰值超出 $\bar F$ 至少 $0.05\,\mathrm{N}$）。
+
+通过在留出集中计算均方根误差（RMSE）评价各模型效果，S9 RMSE为区间内反馈相对参考载荷的均方根误差，而S9阶段前 $1\,\mathrm{mm}$ 待恢复载荷差最大，需要关注该部分补偿效果，因此统计相应 RMSE。去掉附加摩擦项后，相对实测恢复曲线的 RMSE 由 $0.412\,\mathrm{N}$ 升至 $0.480\,\mathrm{N}$，前 $1\,\mathrm{mm}$ 的RMSE由 $0.534\,\mathrm{N}$ 升至 $0.658\,\mathrm{N}$。而弹性加载项是力感数据在S9上升的决定性因素，若取消则模型将无法补偿数据上升段。典型周期的恢复曲线与补偿结果见图\ref{fig6}，各形式相对参考的S9误差分布见图\ref{fig7}。
+
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{图6.png}
+\bicaption{\revised{典型重新承载阶段的补偿效果}}{\revised{Compensation effect in a typical reloading stage}}
+\label{fig6}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{图7不同模型形式的S9阶段补偿误差分析.png}
+	\bicaption{\revised{不同模型形式的S9阶段补偿误差}}{\revised{S9 errors of different recovery model forms}}
+	\label{fig7}
+\end{figure}
+
+
+\input{result_tables_20261104/recovery_fit.tex}
+
+\subsection{力反馈性能评价}
+
+
+
+本节评价最终输出给主端的反馈，比较反馈相对参考载荷的误差。测试前冻结物理参数、网络参数及由训练集计算的标准化参数，网络采用 $M=20$ 个行程单元、$K=10$ 个历史周期和维度 $d=32$ 的单层GRU编码器与单头跨周期注意力。比较方法共四种：原始数据、恢复模型、恢复模型+单周期GRU，以及本文方法。通过依次加入恢复模型、单周期残差网络和跨周期注意力，用于区分各部分的作用。多周期反馈波形及一次S9恢复的反馈误差见图\ref{fig8}和图\ref{fig9}。
+
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=\linewidth]{图8多周期反馈补偿效果.png}
+\bicaption{\revised{夹持切换与重新推进过程中的多周期反馈}}{\revised{Force feedback over multiple cycles during clamping handover and reloaded delivery}}
+\label{fig8}
+\end{figure}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{单个S9阶段误差.png}
+	\bicaption{\revised{单次S9恢复过程的反馈误差}}{\revised{Feedback errors during one S9 recovery}}
+	\label{fig9}
+	
+\end{figure}
+
+
+
+
+外部留出集上四种方法的误差汇总于表\ref{tab1}。
+
+
+
+\begin{table}[H]
+	\centering
+	\bicaption{外部留出集上的力反馈误差}{Force feedback errors on the external held-out set}
+	\label{tab1}
+	\small
+	\setlength{\tabcolsep}{2pt}
+	\begin{tabular}{lcc}
+		\toprule
+		方法 & $E_{\mathrm{S9}}$/N & $E_{1\,\mathrm{mm}}$/N\\
+		\midrule
+		原始反馈 & 0.752 & 1.605\\
+		物理模型 & 0.404 & 0.478\\
+		\makecell[l]{物理模型+GRU} & $0.382$ & $0.507$\\
+		本文方法 & $0.380$ & $0.475 $\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\subsection{操作者实验}
+
+
+补偿后的反馈能否帮助术者完成递送，还需在主从操作中检验。因此，选取4名的操作者参与实验，比较未补偿反馈（A）与本文方法（B）。实验采用缩短后的往复夹持时序，每名操作者完成4组递送任务，操作机器人采用ABBA的顺序用于抵消随组次线性变化的练习效应。任务表现以介入总时间评价，结果见表\ref{tab2}。
+
+
+
+4名操作者使用本文方法时的介入总时间均短于未补偿反馈，按两种条件各自两组的均值计算，时间缩短 $89$～$109\,\mathrm{s}$，相对缩短 $21.5\%$～$29.3\%$。各操作者的完成时间随组次先降后升，表现出练习效应；但第4组未补偿条件的用时仍比第2组采用本文方法时慢 $21$～$46\,\mathrm{s}$。任务时间结果见表\ref{tab2}。图\ref{fig:human-replay}展示按本文方法输出峰峰值中位数选取的连续3个周期。在16份操作者记录中，本文方法相较原始数据将往复运动期间的输出跌落、切换处的输出跳变和完整往复周期的输出峰峰值中位数分别由 $4.101$、$0.194$ 和 $4.939\,\mathrm{N}$ 降至 $0.811$、$0.163$ 和 $2.570\,\mathrm{N}$。
+
+
+
+
+
+
+% 2026-11-04: saved operator recordings; conditional offline replay only.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=7.6cm]{figureD_human_replay_v3_legend_lower_20261105.png}
+\bicaption{操作者实验力反馈记录}{Record of feedback over operator cycles}
+\label{fig:human-replay}
+\end{figure}
+
+
+
+\begin{table}[H]
+	\centering
+	\bicaption{两种反馈条件下操作者的介入总时间}{Total intervention time of operators under two feedback conditions}
+	\label{tab2}
+	\small
+	\setlength{\tabcolsep}{2.5pt}
+	\begin{tabular}{ccccc}
+		\toprule
+		\multirow{2}{*}{操作者} & \multicolumn{4}{c}{介入总时间/s}\\
+		\cmidrule(lr){2-5}
+		& \makecell{第1组\\（A）} & \makecell{第2组\\（B）} & \makecell{第3组\\（B）} & \makecell{第4组\\（A）}\\
+		\midrule
+		1 & 472 & 381 & 275 & 402 \\
+		2 & 441 & 348 & 302 & 387 \\
+		3 & 522 & 371 & 359 & 417 \\
+		4 & 381 & 271 & 212 & 302 \\
+		\midrule
+		均值 & 454.0 & 342.8 & 287.0 & 377.0 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+
+
+\section{结论（Conclusions）}
+
+
+
+针对夹持式血管介入机器人往复递送中承载状态周期性切换引起的力反馈波动，本文提出了物理建模与残差学习相结合的力反馈重构方法。通过交替夹持过程的载荷转移分析，将测力偏差区分为两类，承载切换期间测量值不反映外载；重新承载后，传力链变形减小，器械与血管鞘、血管壁之间的静摩擦需重新过渡为滑动摩擦，使实测载荷低于切换前稳态载荷。据此以推进行程为自变量建立载荷恢复模型，以传力链弹性加载与停顿后附加摩擦阻力衰减描述重新推进时的载荷演化，得到恢复补偿量的解析形式及局部峰值的存在条件；补偿量不使用重新推进阶段的实时测力，实测值以单位权重进入反馈，新增外部阻力直接反映在输出中。在此基础上，采用按行程单元编码的GRU与跨周期注意力，估计插入深度和前序周期引起的模型残差。
+
+在外部留出集上，本文方法将重新推进阶段的反馈均方根误差由 $0.752\,\mathrm{N}$ 降至 $0.380\,\mathrm{N}$，其起始 $1\,\mathrm{mm}$ 内的误差由 $1.605\,\mathrm{N}$ 降至 $0.475\,\mathrm{N}$。机理比较表明，仅考虑弹性加载无法描述多数周期中出现的局部峰值，计入附加摩擦阻力后恢复过程的描述精度提高。4名操作者使用本文方法时的介入总时间均短于未补偿反馈，平均缩短 $24.5\%$。后续将在更宽的停顿时长范围和更多操作者中进一步检验该方法。
+
+
+
+\noindent
+
+% -------- 参考文献表
+\bibliographystyle{JQR_LaTeX_Template-0507/jqr-num}
+\bibliography{JQR_LaTeX_Template-0507/references}
+
+\begin{AuthorIntroduction}
+\Intro 隋凯丞（2001-），男，硕士研究生。研究领域：血管介入手术机器人，机器人力感知与控制。E-mail: suikaicheng@sia.cn。
+
+
+\end{AuthorIntroduction}
+
+\balance
+\end{document}

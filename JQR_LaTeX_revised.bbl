@@ -1,4 +1,4 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{27}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{#1}
 \baselineskip=11bp plus0.1pt minus0.1pt
@@ -12,18 +12,51 @@
   \let\eprint\href
 \fi
 
-\bibitem[Guo et~al.(2019)Guo, Song, Yin, et~al.]{ref2}
-GUO~S, SONG~Y, YIN~X, et~al.
-\newblock \href{http://dx.doi.org/10.1109/TRO.2019.2896763}{A novel
-  robot-assisted endovascular catheterization system with haptic force
-  feedback}\allowbreak[J].
-\newblock IEEE Transactions on Robotics, 2019, 35\allowbreak (3): 685-696.
+\bibitem[王鉴\ 等(2023)王鉴, 高翔, 张峰, and 毕伟]{ref40}
+WANG J, GAO X, ZHANG F, BI W. Current status of robot-assisted vascular
+  interventional therapy[J]. Journal of Interventional Radiology, 2023, 32(6):
+  619--623. (in Chinese) \\
+(王鉴, 高翔, 张峰, 等.
+\newblock
+  \href{https://jrfs.cbpt.cnki.net/portal/journal/portal/client/paper/2e6e8bd32d72e79109b2600001c3a497}{血管介入机器人辅助介入治疗研究现状}\allowbreak[J].
+\newblock 介入放射学杂志, 2023, 32\allowbreak (6): 619-623.)
 
-\bibitem[Patel et~al.(2022)Patel, Atashzar, and Tavakoli]{ref29}
-PATEL~R~V, ATASHZAR~S~F, TAVAKOLI~M.
-\newblock \href{http://dx.doi.org/10.1109/JPROC.2022.3180052}{Haptic feedback
-  and force-based teleoperation in surgical robotics}\allowbreak[J].
-\newblock Proceedings of the IEEE, 2022, 110\allowbreak (7): 1012-1027.
+\bibitem[关沛峰\ 等(2023)关沛峰, 温诗涵, and 杨荣谦]{ref41}
+GUAN P F, WEN S H, YANG R Q. Research Progress and Prospect Analysis of
+  Vascular Interventional Surgical Robot[J]. Chinese Journal of Medical
+  Instrumentation, 2023, 47(6): 638--644. (in Chinese)
+DOI: \doi{10.3969/j.issn.1671-7104.2023.06.010} \\
+(关沛峰, 温诗涵, 杨荣谦.
+\newblock
+  \href{http://dx.doi.org/10.3969/j.issn.1671-7104.2023.06.010}{血管介入手术机器人的研究进展及前景分析}\allowbreak[J].
+\newblock 中国医疗器械杂志, 2023, 47\allowbreak (6): 638-644.)
+
+\bibitem[Feng et~al.(2025)Feng, Liu, Xie, Zhou, Wang, Fan, Hou, Ma, Song, and
+  Zhang]{ref47}
+FENG~Y~Z, LIU~S, XIE~X~L, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2025.3583190}{A novel haptic
+  interface for enhancing operational transparency in robot-assisted vascular
+  interventional surgery}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2025, 7\allowbreak
+  (3): 1051-1061.
+
+\bibitem[童静\ 等(2023)童静, 储呈晨, and 李斌]{ref44}
+TONG J, CHU C C, LI B. Vascular interventional surgery robot and its force
+  feedback technology[J]. Chinese Journal of General Surgery, 2023, 32(6):
+  915--922. (in Chinese)
+DOI: \doi{10.7659/j.issn.1005-6947.2023.06.013} \\
+(童静, 储呈晨, 李斌.
+\newblock
+  \href{http://dx.doi.org/10.7659/j.issn.1005-6947.2023.06.013}{血管介入手术机器人及其力反馈技术研究进展}\allowbreak[J].
+\newblock 中国普通外科杂志, 2023, 32\allowbreak (6): 915-922.)
+
+\bibitem[Bao et~al.(2024)Bao, Guo, Yang, and Zheng]{ref48}
+BAO~X, GUO~S, YANG~C, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMECH.2023.3290492}{Haptic interface
+  with force and torque feedback for robot-assisted endovascular
+  catheterization}\allowbreak[J].
+\newblock IEEE/ASME Transactions on Mechatronics, 2024, 29\allowbreak (2):
+  1111-1125.
 
 \bibitem[He et~al.(2018)He, Wang, and Zuo]{ref3}
 HE~C, WANG~S, ZUO~S.
@@ -33,22 +66,21 @@ HE~C, WANG~S, ZUO~S.
 \newblock International Journal of Computer Assisted Radiology and Surgery,
   2018, 13\allowbreak (5): 671-682.
 
-\bibitem[Kesner et~al.(2014)Kesner and Howe]{ref34}
-KESNER~S~B, HOWE~R~D.
-\newblock \href{http://dx.doi.org/10.1177/0278364913511350}{Robotic catheter
-  cardiac ablation combining ultrasound guidance and force
-  control}\allowbreak[J].
-\newblock The International Journal of Robotics Research, 2014, 33\allowbreak
-  (4): 631-644.
+\bibitem[Pantano et~al.(2026)Pantano, Wolf, Mathea, et~al.]{ref19}
+PANTANO~M, WOLF~T, MATHEA~P, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TMRB.2026.3680997}{Force measurement
+  in robot-assisted endovascular procedures: A systematic
+  review}\allowbreak[J].
+\newblock IEEE Transactions on Medical Robotics and Bionics, 2026, 8\allowbreak
+  (2): 594-611.
 
-\bibitem[Jin et~al.(2021{\natexlab{a}})Jin, Guo, Guo, Shi, Tamiya, Kawanishi,
-  and Hirata]{ref35}
+\bibitem[Jin et~al.(2021)Jin, Guo, Guo, Shi, Tamiya, Kawanishi, and
+  Hirata]{ref35}
 JIN~X, GUO~S, GUO~J, et~al.
 \newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3107188}{Total force
   analysis and safety enhancing for operating both guidewire and catheter in
   endovascular surgery}\allowbreak[J].
-\newblock IEEE Sensors Journal, 2021{\natexlab{a}}, 21\allowbreak (20):
-  22499-22509.
+\newblock IEEE Sensors Journal, 2021, 21\allowbreak (20): 22499-22509.
 
 \bibitem[Sankaran et~al.(2020)Sankaran, Chembrammel, and Kesavadas]{ref5}
 SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
@@ -57,29 +89,29 @@ SANKARAN~N~K, CHEMBRAMMEL~P, KESAVADAS~T.
 \newblock The International Journal of Medical Robotics and Computer Assisted
   Surgery, 2020, 16\allowbreak (2): e2045.
 
-\bibitem[Zhao et~al.(2018)Zhao, Guo, Xiao, et~al.]{ref4}
-ZHAO~Y, GUO~S, XIAO~N, et~al.
-\newblock \href{http://dx.doi.org/10.1007/s10544-018-0275-7}{Operating force
-  information on-line acquisition of a novel slave manipulator for vascular
-  interventional surgery}\allowbreak[J].
-\newblock Biomedical Microdevices, 2018, 20\allowbreak (2): 33.
+\bibitem[Duan et~al.(2026)Duan, Du, Li, et~al.]{ref17}
+DUAN~W, DU~W, LI~Z, et~al.
+\newblock \href{http://dx.doi.org/10.1109/TIM.2026.3679188}{A high-precision
+  positioning and force sensing robotic system for multi-instrument
+  manipulation during robot-assisted endovascular intervention}\allowbreak[J].
+\newblock IEEE Transactions on Instrumentation and Measurement, 2026, 75: 1-14.
 
-\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
-WANG~S, LIU~Z, SHU~X, et~al.
-\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
-  sensing of a novel cardiovascular interventional surgery
-  robot}\allowbreak[J].
-\newblock The International Journal of Medical Robotics and Computer Assisted
-  Surgery, 2022, 18\allowbreak (4): e2406.
+\bibitem[陈翼楠\ 等(2023)陈翼楠, 蒲志新, and 郑珍妮]{ref42}
+CHEN Y N, PU Z X, ZHENG Z N. A novel vascular interventional surgery robot with
+  force detection mechanism[J]. Chinese Journal of Engineering Design, 2023,
+  30(1): 20--31. (in Chinese)
+DOI: \doi{10.3785/j.issn.1006-754X.2023.00.016} \\
+(陈翼楠, 蒲志新, 郑珍妮.
+\newblock
+  \href{http://dx.doi.org/10.3785/j.issn.1006-754X.2023.00.016}{一种具有力检测机制的新型血管介入手术机器人}\allowbreak[J].
+\newblock 工程设计学报, 2023, 30\allowbreak (1): 20-31.)
 
-\bibitem[Jin et~al.(2021{\natexlab{b}})Jin, Guo, Guo, Shi, Tamiya, and
-  Hirata]{ref36}
-JIN~X, GUO~S, GUO~J, et~al.
-\newblock \href{http://dx.doi.org/10.1109/JSEN.2021.3066424}{Development of a
-  tactile sensing robot-assisted system for vascular interventional
-  surgery}\allowbreak[J].
-\newblock IEEE Sensors Journal, 2021{\natexlab{b}}, 21\allowbreak (10):
-  12284-12294.
+\bibitem[Ren et~al.(2025)Ren, Zhao, Zhang, Wang, Li, and Zhang]{ref43}
+REN~B, ZHAO~Y, ZHANG~J, et~al.
+\newblock \href{http://dx.doi.org/10.1016/j.sna.2024.116128}{Multi-point
+  bending operation force detection method of catheter-based on rotary clamping
+  delivery}\allowbreak[J].
+\newblock Sensors and Actuators A: Physical, 2025, 382: 116128.
 
 \bibitem[Thakur et~al.(2009)Thakur, Bax, Holdsworth, and Drangova]{ref37}
 THAKUR~Y, BAX~J~S, HOLDSWORTH~D~W, et~al.
@@ -127,6 +159,14 @@ WANG~K, YUAN~H, ZENG~Y, et~al.
 2020 IEEE International Conference on Mechatronics and Automation (ICMA).
 \newblock 2020: 1613-1618.
 
+\bibitem[Wang et~al.(2022)Wang, Liu, Shu, et~al.]{ref12}
+WANG~S, LIU~Z, SHU~X, et~al.
+\newblock \href{http://dx.doi.org/10.1002/rcs.2406}{Mechanism design and force
+  sensing of a novel cardiovascular interventional surgery
+  robot}\allowbreak[J].
+\newblock The International Journal of Medical Robotics and Computer Assisted
+  Surgery, 2022, 18\allowbreak (4): e2406.
+
 \bibitem[Bao et~al.(2018)Bao, Guo, Xiao, et~al.]{ref8}
 BAO~X, GUO~S, XIAO~N, et~al.
 \newblock \href{http://dx.doi.org/10.1007/s10544-018-0318-0}{Compensatory force
@@ -140,6 +180,13 @@ LYU~C, GUO~S, YAN~Y, et~al.
   force sensing method for a flexible endovascular surgery
   robot}\allowbreak[J].
 \newblock IEEE Transactions on Instrumentation and Measurement, 2024, 73: 1-10.
+
+\bibitem[Wang et~al.(2024)Wang, Shen, Liu, et~al.]{ref14}
+WANG~S, SHEN~H, LIU~Z, et~al.
+\newblock \href{http://dx.doi.org/10.1109/JSEN.2023.3345028}{{TCN}-based distal
+  force feedback strategy of a vascular interventional surgery
+  robot}\allowbreak[J].
+\newblock IEEE Sensors Journal, 2024, 24\allowbreak (3): 4120-4130.
 
 \bibitem[Kim et~al.(2025)Kim, Lee, Ham, Choi, and Kim]{ref39}
 KIM~H~B, LEE~S, HAM~B~I, et~al.

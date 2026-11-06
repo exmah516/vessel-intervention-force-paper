@@ -1,0 +1,16 @@
+\begin{table}[!htbp]
+\centering
+\bicaption{脉冲保留与承载切换连续性}{Pulse retention and continuity at the load transition}
+\label{tab:pulse-switch}
+\small\setlength{\tabcolsep}{2pt}
+\begin{tabular}{lcc}
+\toprule
+方法 & 脉冲保留比 & 切换跳变/N\\
+\midrule
+保持至S9 & 0.000 [0.000, 0.000] & 0.184 [0.082, 0.330]\\
+本文方法 & 1.000 [1.000, 1.000] & 0.014 [0.008, 0.023]\\
+\bottomrule
+\end{tabular}
+\par\vspace{2pt}
+{\footnotesize 注：中位数[四分位区间]。脉冲为1.0 N、0.3 s半正弦，采用固定抽取的30个外部周期；完整脉冲均位于S9内。切换统计使用全部113周期，为切换前后各20 ms均值差的绝对值；保持至S9与本文方法的最大跳变分别为1.705 N和0.083 N。}
+\end{table}

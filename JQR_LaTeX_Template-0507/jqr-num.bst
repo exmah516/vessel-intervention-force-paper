@@ -59,7 +59,7 @@ FUNCTION {load.config}
   #0 'show.doi :=
   #0 'show.preprint :=
   #0 'show.note :=
-  #0 'show.english.translation :=
+  #1 'show.english.translation :=
 }
 
 ENTRY

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  5 NOV 2026 18:13
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.7.3)  5 NOV 2026 22:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1755,26 +1755,26 @@ Package: xeCJKfntef 2022/08/05 v3.9.1 xeCJK font effect
 (./JQR_LaTeX_revised.aux)
 \openout1 = `JQR_LaTeX_revised.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 79.
+LaTeX Font Info:    ... okay on input line 79.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: xetex
@@ -1816,20 +1816,20 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: picinpar package is loaded.
 Package caption Info: subfigure package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package bicaption Info: Main language is not set on input line 81.
+Package bicaption Info: Main language is not set on input line 79.
 \c@mv@tabular=\count507
 \c@mv@boldtabular=\count508
-Package hyperref Info: Link coloring OFF on input line 81.
+Package hyperref Info: Link coloring OFF on input line 79.
 (./JQR_LaTeX_revised.out) (./JQR_LaTeX_revised.out)
 \@outlinefile=\write4
 \openout4 = `JQR_LaTeX_revised.out'.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.03374pt on input line 83.
+(Font)              scaled to size 9.03374pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.03374pt on input line 83.
+(Font)              scaled to size 9.03374pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.045pt on input line 83.
+(Font)              scaled to size 12.045pt on input line 81.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "FangSong/BI" (it probably
@@ -1866,14 +1866,14 @@ Package fontspec Info:
 (fontspec)             Could not resolve font "Microsoft YaHei/I" (it probably
 (fontspec)             doesn't exist).
 
-LaTeX Font Info:    Trying to load font information for T1+qhv on input line 83
+LaTeX Font Info:    Trying to load font information for T1+qhv on input line 81
 .
 
 (c:/texlive/2026/texmf-dist/tex/latex/tex-gyre/t1qhv.fd
 File: t1qhv.fd 2009/09/25 v1.2 font definition file for T1/qhv
 )
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 9.48535pt on input line 83.
+(Font)              scaled to size 9.48535pt on input line 81.
 
 Package fontspec Info: 
 (fontspec)             Font family 'MicrosoftYaHei(0)' created for font
@@ -1891,53 +1891,53 @@ Package fontspec Info:
 (fontspec)             YaHei/BI/OT:script=hani;language=dflt;"
 
 LaTeX Font Info:    Font shape `T1/qhv/m/n' will be
-(Font)              scaled to size 10.84042pt on input line 83.
+(Font)              scaled to size 10.84042pt on input line 81.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 83.
+ 81.
 
 (c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 83.
+ 81.
 
 (c:/texlive/2026/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 83.
+ 81.
 
 (c:/texlive/2026/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
 LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 8
-3.
+1.
 
 (c:/texlive/2026/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9.03374> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Trying to load font information for OMX+mdugm on input line
- 83.
+ 81.
 
 (c:/texlive/2026/texmf-dist/tex/latex/mathdesign/mdugm/omxmdugm.fd
 File: omxmdugm.fd 2013/08/29 Fontinst v1.933 font definitions for OMX/mdugm.
 )
-LaTeX Font Info:    Trying to load font information for U+euex on input line 83
+LaTeX Font Info:    Trying to load font information for U+euex on input line 81
 .
 
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuex.fd
 File: ueuex.fd 2013/01/14 v3.01 Euler extra symbols
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 16.06pt on input line 83.
+(Font)              scaled to size 16.06pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 16.06pt on input line 83.
+(Font)              scaled to size 16.06pt on input line 81.
 
 Package fontspec Info: 
 (fontspec)             Could not resolve font "SimHei/BI" (it probably doesn't
@@ -1954,7 +1954,7 @@ Package fontspec Info:
 (fontspec)             exist).
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 10.53937pt on input line 83.
+(Font)              scaled to size 10.53937pt on input line 81.
 
 Package fontspec Info: 
 (fontspec)             Font family 'SimHei(0)' created for font 'SimHei' with
@@ -1969,44 +1969,44 @@ Package fontspec Info:
 
 
 LaTeX Font Warning: Font shape `TU/SimHei(0)/b/n' undefined
-(Font)              using `TU/SimHei(0)/m/n' instead on input line 83.
+(Font)              using `TU/SimHei(0)/m/n' instead on input line 81.
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.05249pt on input line 83.
+(Font)              scaled to size 14.05249pt on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.05249> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.53937> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.52812> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.52812pt on input line 83.
-Package mdframed Info: mdframed works in twoside mode on input line 83.
+(Font)              scaled to size 7.52812pt on input line 81.
+Package mdframed Info: mdframed works in twoside mode on input line 81.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 83.
+(mdframed)              on input line 81.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 83.
+ mdframed uses option nobreak mdframed on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 12.045pt on input line 83.
+(Font)              scaled to size 12.045pt on input line 81.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 7.0pt on input line 83.
+(Font)              scaled to size 7.0pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 7.52812pt on input line 83.
+(Font)              scaled to size 7.52812pt on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.0pt on input line 83.
-Package mdframed Info: mdframed works in twoside mode on input line 83.
+(Font)              scaled to size 9.0pt on input line 81.
+Package mdframed Info: mdframed works in twoside mode on input line 81.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 83.
+(mdframed)              on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 9.0pt on input line 83.
+(Font)              scaled to size 9.0pt on input line 81.
 Package mdframed Info: mdframed inside a box 
- mdframed uses option nobreak mdframed on input line 83.
+ mdframed uses option nobreak mdframed on input line 81.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.03pt on input line 83.
+(Font)              scaled to size 8.03pt on input line 81.
 [1
 
 
@@ -2022,7 +2022,7 @@ File: ./figure3_manuscript.png Graphic file (type bmp)
 File: Fig4_最终版_修改.pdf Graphic file (type pdf)
 <use Fig4_最终版_修改.pdf>
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 321--323
+Underfull \hbox (badness 10000) in paragraph at lines 319--321
 \TU/SimSun(0)/m/n/10.53937 式 中，| $\OML/ztmcm/m/it/10.53937 ^^V[]$ \TU/SimSun(0)
 /m/n/10.53937 为 插 值 系 数，| $[] \OT1/ztmcm/m/n/10.53937 = 0$\TU/SimSun(0)/m/n/10.
 53937 ，| $[]\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/
@@ -2030,7 +2030,7 @@ n/10.53937 ) =
  []
 
 
-Underfull \hbox (badness 2326) in paragraph at lines 321--323
+Underfull \hbox (badness 2326) in paragraph at lines 319--321
 []\OT1/ztmcm/m/n/10.53937 (\OMS/ztmcm/m/n/10.53937 ^^@\OML/ztmcm/m/it/10.53937 
 a; []\OT1/ztmcm/m/n/10.53937 (\OML/ztmcm/m/it/10.53937 e; a\OT1/ztmcm/m/n/10.53
 937 ))$\TU/SimSun(0)/m/n/10.53937 ，| $\OML/ztmcm/m/it/10.53937 ^^Q \U/msa/m/n/1
@@ -2039,7 +2039,7 @@ ML/ztmcm/m/it/10.53937 e[] > \OT1/ztmcm/m/n/10.53937 0$
  []
 
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 5.0pt on input line 329.
+(Font)              scaled to size 5.0pt on input line 327.
 [5]
 File: 图5实验设置.png Graphic file (type bmp)
 <图5实验设置.png>
@@ -2047,9 +2047,9 @@ File: 图5实验设置.png Graphic file (type bmp)
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6]
 File: 图6.png Graphic file (type bmp)
 <图6.png>
+[6]
 File: 图7不同模型形式的S9阶段补偿误差分析.png Graphic file (type bmp)
 <图7不同模型形式的S9阶段补偿误差分析.png>
  (./result_tables_20261104/recovery_fit.tex)
@@ -2066,6 +2066,13 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 8.03pt on input line 1.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.5pt on input line 1.
+LaTeX Font Info:    Calculating math sizes for size <8.5> on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8.5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6.29004> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5.10005> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 28.
 
 [8])
 
@@ -2127,8 +2134,9 @@ Package fontspec Info:
 \openout6 = `JQR_LaTeX_revised.loc'.
 
 
-Overfull \vbox (0.86128pt too high) has occurred while \output is active []
 
+Package balance Warning: You have called \balance in second column
+(balance)                Columns might not be balanced.
 
 [9] (./JQR_LaTeX_revised.aux)
  ***********
@@ -2140,15 +2148,15 @@ L3 programming layer <2022/08/05>
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 Package rerunfilecheck Info: File `JQR_LaTeX_revised.out' has not changed.
-(rerunfilecheck)             Checksum: E4CE12ECAE3EDDFFFB9DAFDC411FD967;2524.
+(rerunfilecheck)             Checksum: CF73DEA0B63E008F38ACC9C61C017120;2548.
  ) 
 Here is how much of TeX's memory you used:
- 37346 strings out of 468168
- 786096 string characters out of 5436525
- 1286835 words of memory out of 5000000
- 65311 multiletter control sequences out of 15000+600000
- 721443 words of font info for 208 fonts, out of 8000000 for 9000
+ 37410 strings out of 468168
+ 787187 string characters out of 5436525
+ 1286826 words of memory out of 5000000
+ 65372 multiletter control sequences out of 15000+600000
+ 736073 words of font info for 251 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 137i,17n,143p,1239b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 137i,15n,143p,1239b,1101s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on JQR_LaTeX_revised.pdf (9 pages).

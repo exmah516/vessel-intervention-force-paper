@@ -1,0 +1,436 @@
+% !TeX program = xelatex
+% !TeX encoding = utf-8
+% 《机器人》LaTeX模板
+% 技术问题联系：latexstudio@qq.com
+
+% 使用 overleaf 时加载，本地使用注释掉
+% \PassOptionsToClass{fontset=fandol}{ctexart}
+
+\documentclass{JQRnew}
+
+\JQRsetup{
+ % 期刊出版信息
+ volume   = xx,
+ number   = x,
+ year    = 2025,
+ month   = 4,
+ doi    = 250xxx,
+ % 若稿号为25-xxx，则 DOI号处填250xxx
+ % 基金项目，**注释掉不显示**
+ funds   = {项目 1 名称（编号）；项目 2 名称（编号，编号）．省级及以上},
+ % 通信作者
+ corrauthor = {姓名，Email（请使用学校或研究所的正式邮箱）},
+ % 日期
+ dates   = {yyyy-mm-dd/yyyy-mm-dd/yyyy-mm-dd},
+ % 日期部分由编辑部填写。基金一般只标注省级及以上的基金项目。
+ %
+ % ---- 中文相关信息
+ cntitle  = {《机器人》论文\LaTeX 模板及我刊来稿的一般要求},
+ cnauthor  = {作者一\addr{1,2,3}, 作\quad 者\addr{1,2}, 作者三\addr{1,2}, 作者四\addr{1,2}},
+ % runauthor = {}
+ runtitle  = {作者一，等：《机器人》\LaTeX 模板使用方法},
+ cnaddress = {1.XXX实验室，省份~~城市\quad 000000（邮编）； \\
+        2.XXX研究院，省份~~城市\quad 000000（邮编）；\\
+        3.XXX大学，省份~~城市\quad 000000（邮编）；},
+ %
+ % ----- 摘要
+ cnabstract = {摘要应具有独立性和自明性，一般400字左右。推荐我刊论文使用结构式摘要，作者可按以下仿写。【目的】目的部分应紧密围绕本文研究的目的来讨论。在体现本文的学术价值时，应注意不要扩大为本方向研究、本学科研究的重要性和必要性；在体现其社会价值时，应避免写成单纯的研究背景介绍；【方法】方法部分的介绍注意逻辑层次，详略得当；【结果】结果部分建议给出关键指标的具体结果；【结论】结论部分呼应研究目的的达成程度，忌空泛地进行自评“提供了研究基础”或者无实际信息地“对方法的有效性进行了验证”。},
+ % ---- 关键字
+ cnkeywords = {科技论文写作；写作模板；《机器人》；写作要求\\
+ 【关键词】关键词的数量以3～8个为宜，选取关键词时要考虑“便于被检索到”。},
+ %
+ % ---- 英文相关信息
+ entitle  = {Template of Journal \textit{ROBOT} and a Simple Guide for Authors},
+ enauthor  = {Author One\addr{1,2,3}, Author Two\addr{1,2}, Author Three\addr{1,2}, Author Four\addr{1,2}},
+ enaddress = {1. \textit{Address}, \textit{Address}, \textit{Address}, \textit{City} 000000, \textit{Country}; \\
+        2. \textit{Address}, \textit{Address}, \textit{Address}, \textit{City} 000000, \textit{Country}; \\
+        3. \textit{Address}, \textit{Address}, \textit{Address}, \textit{City} 000000, \textit{Country}},
+ %
+ %
+ % ---- 英文摘要
+ enabstract = {英文翻译要求，以句子为单位实词严格对应，不可“意译”；我刊统一采用一般现在时、被动式，不用~we 或~this paper 作主语。},
+ %
+ % ---- 英文关键字
+ enkeywords = {writing guidelines for academic papers; format requirements; quantities and units; rules for
+bibliographic references}
+}
+
+% ----- 加载宏包
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{lipsum}
+\usepackage{zhlipsum}
+\usepackage{pifont}
+\usepackage{balance}
+\usepackage{mwe}
+
+\floatname{algorithm}{算法}
+% \usepackage{caption}
+% \captionsetup[algorithm]{font=small}
+\renewcommand{\algorithmicrequire}{\textbf{输入:}}
+\renewcommand{\algorithmicensure}{\textbf{输出:}}
+\newcommand{\algorithmicchushi}{\textbf{初始化:}}
+
+\begin{document}
+
+\maketitle
+
+% \zhlipsum[1]
+
+
+【正文引言的写法】
+
+本刊约定，引言部分不需要“节”标题。
+
+引言内容通常包含研究的背景、目的、理由，预期结果及其意义和价值。引言的编写宜做到切合主题，言简意赅，突出重点、新颖性，客观评介前人的研究，引出本文研究的入手点；不宜单纯罗列前人研究成果，不宜在引言末尾复制摘要内容或作章节简介，不宜在引言部分提前对全文的创新点作结论性的列项总结。
+
+【正文中引用参考文献的写法】
+
+我刊采用“顺序编码”制，即按照文献在正文中被提及的顺序进行文末的文献编号。
+
+参考文献标号平排使用 \verb|\cite{}|：
+
+参考文献标号上标使用 \verb|\ucite{}|：
+
+示例：“对于~Yu等\ucite{refa}完成的工作，正文引用时只提及该外文文献作者的姓氏即可。引述来自其他文献的观点，在句子末尾添加引用文献编号\ucite{refb}。这篇丁汉团队\ucite{refc}完成的工作，尽管文献原文是英文的，但能够确认作者的中文姓名，在引用时不需要写Ding。综上，文\cite{refd,refe,reff,refg}方法中均未考虑到某问题，而考虑到该问题的文\cite{refh}存在某局限性、文\cite{refi,refj}无法满足某场景下的应用。本文受某方法\ucite{refk}处理某类问题的启发，对某框架\ucite{refl}的某部分进行了改进……”。
+
+【杜绝学术不端行为、避免学术不端边缘问题】
+
+请注意全文的重复率不宜超过~10\%。如作者拟将投稿文章内容纳入本人的学位论文，宜先上线投稿文章，后上线学位论文。该时间问题可在录用后联系您的责任编辑。
+
+【tex文档运行说明】
+\JQRpubidadjcol
+
+本tex文档的运行平台需采用~TeXLive2021以上版本，如~TeXLive2022、TeXLive2023 等。将tex文档编译为pdf文档，需进入运行平台的~Menu 菜单在~Settings 设置~Compiler为~XeLaTeX。
+
+在第一页的第二栏插入 \verb|\JQRpubidadjcol|， 以平衡首页两栏文字的容量使两栏底部对齐。
+
+
+\section{正文中行文的写法（Main text writing conventions）}
+
+
+正文行文要求结构逻辑清楚，语言简洁、明晰。
+
+%2.1
+\subsection{请特别注意行文的简明}
+
+我刊对文章字数没有要求，不认为字数的多寡与文章质量的高低之间有联系。请特别注意行文的简、明。例如，各节标题下第一段不需要介绍各小节内容；图例中能表达清晰的，不需要在正文中重复解释说明。近年《机器人》上刊发的论文类文章平均页数为~10 页，综述类文章的平均页数为~16 页，仅供参考。
+
+%2.2
+\subsection{避免文章结构的“头重脚轻”}
+
+正文主体部分占论文的主要篇幅，论文的论点、论据和论证均在此部分阐述或展示。所谓的“头重脚轻”，即结构上对非本文创新点的前期工作着墨过多，而论据介绍得不清楚、逻辑不够通顺，或论证得不充分、说服力不够。修改时建议理顺创新性理论的逻辑，增加论证的工作量。
+
+%2.3
+\subsection{公式的写法}
+
+1) 一行公式，见式~\eqref{eqname}。
+\begin{align}
+\label{eqname}
+a^2+b^2=c^2
+\end{align}
+式中，$a,b,c$ 分别表示三角形两条直角边的长度和斜边的长度。
+
+2) 两行公式，如式~\eqref{eqlabel}\eqref{eqlabel2} 所示。
+\begin{align}
+\label{eqlabel}
+a^2+b^2=c^2\\
+\label{eqlabel2}
+a^2+b^2=c^2
+\end{align}
+公式一律用阿拉伯数字依序连续编号。一般不写成形如“式(2a)(2b)”“式(2-1)(2-2)”的子公式号的形式。
+
+3) 条件公式，见式~\eqref{eqcases}。
+\begin{align}
+\label{eqcases}
+|x| =
+\begin{cases}
+-x, & x < 0\\
+0,  &  x = 0\\
+x,  &  x > 0
+\end{cases}
+\end{align}
+
+%2.3.1
+\subsection{量的写法}
+\subsubsection{矩阵向量用黑斜体表示}
+
+%eq
+\noindent
+\begin{align}
+\label{eq5}
+\bm{U}=[u_{1},u_{2},\cdots,u_{m}]^{\rm T},\quad  m=1,2,\cdots
+\end{align}
+
+%2.3.2
+\subsubsection{常写为正体的符号}
+%eq
+\noindent
+\begin{align}
+\label{eq6}
+\bm{y}(t)=f\left(\int\limits_{-\infty}^{+\infty} \left(\sum\limits_{i=1}^n \omega_{i} x_{i} (\tau) g(t,\tau)\right) \dd \tau -\theta\right)
+\end{align}
+微分符号~$\dd $ 正体，类似的常写为正体符号的还有偏微分~$\partial $、矩阵转置符号~$\rm T$、圆周率~$\uppi =3.14\cdots$ 和自然对数的底~$\ee =2.718\cdots $。
+
+%2.3.3
+\subsubsection{上下标写法}
+
+表示一般变量的上下标，应写为白斜体，如式~\eqref{eq5} 的~$ u_{m}$ 的下标~$ m=1,2,\cdots $；而表示英文单词\!／\!拼音缩写的上下标，用正体，如期望输出~$\bm{y}_{\rm d}$ 中的~d 是~desired 的首字母，PID 控制中常用的增益系数写为~$ k_{\rm P}$、$k_{\rm I}$、$ k_{\rm D}$。
+
+%2.3.3
+\subsubsection{尽量用一个字符表示一个量}
+
+量的符号通常为单个拉丁字母或希腊字母。如种群个数~$N_{\text{group}}$不宜写为\textit{GroupNumber}，$t$ 时刻下 相机坐标系~$\varSigma _{\rm cam}$ 到本体坐标系 ~$\varSigma _{\rm body}$ 的旋转矩阵${\bm R}_{{\rm cam},t} ^{\rm body}$ 不宜写为~${\bm {Rot}}_{{\rm cam},t} ^{\rm body}$。
+
+\subsection{单位的写法}
+
+1) 使用我国法定计量单位，可参考国家标准GB 3100-1993 国际单位制及其应用。
+
+2) 行文中使用单位符号表达，不用单位名称或单位英文名称的缩写。例如“旋转~90 度”应改为90$^{\circ}$，“精度可达~0.03 微米”应改为~$0.03\:{\rm \upmu m}$，“转速为~50\:rpm”应改为~50\:r/min。
+
+3) 将单位符号写全、写对。
+例：压强~$ P = 10\:$kPa 正确，$P=10\:$KPa 错误；频率~Hz 正确，HZ 错误。
+
+\subsection{必要的注释}
+
+第一次出现的变量、不常见的运算符号或关系符号、英文缩写，需要在正文中对其进行解释或者注明引文出处。量的注释示例见式~\eqref{eqname} 下方文字。
+
+\section{正文中图/表的写法（Presentation of figures and tables in the main text）}
+
+1) 图、表一律用阿拉伯数字分别依序连续编号。
+
+2) 图/表使用双语标题，用 \verb|\bicaption{}{}|命令撰写标题；使用 \verb|\ref{}| 命令引用图和表~\ref{figlabel}、子图~\ref{image-a}、表~\ref{tablabel}。
+
+3) 图/表宜紧置于提及该图/表编号的正文之后，先见文字后见图/表。
+
+%3.1
+\subsection{图的写法}
+
+1) 子图应有中文标题，以(a)(b)(c)为序进行编号。子图的编号和标题宜居中置于子图的正下方，如图\ref{figlabel} 所示。图注的末尾应加“
+。”。
+\begin{figure}[h!t]
+\centering
+\subfigure[子图标题一\label{image-a}]{\includegraphics[width=0.45\linewidth]{example-image-a}}\quad
+\subfigure[子图标题二\label{image-b}]{\includegraphics[width=0.45\linewidth]{example-image-b}}
+\bicaption{图片标题}{English title}
+\label{figlabel}
+\end{figure}
+
+2) 图中的文字。字号选用9号字，中文选用宋体，英文选用Times New Roman。
+
+3) 图中的文字内容的意义要明确。量的符号或英文缩写词如在图中是首次出现的，要在正文或图中给出注释。
+
+4) 不同类型的插图，有不同的编排要求。
+
+$\cdot $~坐标曲线图的标目应分别置于横、纵坐标轴的外侧，一般居中排。横坐标标目应自左至右；纵坐标标目应自下而上，“顶左底右”；如有右侧纵坐标，其标目排法同左侧。当标目同时用量和单位表示时，应采用“量的符号或名称/单位符号"的标准化形式，如 $s~ /(mol/L)$、B 的浓度$~/(mol/L)$、BMI~$/(kg/m^2)$。例中的~$s$ 为量的符号，B 的浓度为量的名称，BMI 为量的名称的英文缩写词，应按第2)项的要求给出注释“BMI 为 身体质量指数”。
+
+$\cdot $~ 构造图、装配图中的尺寸数据如具有相同的单位，宜将共同单位标注在图的右下角或左下角。写作“单位：XX ”。
+
+5) 请在“录用待发表”阶段，按邮件通知要求单独提交图文件。
+图文件请存储为矢量图（*.eps、*.visio、*.pptx…）或 200~dpi 以上的清晰位图。例如：
+由~Matlab 生成的仿真图，请直接在~Matlab 软件中导出图的~eps 格式（可能产生的乱码由编辑部按~pdf 稿修改）；visio、PPT 绘制的流程图、示意图可直接提交文件，无需再截图。
+
+6) 大图需要跨栏排版。跨栏图使用加星号的 \verb|{figure*}| 的环境。
+\begin{figure*}[h!t]
+\centering
+\includegraphics[width=0.6\linewidth]{example-image-duck}
+\bicaption{跨栏图片标题}{English title}
+\label{figlabelc}
+\end{figure*}
+
+\subsection{表的写法}
+
+1) 表格应有表头，表头中不准许使用斜线。表格的编排，宜将内容和测试项目由左至右横排，数据依序竖排。表注的末尾应加“。”。
+
+2) 表中数据的单位要准确撰写。若表格中某一列的数据代表某一个量的不同值，应在该列的表头采用“量的符号或名称/单位符号"的标准化形式标注，如表1所示；若全表格所有列的单位都相同，宜将共同单位标注在表格的右上方，如“单位：mm”。
+
+3) 表身中的“空白”表示无此项或未测量,“--”表示测量过而未发现，“0”表示实测结果为零。
+
+
+\begin{table}[h!t]
+\centering
+\bicaption{表格标题}{English title}
+\label{tablabel}
+\begin{tabular}{cccc}
+\hline
+方法 & 时间~/s & 关节转角~/($^{\circ}$) & 力矩~/(N$\cdot $m) \\
+\hline
+1 & value1 & valuea & value \\
+2 & value2 & valueb & value \\
+3 & value3 & valuec & value \\
+4 & value4 & valued & value \\
+\hline
+\end{tabular}
+\end{table}
+
+4) 跨栏表使用加星号的 \verb|{table*}| 的环境，见表\ref{tablabelb}。
+
+\begin{table*}[h!t]
+\centering
+\bicaption{跨栏表格标题}{English title}
+\label{tablabelb}
+\begin{tabular}{cccccc}
+\hline
+元素    & 半径 ~/nm & 元素    & 半径~/nm & 元素    & 半径~/nm \\
+\hline
+Hydrogen  & 0.12    & Hydrogen  & 0.12    & Hydrogen  & 0.12    \\
+Oxygen   & 0.14    & Oxygen   & 0.14    & Oxygen   & 0.14    \\
+Nitrogen  & 0.15    & Nitrogen  & 0.15    & Nitrogen  & 0.15    \\
+Carbon   & 0.17    & Carbon   & 0.17    & Carbon   & 0.17    \\
+Sulfur   & 0.18    & Sulfur   & 0.18    & Sulfur   & 0.18    \\
+Phosphorus & 0.19    & Phosphorus & 0.19    & Phosphorus & 0.19    \\
+\hline
+\end{tabular}
+\end{table*}
+
+% \zhlipsum[6]
+% \zhlipsum[8]
+
+\section{科学数据平台ScienceDB的利用（How to use the database ScienceDB）}
+
+建议作者将论文的原始数据和程序、处理数据，以及其他因正文篇幅所限而未刊发的附录等附件信息提交至我国自主研发的通用型数据存储库ScienceDB平台。
+
+\subsection{科学数据平台ScienceDB简介}
+
+\href{https://www.scidb.cn/}{\color{blue}ScienceDB}由中国科学院计算机网络信息中心建设维护。由我国公共资助产生的论文成果向国内、国外期刊投稿时，论文关联的科学数据可存储在该平台进行共享，平台为科学数据分配和注册数字唯一标识（DOI）用以引用。
+
+\subsection{如何使用ScienceDB}
+1) 提交和维护数据
+登录\href{https://www.scidb.cn/surl/robot}{\color{blue}本刊在ScienceDB的社区}，点击“提交数据”。
+
+另可至\href{本刊在ScienceDB的社区}{\color{blue}Science DB的B站官方账号}观看讲解。
+
+2) 在论文文末添加“数据可用性声明”。一则范例请见本模板最后一节之后、参考文献之前处。
+
+3)是否支持期刊“双盲制评审”的要求。
+
+	支持。ScienceDB可为数据提供“匿名私有链接”。作者可在“我的数据中心”获取该链接。在匿名私有链接页面上，审稿专家将无法看到作者的姓名、机构及邮箱等可识别个人信息的内容，但可匿名访问数据元数据、数据文件。作者可按需将匿名私有链接写入“审稿意见答复”交给期刊编辑部，以用于双盲评审。请注意，在上传数据文件时，数据文件名称及内容，不要包含个人信息（姓名、机构等）。
+其他相关问题请见\href{https://www.scidb.cn/help?p=faq}{\color{blue}官网常见问题}第5、6条。
+
+
+%5
+\section{结论（Conclusion）}
+
+结论是对研究结果和结论的提炼与概括，不是摘要或主体部分中各章、节小结的简单重复，宜做到客观、准确、精炼、完整。结论中也可以进行必要的讨论，在讨论中提出建议或待研究解决的问题等。不推荐自评成果的学术价值，尤其应避免过于夸大的评价，如：“为□□学科的后续研究奠定了基础”“给□□的生产制造指明了方向）”……
+
+
+\noindent
+\textbf{数据可用性声明}
+
+支撑本研究的科学数据已在中国科学院科学数据银行（Science Data
+Bank）ScienceDB 平台公开发布，访问地址为~\url{https://www.doi.org/}[数据~DOI 编号]或~\url{http://resolve.pid21.cn/}[数据~CSTR 编号]。''
+
+【参考文献的写法】
+
+1) 引用准确。不转引、匿引文献。
+
+2) 近年的研究情况要有所了解，距今~10 年以上的文献不宜超过~3 条（综述适当放宽）。
+
+3) 添加文章信息的链接。参考文献如有~DOI 号，链接建议使用~\url{https://doi.org/xxxxx} 的形式。
+
+4) 可使用bibtex 自动生成参考文献索引。
+% \nocite{*}
+
+% -------- bibtex 自动生成参考文献
+% \bibliographystyle{jqr-num}
+% \bibliography{test}
+
+% -------- 手动写参考文献
+\begin{thebibliography}{99}
+\baselineskip=11bp plus0.1pt minus0.1pt%
+
+ % 常见文献写法范例
+ % 按文件类型排序：
+
+ % 书~Monograph-------------------------------------------------- \textbf{M} [M] 作者。书名[M]。出版地：出版者，出版年。
+
+\bibitem{refa} YU H B, LIU J G, LIU L Q, et al. \href{https://doi.org/10.1007/978-3-030-27535-8}{Intelligent robotics and applications}\allowbreak[M]. Berlin, Germany: Springer, 2019.
+
+\bibitem{refb} 胡寿松。\href{http://find.nlc.cn/search/showDocDetails?docId=8063907072563311727 & dataSource=ucs01 & query=自动控制原理}{自动控制原理}\allowbreak[M]。5 版。北京：科学出版社，2007：471-472。 \\
+Hu S S. The principle of automatic control[M]. 5th ed. Beijing: Science Press, 2007: 471-472.
+
+% 期刊~Journal----------------------------------------------------- \textbf{J} [J] 作者。文章题名[J]。期刊名，年，卷（期）：起止页码。
+
+\bibitem{refc} DING H, YANG X J, ZHENG N N, et al. \href{https://doi.org/10.1093/nsr/nwx148}{Tri-Co Robot: a Chinese robotic research initiative for enhanced robot interaction capabilities}\allowbreak[J]. National Science Review, 2018, 5(6): 799-801.
+
+\bibitem{refd} 王天然。\href{https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD & filename=JQRR201704001 & dbname=CJFDLAST2017}{机器人技术的发展}\allowbreak[J]。机器人，2017，39(4)：385-386。 \\
+Wang T R. Development of robotics[J]. Robot, 2017, 39(4): 385-386.
+
+% 会议录~Conference---------------------------------------------- \textbf{C} [C] 作者。文章题名[C]//会议论文集名。出版地：出版社，出版年：起止页码。
+% 常见国外出版社及出版地整理如下：
+% Piscataway, USA: IEEE
+% Berlin, Germany: Springer
+% New York, USA: ACM
+% Amsterdam, Netherlands: Elsevier
+% New York, USA: ASME
+% Cambridge, USA: MIT Press
+% Reston, USA: AIAA
+% Bellingham, USA: SPIE
+
+\bibitem{refe} GONG Z Y, CHENG J H, HU K N, et al. \href{http://doi.org/10.1109/ROBOSOFT.2018.8405378}{An inverse kinematics method of a soft robotic arm with three-dimensional locomotion for underwater manipulation}\allowbreak[C]//IEEE International Conference on Soft Robotics. Piscataway, USA: IEEE, 2018: 516-521.
+
+\bibitem{reff} ZHANG J B, WEN K, YUE Y, et al. \href{http://doi.org/10.1109/ICMAE.2019.8880959}{Research on key technologies for high-precision whole flexible machining of large-scale multi-supports cabin}\allowbreak[C]//IEEE 10th International Conference on Mechanical and Aerospace Engineering. Piscataway, USA: IEEE. DOI: 10.1109/ICMAE.2019.8880959.
+
+% 没有具体页码的，写~DOI 号，不要写文献号。 \\
+% 论文~Discourse-------------------------------------------------- \textbf{D} [D] 作者。学位论文名称[D]。出版地，出版社，出版年。
+
+\bibitem{refg} SMALLWOOD D A. \href{https://dl.acm.org/doi/book/10.5555/937172}{Advances in dynamical modeling and control of underwater robotic vehicles}\allowbreak[D]. Baltimore, USA: Johns Hopkins University, 2003.
+
+\bibitem{refh} 牛国君。\href{http://cdmd.cnki.com.cn/Article/CDMD-10213-1017862151.htm}{腹腔微创手术机器人系统从手机构与控制的研究}\allowbreak[D]。哈尔滨：哈尔滨工业大学，2017。 \\
+Niu G J. Research on the slave mechanism and control of a medical robot system for celiac minimally invasive surgery[D]. Harbin: Harbin Institute of Technology, 2017.
+
+% 报告~Report----------------------------------------------------- \textbf{R} [R] 作者。报告名称[R]。出版地：出版者，出版年。
+
+\bibitem{refi} WENZHOFER F, KNUST R. \href{https://epic.awi.de/id/eprint/44793/}{Expedition programme PS108}\allowbreak[R]. Bre-merhaven, Germany: Alfred Wegener Institute, 2017.
+
+% 专利------------------------------------------------------------- \textbf{P} [P] 专利所有者。专利题名：专利国别，专利号[P]。公告日期\!／\!公开日期。获取和访问路径。
+
+\bibitem{refj} 张承瑞，王金江。\href{http://d.wanfangdata.com.cn/patent/CN200710013313.0}{基于标准以太网的实时同步网络及其工作方法}：200710013313.0[P]。2007-08-15。 \\
+ZHANG C R, WANG J J. Real-time and synchronous control network and working method based on standard Ethernet: 200710013313.0[P]. 2007-08-15.
+
+% 带载体标志的文献： 联机网络~On Line-----------------------------------------------------OL 光盘~CD-----------------------------------------------------------------CD [OL]主要责任者。题名：其他题目信息[文献类型\!／\!载体标志]。出版地：出版者，出版年。（更新日期） [引用日期]。获取访问和访问路径。
+
+\bibitem{refk} OLFATI-SABER R, MURRAY R M. \href{http://www.ifac-papersonline.net/Detailed/25875.html}{Distributed cooperative control of multiple vehicle formations using structural potential functions}[C/OL]//Proceeding of the 15th IFAC World Congress. (2008-09-05) [2012-12-02]. http://www.ifac-papersonline.net/Detailed/25875.html.
+
+% 数据库~Database---------------------------------------------- \textbf{DB}
+
+\bibitem{refl} NEBOT E. \href{http://www-personal.acfr.usyd.edu.au/nebot/dataset.htm}{Victoria park data set}[DB/OL]. (2001-04-29) [2017-03-10]. http://www-personal.acfr.usyd.edu.au/nebot/dataset.htm.
+
+% 电子公告~Electronic Bulletin----------------------------------- \textbf{EB}
+
+\bibitem{refm} NASA. \href{https://www.nasa.gov/robotics/index.html}{National robotics initiative(NRI)} [EB/OL]. (2011-07-25) [2016-11-21]. https://www.nasa.gov/robotics/index.html.
+
+\end{thebibliography}
+
+\begin{AuthorIntroduction}
+
+\Intro 第一作者姓名（出生年~--），性别，学历（硕士生/博士生），职称（没有则此项不填）。研究领域：XXXX，XXXX。
+
+\Intro 通信作者姓名（出生年~--），性别，学历（博士），职称（教授/研究员，硕/博士生导师）。研究领域：XXXX，XXXX，XXXX。
+% 注：我刊最多列写2位作者的简介。如介绍2位作者，按“第一作者”“通信作者”的顺序介绍；如介绍1位作者，请作者团队协商一致后将“指定作者”（第一作者或通信作者）的介绍随录用稿提交。
+%
+\end{AuthorIntroduction}
+
+
+【tex 文档运行说明】
+
+使用 \verb|\balance| 命令使最后一页两栏文字底对齐。
+\balance
+\end{document}
+
+% 请随录用稿提交本文基金项目的详细信息
+
+\begin{table*}[h!t]
+\centering
+\bicaption{跨栏表格标题}{English title}
+\label{tablabelb}
+\begin{tabular}{cccccc}
+\hline
+基金序号 & 基金全称 & 项目课题名 & 项目号 & 项目负责人 & 起止时间\\
+\hline
+1  & 国家自然科学基金    & 融合XXX的机器人系统研发  & 623XXXXX    & XXX  & 2021/8/1—2024/7/31 \\
+2  & 国家重点研发计划    & XXXXXX    
+& 2024YFB0000000   & XXX    & 2021/8/1—2024/7/31 \\
+\hline
+\end{tabular}
+\end{table*}
